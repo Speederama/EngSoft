@@ -18,7 +18,7 @@ MainScreen::MainScreen()
 }
 
 /* Rotates the roullete that indicates action for turn */
-void MainScreen::rotateRoullete()
+int MainScreen::rotateRoullete()
 {
 	// Choose some random time to keep spinning...
 	int t = 150 + rand() % 100;
@@ -37,18 +37,17 @@ void MainScreen::rotateRoullete()
 	switch (numSlices % 4)
 	{
 		case 0:
-			showQuestion(true);
-			break;
+			return showQuestion(true) + 4;
 		case 1:
 			showCard(false);
-			break;
+			return 10;
 		case 2:
-			showQuestion(false);
-			break;
+			return showQuestion(false);
 		case 3:
 			showCard(true);
-			break;
+			return 11;
 	}
+	return 0;
 }
 
 /* Draws screen using current information */
@@ -91,8 +90,8 @@ int MainScreen::drawScreen()
 }
 
 /* Draws screen reseting the current information */
-int MainScreen::drawScreen(char* fileImageAvatar, int numRound, int maxRounds, char* namePlayer, char* methodologyPlayer, int pointsPlayer, 
-	int resourcesPlayer, list< pair<const char*, int> > companiesPlayer, list< pair<const char*, int> > otherPlayers)
+int MainScreen::drawScreen(const char* fileImageAvatar, int numRound, int maxRounds, const char* namePlayer, const char* methodologyPlayer, 
+	int pointsPlayer, int resourcesPlayer, list< pair<const char*, int> > companiesPlayer, list< pair<const char*, int> > otherPlayers)
 {
 	// Grab new information...
 	MainScreen::fileImageAvatar = fileImageAvatar;
@@ -150,24 +149,28 @@ int MainScreen::waitForEvent()
 	ALLEGRO_EVENT event;
 	al_register_event_source(queue, al_get_mouse_event_source());
 
+	al_wait_for_event(queue, &event);
 	while (1)
 	{
-		al_wait_for_event(queue, &event);
 		if (event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
 		{
 			int centerX = VERT_LINE_PLAYERS_WIDTH * width / 2;
 			int centerY = (HOR_LINE_INFO_PLAYER_HEIGHT - HOR_LINE_ROUNDS_HEIGHT) * height / 2;
 			double dist = (event.mouse.x - centerX) * (event.mouse.x - centerX) + (event.mouse.y - centerY) * (event.mouse.y - centerY);
 			if (dist <= 16900)
-				rotateRoullete();
+				return rotateRoullete();
 			else if (event.mouse.y < 215 && event.mouse.y > 135 && event.mouse.x < VERT_LINE_PLAYERS_WIDTH * width && 
 				event.mouse.x > VERT_LINE_PLAYERS_WIDTH * width - 200)
-				confirmPurchase();
+			{
+				if (confirmPurchase() == 1)
+					return 11;
+				else
+					return 0;
+			}
 			else if (event.mouse.y < 315 && event.mouse.y > 235 && event.mouse.x < VERT_LINE_PLAYERS_WIDTH * width && 
 				event.mouse.x > VERT_LINE_PLAYERS_WIDTH * width - 200)
-				confirmCertification();
+				return 11 + confirmCertification();
 		}
-		al_flush_event_queue(queue);
 	}
 
 	return 0;
@@ -459,33 +462,4 @@ int MainScreen::drawAvatar(const char* filename)
 		heightAvailable, 0);
 	al_destroy_bitmap(imageAvatar);
 	return 1;
-}
-
-int main()
-{
-	if (!al_init())
-	{
-		fprintf(stderr, "failed to initialize allegro!\n");
-		return EXIT_FAILURE;
-	}
-	al_init_native_dialog_addon();
-	al_init_image_addon();
-	al_init_primitives_addon();
-	al_init_font_addon();
-	al_init_ttf_addon();
-	al_install_mouse();
-	srand(time(NULL));
-
-	MainScreen screen;
-	list< pair<const char*, int> > otherPlayers;
-	otherPlayers.push_back(pair<const char*, int>("Maria Souza", 210));
-	otherPlayers.push_back(pair<const char*, int>("Antônio Alberto", 150));
-	list< pair<const char*, int> > companies;
-	companies.push_back(pair<const char*, int>("Empresa 1", 1));
-	companies.push_back(pair<const char*, int>("Empresa 2", 5));
-	companies.push_back(pair<const char*, int>("Empresa 3", 3));
-	screen.drawScreen("figuras/avatar.jpg", 1, 10, "João da Silva", "XP", 160, 1000000, companies, otherPlayers);	
-	screen.waitForEvent();
-
-	return EXIT_SUCCESS;
 }

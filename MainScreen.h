@@ -32,7 +32,7 @@ class MainScreen
 		int pointsPlayer, resourcePlayer, numRound, maxRounds;
 		std::list< std::pair<const char*, int> > otherPlayers, companiesPlayer;
 
-		void rotateRoullete();
+		int rotateRoullete();
 		int confirmPurchase();
 		int confirmCertification();
 
@@ -53,8 +53,8 @@ class MainScreen
 
 	public:
 		MainScreen();
-		int drawScreen(char* fileImageAvatar, int numRound, int maxRounds, char* namePlayer, char* methodologyPlayer, int points, 
-			int resources, std::list< std::pair<const char*, int> > companiesPlayer, 
+		int drawScreen(const char* fileImageAvatar, int numRound, int maxRounds, const char* namePlayer, 
+			const char* methodologyPlayer, int points, int resources, std::list< std::pair<const char*, int> > companiesPlayer, 
 			std::list< std::pair<const char*, int> > otherPlayers);
 		int waitForEvent();
 };
