@@ -6,6 +6,7 @@
 #include <allegro5/allegro_native_dialog.h>
 
 #include <list>
+#include <string>
 
 #define HOR_LINE_INFO_PLAYER_HEIGHT 0.65
 #define HOR_LINE_ROUNDS_HEIGHT 0.05
@@ -28,7 +29,7 @@ class MainScreen
 		int height, width;
 		float angle;
 
-		char *fileImageAvatar, *namePlayer, *methodologyPlayer;
+		std::string fileImageAvatar, namePlayer, methodologyPlayer;
 		int pointsPlayer, resourcePlayer, numRound, maxRounds;
 		std::list< std::pair<const char*, int> > otherPlayers, companiesPlayer;
 
@@ -46,15 +47,16 @@ class MainScreen
 		int drawLegendArrow();
 		int drawButtons();
 		int drawAvatar(const char* filename);
-		int drawPlayerInfo(char* playerName, char* methodology, int currentPoints, int currentMoney, 
-			std::list< std::pair<const char*, int> > companies);
-		int drawOtherPlayers(std::list< std::pair<const char*, int> > otherPlayers);
+		int drawPlayerInfo(const char* playerName, const char* methodology, int currentPoints, int currentMoney, 
+			const std::list< std::pair<const char*, int> >& companies);
+		int drawOtherPlayers(const std::list< std::pair<const char*, int> >& otherPlayers);
 		int drawRounds(int roundNumber, int totalRounds);
 
 	public:
 		MainScreen();
 		int drawScreen(const char* fileImageAvatar, int numRound, int maxRounds, const char* namePlayer, 
-			const char* methodologyPlayer, int points, int resources, std::list< std::pair<const char*, int> > companiesPlayer, 
-			std::list< std::pair<const char*, int> > otherPlayers);
+			const char* methodologyPlayer, int points, int resources, const std::list< std::pair<const char*, int> >& companiesPlayer, 
+			const std::list< std::pair<const char*, int> >& otherPlayers);
 		int waitForEvent();
+		void showMessage(const char* caption, const char* header, const char* text, bool error);
 };

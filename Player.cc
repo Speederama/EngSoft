@@ -21,10 +21,19 @@ void Player::addResources(int resources)
 		resourcesPlayer += resources;
 }
 
-void Player::removeResources(int resources)
+int Player::removeResources(int resources, bool force)
 {
-	if (resources > 0 && resources < resourcesPlayer)
+	if (resources > 0 && resources <= resourcesPlayer)
+	{
 		resourcesPlayer -= resources;
+		return 1;
+	}
+	else if (force)
+	{
+		resourcesPlayer = 0;
+		return 1;
+	}
+	return 0;
 }
 
 int Player::buyCompany(const char* nameCompany)
@@ -34,11 +43,11 @@ int Player::buyCompany(const char* nameCompany)
 		if (strcmp(it->getName(), nameCompany) == 0)
 			return -1;
 	}
-	if (resourcesPlayer >= COMPANY_PRICE)
+	if (removeResources(COMPANY_PRICE, false) == 1)
 	{
-		resourcesPlayer -= COMPANY_PRICE;
 		Company company(nameCompany);
 		listCompanies.push_back(company);
+		updatePoints();
 		return 1;
 	}
 	else
@@ -51,10 +60,10 @@ int Player::certifyCompany(const char* nameCompany)
 	{
 		if (strcmp(it->getName(), nameCompany) == 0)
 		{
-			if (it->getCertificationCost() <= resourcesPlayer)
+			if (removeResources(it->getCertificationCost(), false) == 1)
 			{
-				resourcesPlayer -= it->getCertificationCost();
 				it->upLevel();
+				updatePoints();
 				return 1;
 			}
 			else
@@ -67,5 +76,8 @@ int Player::certifyCompany(const char* nameCompany)
 
 void Player::updatePoints()
 {
-  //TODO
+	int sumLevel = 0;
+	for (list<Company>::iterator it = listCompanies.begin(); it != listCompanies.end(); ++it)
+		sumLevel += it->getLevel() - 1;
+	pointsPlayer = 100 * getNumEmpresas() + 50 * sumLevel;
 }

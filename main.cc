@@ -34,11 +34,11 @@ int main()
 	infoPlayers.push_back(pair<pair<const char*, const char*>, const char*>(pair<const char*, const char*>("João da Silva", "XP"), 
 		"figuras/avatar.jpg"));
 	infoPlayers.push_back(pair<pair<const char*, const char*>, const char*>(pair<const char*, const char*>("Maria Souza", "Scrum"), 
-		"figuras/avatar.jpg"));
+		"figuras/hebe.jpg"));
 	infoPlayers.push_back(pair<pair<const char*, const char*>, const char*>(pair<const char*, const char*>("Antônio Alberto", "Praxis"), 
-		"figuras/avatar.jpg"));
+		"figuras/gugu.jpg"));
 	infoPlayers.push_back(pair<pair<const char*, const char*>, const char*>(pair<const char*, const char*>("Clara Nunes", "Kanban"), 
-		"figuras/avatar.jpg"));
+		"figuras/xuxa.jpg"));
 
 	printf("Starting game...\n");
 	Game game(infoPlayers, 5);

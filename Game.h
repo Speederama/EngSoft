@@ -13,10 +13,10 @@ class Game
 		int currentRound;
 		int numberRounds;
 
-		void round(MainScreen screen);
+		void round(MainScreen& screen);
 		void endGame();
 	public:
-		Game(std::list< std::pair<std::pair<const char*, const char*>, const char*> > infoPlayers, int numRounds);
+		Game(const std::list< std::pair<std::pair<const char*, const char*>, const char*> >& infoPlayers, int numRounds);
 
 		void startGame();
 };

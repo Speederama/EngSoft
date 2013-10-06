@@ -45,7 +45,7 @@ int MainScreen::rotateRoullete()
 			return showQuestion(false);
 		case 3:
 			showCard(true);
-			return 11;
+			return 9;
 	}
 	return 0;
 }
@@ -79,10 +79,10 @@ int MainScreen::drawScreen()
 	drawButtons();
 
 	// Draw player-related stuff..
-	drawAvatar(fileImageAvatar);
+	drawAvatar(fileImageAvatar.data());
 	drawRounds(numRound, maxRounds);
 	drawOtherPlayers(otherPlayers);
-	drawPlayerInfo(namePlayer, methodologyPlayer, pointsPlayer, resourcePlayer, companiesPlayer);
+	drawPlayerInfo(namePlayer.data(), methodologyPlayer.data(), pointsPlayer, resourcePlayer, companiesPlayer);
 
 	al_flip_display();
 
@@ -91,7 +91,8 @@ int MainScreen::drawScreen()
 
 /* Draws screen reseting the current information */
 int MainScreen::drawScreen(const char* fileImageAvatar, int numRound, int maxRounds, const char* namePlayer, const char* methodologyPlayer, 
-	int pointsPlayer, int resourcesPlayer, list< pair<const char*, int> > companiesPlayer, list< pair<const char*, int> > otherPlayers)
+	int pointsPlayer, int resourcesPlayer, const list< pair<const char*, int> >& companiesPlayer, 
+	const list< pair<const char*, int> >& otherPlayers)
 {
 	// Grab new information...
 	MainScreen::fileImageAvatar = fileImageAvatar;
@@ -149,9 +150,9 @@ int MainScreen::waitForEvent()
 	ALLEGRO_EVENT event;
 	al_register_event_source(queue, al_get_mouse_event_source());
 
-	al_wait_for_event(queue, &event);
 	while (1)
 	{
+		al_wait_for_event(queue, &event);
 		if (event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
 		{
 			int centerX = VERT_LINE_PLAYERS_WIDTH * width / 2;
@@ -169,11 +170,26 @@ int MainScreen::waitForEvent()
 			}
 			else if (event.mouse.y < 315 && event.mouse.y > 235 && event.mouse.x < VERT_LINE_PLAYERS_WIDTH * width && 
 				event.mouse.x > VERT_LINE_PLAYERS_WIDTH * width - 200)
-				return 11 + confirmCertification();
+			{
+				int answer = confirmCertification();
+				if (answer == 0)
+					return 0;
+				else
+					return 11 + answer;
+			}
 		}
 	}
 
 	return 0;
+}
+
+/* Shows message box to inform error to user */
+void MainScreen::showMessage(const char* caption, const char* header, const char* text, bool error)
+{
+	if (error)
+		al_show_native_message_box(display, caption, header, text, NULL, ALLEGRO_MESSAGEBOX_ERROR);
+	else
+		al_show_native_message_box(display, caption, header, text, "OK", ALLEGRO_MESSAGEBOX_OK_CANCEL);
 }
 
 /* Shows message box to confirm the purchase of a new company */
@@ -187,22 +203,40 @@ int MainScreen::confirmPurchase()
 /* Shows message box to allow user to select which company to improve */
 int MainScreen::confirmCertification()
 {
-	char text[1024];
-	int count = 0;
-	for (list< pair<const char*, int> >::iterator it = companiesPlayer.begin(); it != companiesPlayer.end(); ++it)
+	if (companiesPlayer.size() > 0)
 	{
-		if (it->second < 5)
+		char text[1024];
+		int count = 0;
+		for (list< pair<const char*, int> >::iterator it = companiesPlayer.begin(); it != companiesPlayer.end(); ++it)
 		{
-			if (count == 0)
-				sprintf(text, "%s (R$ %d)", it->first, it->second * 100000);
-			else
-				sprintf(text, "%s|%s (R$ %d)", text, it->first, it->second * 100000);
-			count += 1;
+			if (it->second < 5)
+			{
+				if (count == 0)
+					sprintf(text, "%s (R$ %d)", it->first, it->second * 100000);
+				else
+					sprintf(text, "%s|%s (R$ %d)", text, it->first, it->second * 100000);
+				count += 1;
+			}
+		}
+		if (count > 0)
+		{
+			int answer = al_show_native_message_box(display, "Certificação de Empresa", "Certificação de Empresa", 
+				"Qual empresa você deseja certificar?", text, ALLEGRO_MESSAGEBOX_QUESTION);
+			return answer;
+		}
+		else
+		{
+			al_show_native_message_box(display, "Certificação de Empresa", "Certificação de Empresa", 
+				"Todas suas empresas possuem o nível máximo de certificação!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+			return 0;
 		}
 	}
-	int answer = al_show_native_message_box(display, "Certificação de Empresa", "Certificação de Empresa", 
-		"Qual empresa você deseja certificar?", text, ALLEGRO_MESSAGEBOX_QUESTION);
-	return answer;
+	else
+	{
+		al_show_native_message_box(display, "Certificação de Empresa", "Certificação de Empresa", 
+			"Você não possui empresas para certificar", NULL, ALLEGRO_MESSAGEBOX_ERROR);
+		return 0;
+	}
 }
 
 /* Shows message box with specific or general question */
@@ -377,7 +411,7 @@ int MainScreen::drawRounds(int roundNumber, int totalRounds)
 }
 
 /* Draws info about other players */
-int MainScreen::drawOtherPlayers(list< pair<const char*, int> > otherPlayers)
+int MainScreen::drawOtherPlayers(const list< pair<const char*, int> >& otherPlayers)
 {
 	ALLEGRO_FONT *fontOtherPlayers = NULL;
 	fontOtherPlayers = al_load_ttf_font("DejaVuSans.ttf", 15, 0);
@@ -388,7 +422,7 @@ int MainScreen::drawOtherPlayers(list< pair<const char*, int> > otherPlayers)
 	}
 
 	float offset = 0.0;
-	for (list< pair<const char*, int> >::iterator it = otherPlayers.begin(); it != otherPlayers.end(); ++it)
+	for (list< pair<const char*, int> >::const_iterator it = otherPlayers.begin(); it != otherPlayers.end(); ++it)
 	{
 		char text[1024];
 		sprintf(text, "%s - Pontuação: %d", it->first, it->second);
@@ -399,7 +433,8 @@ int MainScreen::drawOtherPlayers(list< pair<const char*, int> > otherPlayers)
 	return 1;
 }
 
-int MainScreen::drawPlayerInfo(char* playerName, char* methodology, int currentPoints, int currentMoney, list< pair<const char*, int> > companies)
+int MainScreen::drawPlayerInfo(const char* playerName, const char* methodology, int currentPoints, int currentMoney, 
+	const list< pair<const char*, int> >& companies)
 {
 	ALLEGRO_FONT *fontInfoPlayer = NULL;
 	fontInfoPlayer = al_load_ttf_font("DejaVuSans.ttf", 15, 0);
@@ -427,7 +462,7 @@ int MainScreen::drawPlayerInfo(char* playerName, char* methodology, int currentP
 		(HOR_LINE_INFO_PLAYER_HEIGHT + 0.20) * height, 0, resource);
 
 	int count = 0;
-	for (list< pair<const char*, int> >::iterator it = companies.begin(); it != companies.end(); ++it)
+	for (list< pair<const char*, int> >::const_iterator it = companies.begin(); it != companies.end(); ++it)
 	{
 		char text[1024];
 		sprintf(text, "%s - CMMI %d", it->first, it->second);

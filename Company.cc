@@ -5,20 +5,8 @@
 
 Company::Company(const char* name)
 {
-	nameCompany = (char*) malloc(sizeof(char) * (strlen(name) + 1 ));
-	strcpy(nameCompany, name);
+	nameCompany = name;
 	levelCMMI = 1;
-}
-
-Company::~Company()
-{
-	if (nameCompany != NULL)
-		free(nameCompany);
-}
-
-char* Company::getName()
-{
-	return nameCompany;
 }
 
 void Company::upLevel()
@@ -33,14 +21,9 @@ void Company::downLevel()
 		levelCMMI -= 1;
 }
 
-int Company::getLevel()
-{
-	return levelCMMI;
-}
-
-int Company::getCertificationCost()
+int Company::getCertificationCost() const
 {
 	//TODO
 
-	return 100000;
+	return 100000 * levelCMMI;
 }

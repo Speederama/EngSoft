@@ -3,7 +3,7 @@
 
 #include "Company.h"
 
-#define INITIAL_RESOURCES 1000000
+#define INITIAL_RESOURCES 2000000
 
 class Player
 {
@@ -18,25 +18,23 @@ class Player
 	public:
 		Player(const char* namePlayer, const char* methodologyPlayer, const char* fileAvatar);
 
-		inline const char* getName() { return namePlayer.data(); }
-		inline void setName(const char* name) { namePlayer = name; }
+		inline const char* getName() const { return namePlayer.data(); }
 
-		inline const char* getMethodology() { return methodologyPlayer.data(); }
-		inline void setMethodology(const char* name) { methodologyPlayer = name; }
+		inline const char* getMethodology() const { return methodologyPlayer.data(); }
 
-		inline int getNumEmpresas() { return listCompanies.size(); }
+		inline int getNumEmpresas() const { return listCompanies.size(); }
 
-		inline int getPoints() { return pointsPlayer; }
+		inline int getPoints() const { return pointsPlayer; }
 
-		inline int getResources() { return resourcesPlayer; }
+		inline int getResources() const { return resourcesPlayer; }
 		void addResources(int resources);
-		void removeResources(int resources);
+		int removeResources(int resources, bool force);
 
 		int buyCompany(const char* nameCompany);
 
 		int certifyCompany(const char* nameCompany);
 
-		inline std::list<Company> getCompanies() { return listCompanies; }
+		inline const std::list<Company>& getCompanies() const { return listCompanies; }
 
-		inline const char* getFileAvatar() { return fileAvatar.data(); }
+		inline const char* getFileAvatar() const { return fileAvatar.data(); }
 };

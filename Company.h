@@ -1,20 +1,20 @@
+#include <string>
+
 #define COMPANY_PRICE 500000
 
 class Company
 {
 	private:
-		char* nameCompany;
+		std::string nameCompany;
 		int levelCMMI;
 	public:
 		Company(const char* name);
-		~Company();
 
-		char* getName();
-		void setName(const char* name);
+		inline const char* getName() const { return nameCompany.data(); }
 
 		void upLevel();
 		void downLevel();
-		int getLevel();
+		inline int getLevel() const { return levelCMMI; }
 
-		int getCertificationCost();
+		int getCertificationCost() const;
 };
