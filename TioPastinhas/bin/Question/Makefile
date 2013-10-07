@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src
+CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin
+CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/Question/CMakeFiles/progress.marks
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Question/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 0
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Question/CMakeFiles/progress.marks
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Question/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Question/clean
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Question/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,22 +88,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Question/preinstall
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Question/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Question/preinstall
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Question/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Question/CMakeFiles/Question.dir/rule:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Question/CMakeFiles/Question.dir/rule
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Question/CMakeFiles/Question.dir/rule
 .PHONY : Question/CMakeFiles/Question.dir/rule
 
 # Convenience name for target.
@@ -112,7 +112,7 @@ Question: Question/CMakeFiles/Question.dir/rule
 
 # fast build rule for target.
 Question/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/build
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/build
 .PHONY : Question/fast
 
 Question.o: Question.cc.o
@@ -120,7 +120,7 @@ Question.o: Question.cc.o
 
 # target to build an object file
 Question.cc.o:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/Question.cc.o
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/Question.cc.o
 .PHONY : Question.cc.o
 
 Question.i: Question.cc.i
@@ -128,7 +128,7 @@ Question.i: Question.cc.i
 
 # target to preprocess a source file
 Question.cc.i:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/Question.cc.i
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/Question.cc.i
 .PHONY : Question.cc.i
 
 Question.s: Question.cc.s
@@ -136,7 +136,7 @@ Question.s: Question.cc.s
 
 # target to generate assembly for a file
 Question.cc.s:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/Question.cc.s
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/Question.cc.s
 .PHONY : Question.cc.s
 
 # Help Target
@@ -162,6 +162,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

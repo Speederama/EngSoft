@@ -1,4 +1,4 @@
-# Install script for directory: /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Game
+# Install script for directory: /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Game
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

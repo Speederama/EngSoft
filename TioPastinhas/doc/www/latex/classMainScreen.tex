@@ -15,6 +15,14 @@ int \hyperlink{classMainScreen_aa060b16684e89d25104f2fa9cc751961}{draw\-Screen} 
 int \hyperlink{classMainScreen_a44cfe11e0495894b7cce6fbba1395a90}{wait\-For\-Event} ()
 \item 
 void \hyperlink{classMainScreen_a055b854813b4a149f4eb43d0a7a4c574}{show\-Message} (const char $\ast$caption, const char $\ast$header, const char $\ast$text, bool error)
+\item 
+\hyperlink{classMainScreen_afe04f97c6cbff7dc13f03344c74e3253}{Main\-Screen} ()
+\item 
+int \hyperlink{classMainScreen_aa060b16684e89d25104f2fa9cc751961}{draw\-Screen} (const char $\ast$file\-Image\-Avatar, int num\-Round, int max\-Rounds, const char $\ast$name\-Player, const char $\ast$methodology\-Player, int points, int resources, const std\-::list$<$ std\-::pair$<$ const char $\ast$, int $>$ $>$ \&companies\-Player, const std\-::list$<$ std\-::pair$<$ const char $\ast$, int $>$ $>$ \&other\-Players)
+\item 
+int \hyperlink{classMainScreen_a44cfe11e0495894b7cce6fbba1395a90}{wait\-For\-Event} ()
+\item 
+void \hyperlink{classMainScreen_a055b854813b4a149f4eb43d0a7a4c574}{show\-Message} (const char $\ast$caption, const char $\ast$header, const char $\ast$text, bool error)
 \end{DoxyCompactItemize}
 
 
@@ -36,9 +44,31 @@ void \hyperlink{classMainScreen_a055b854813b4a149f4eb43d0a7a4c574}{show\-Message
 18     width = 0;
 19 \}
 \end{DoxyCode}
+\hypertarget{classMainScreen_afe04f97c6cbff7dc13f03344c74e3253}{\index{Main\-Screen@{Main\-Screen}!Main\-Screen@{Main\-Screen}}
+\index{Main\-Screen@{Main\-Screen}!MainScreen@{Main\-Screen}}
+\subsubsection[{Main\-Screen}]{\setlength{\rightskip}{0pt plus 5cm}Main\-Screen\-::\-Main\-Screen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMainScreen_afe04f97c6cbff7dc13f03344c74e3253}
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classMainScreen_aa060b16684e89d25104f2fa9cc751961}{\index{Main\-Screen@{Main\-Screen}!draw\-Screen@{draw\-Screen}}
+\index{draw\-Screen@{draw\-Screen}!MainScreen@{Main\-Screen}}
+\subsubsection[{draw\-Screen}]{\setlength{\rightskip}{0pt plus 5cm}int Main\-Screen\-::draw\-Screen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\-Image\-Avatar, }
+\item[{int}]{num\-Round, }
+\item[{int}]{max\-Rounds, }
+\item[{const char $\ast$}]{name\-Player, }
+\item[{const char $\ast$}]{methodology\-Player, }
+\item[{int}]{points, }
+\item[{int}]{resources, }
+\item[{const std\-::list$<$ std\-::pair$<$ const char $\ast$, int $>$ $>$ \&}]{companies\-Player, }
+\item[{const std\-::list$<$ std\-::pair$<$ const char $\ast$, int $>$ $>$ \&}]{other\-Players}
+\end{DoxyParamCaption}
+)}}\label{classMainScreen_aa060b16684e89d25104f2fa9cc751961}
 \hypertarget{classMainScreen_aa060b16684e89d25104f2fa9cc751961}{\index{Main\-Screen@{Main\-Screen}!draw\-Screen@{draw\-Screen}}
 \index{draw\-Screen@{draw\-Screen}!MainScreen@{Main\-Screen}}
 \subsubsection[{draw\-Screen}]{\setlength{\rightskip}{0pt plus 5cm}int Main\-Screen\-::draw\-Screen (
@@ -64,6 +94,16 @@ void \hyperlink{classMainScreen_a055b854813b4a149f4eb43d0a7a4c574}{show\-Message
 \item[{bool}]{error}
 \end{DoxyParamCaption}
 )}}\label{classMainScreen_a055b854813b4a149f4eb43d0a7a4c574}
+\hypertarget{classMainScreen_a055b854813b4a149f4eb43d0a7a4c574}{\index{Main\-Screen@{Main\-Screen}!show\-Message@{show\-Message}}
+\index{show\-Message@{show\-Message}!MainScreen@{Main\-Screen}}
+\subsubsection[{show\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Screen\-::show\-Message (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{caption, }
+\item[{const char $\ast$}]{header, }
+\item[{const char $\ast$}]{text, }
+\item[{bool}]{error}
+\end{DoxyParamCaption}
+)}}\label{classMainScreen_a055b854813b4a149f4eb43d0a7a4c574}
 
 \begin{DoxyCode}
 189 \{
@@ -73,6 +113,13 @@ void \hyperlink{classMainScreen_a055b854813b4a149f4eb43d0a7a4c574}{show\-Message
 193         al\_show\_native\_message\_box(display, caption, header, text, \textcolor{stringliteral}{"OK"}, ALLEGRO\_MESSAGEBOX\_OK\_CANCEL);
 194 \}
 \end{DoxyCode}
+\hypertarget{classMainScreen_a44cfe11e0495894b7cce6fbba1395a90}{\index{Main\-Screen@{Main\-Screen}!wait\-For\-Event@{wait\-For\-Event}}
+\index{wait\-For\-Event@{wait\-For\-Event}!MainScreen@{Main\-Screen}}
+\subsubsection[{wait\-For\-Event}]{\setlength{\rightskip}{0pt plus 5cm}int Main\-Screen\-::wait\-For\-Event (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMainScreen_a44cfe11e0495894b7cce6fbba1395a90}
 \hypertarget{classMainScreen_a44cfe11e0495894b7cce6fbba1395a90}{\index{Main\-Screen@{Main\-Screen}!wait\-For\-Event@{wait\-For\-Event}}
 \index{wait\-For\-Event@{wait\-For\-Event}!MainScreen@{Main\-Screen}}
 \subsubsection[{wait\-For\-Event}]{\setlength{\rightskip}{0pt plus 5cm}int Main\-Screen\-::wait\-For\-Event (
@@ -129,4 +176,6 @@ void \hyperlink{classMainScreen_a055b854813b4a149f4eb43d0a7a4c574}{show\-Message
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
 Screen/\hyperlink{MainScreen_8h}{Main\-Screen.\-h}\item 
-Screen/\hyperlink{MainScreen_8cc}{Main\-Screen.\-cc}\end{DoxyCompactItemize}
+Screen/\hyperlink{Screen_8h}{Screen.\-h}\item 
+Screen/\hyperlink{MainScreen_8cc}{Main\-Screen.\-cc}\item 
+Screen/\hyperlink{Screen_8cc}{Screen.\-cc}\end{DoxyCompactItemize}

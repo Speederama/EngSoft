@@ -1,0 +1,965 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classMainScreen" kind="class" prot="public">
+    <compoundname>MainScreen</compoundname>
+    <includes refid="MainScreen_8h" local="no">MainScreen.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMainScreen_1a46cbd98c245991838a1f20807693b7c7" prot="private" static="no" mutable="no">
+        <type>ALLEGRO_DISPLAY *</type>
+        <definition>ALLEGRO_DISPLAY * MainScreen::display</definition>
+        <argsstring></argsstring>
+        <name>display</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="25" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1acd84a4744564ada8ad8a8a9ea8d25b2a" prot="private" static="no" mutable="no">
+        <type>ALLEGRO_DISPLAY_MODE</type>
+        <definition>ALLEGRO_DISPLAY_MODE MainScreen::disp_data</definition>
+        <argsstring></argsstring>
+        <name>disp_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="26" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1a7bc906b9476810a9b540aa8342155b23" prot="private" static="no" mutable="no">
+        <type>ALLEGRO_BITMAP *</type>
+        <definition>ALLEGRO_BITMAP * MainScreen::imageRoullete</definition>
+        <argsstring></argsstring>
+        <name>imageRoullete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="27" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1a27f057ad7619e6d4c429bf1f7f30c5ed" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MainScreen::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="29" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1a086aba68f88c7fc23938a5e7a7f18f2e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MainScreen::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="29" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1af4a08d4c39cb5c322db9bdd04ca20194" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MainScreen::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="30" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1aa5ed4882ec02ec4cc2b93354d142e092" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MainScreen::fileImageAvatar</definition>
+        <argsstring></argsstring>
+        <name>fileImageAvatar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="32" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1aa49463a63ae76b636c24d1fcd2873517" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MainScreen::namePlayer</definition>
+        <argsstring></argsstring>
+        <name>namePlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="32" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1a3350a59069d77414fc030bd9a869f443" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MainScreen::methodologyPlayer</definition>
+        <argsstring></argsstring>
+        <name>methodologyPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="32" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1adbc6e46c5651229f90c3050750054579" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MainScreen::pointsPlayer</definition>
+        <argsstring></argsstring>
+        <name>pointsPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="33" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1a36329c88db4a122bc5d7e5ba327c7a3c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MainScreen::resourcePlayer</definition>
+        <argsstring></argsstring>
+        <name>resourcePlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="33" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1a166fea5002b8d8fa6376fa969303a030" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MainScreen::numRound</definition>
+        <argsstring></argsstring>
+        <name>numRound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="33" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1a14a3704ea95e4641ca7239fca0af1872" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MainScreen::maxRounds</definition>
+        <argsstring></argsstring>
+        <name>maxRounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="33" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1a12146d5fe2d643b124a446aea8fc0f0a" prot="private" static="no" mutable="no">
+        <type>std::list&lt; std::pair&lt; const char *, int &gt; &gt;</type>
+        <definition>std::list&lt; std::pair&lt; const char *, int &gt; &gt; MainScreen::otherPlayers</definition>
+        <argsstring></argsstring>
+        <name>otherPlayers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="34" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainScreen_1a456c53e779f39d12531d928f293c0f82" prot="private" static="no" mutable="no">
+        <type>std::list&lt; std::pair&lt; const char *, int &gt; &gt;</type>
+        <definition>std::list&lt; std::pair&lt; const char *, int &gt; &gt; MainScreen::companiesPlayer</definition>
+        <argsstring></argsstring>
+        <name>companiesPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="34" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classMainScreen_1a3abb57a41ac05a0132fea2fb2b0322cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::rotateRoullete</definition>
+        <argsstring>()</argsstring>
+        <name>rotateRoullete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="36" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="22" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a14c2e26b39bdc9f36ffb50e967090d5b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::confirmPurchase</definition>
+        <argsstring>()</argsstring>
+        <name>confirmPurchase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="37" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="197" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a0720b3cfbd832b3524f8380bb6acdaf1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::confirmCertification</definition>
+        <argsstring>()</argsstring>
+        <name>confirmCertification</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="38" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="205" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a6e79ef23190420f2347b22dcd6f77f31" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::showQuestion</definition>
+        <argsstring>(bool specific)</argsstring>
+        <name>showQuestion</name>
+        <param>
+          <type>bool</type>
+          <declname>specific</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="40" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="244" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1ac44b0cf1e38e4d0a0efefaf6dd82c934" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::showCard</definition>
+        <argsstring>(bool lucky)</argsstring>
+        <name>showCard</name>
+        <param>
+          <type>bool</type>
+          <declname>lucky</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="41" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="257" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1acbe5e16a755d7c0c04540b2b67adc7ea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawScreen</definition>
+        <argsstring>()</argsstring>
+        <name>drawScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="43" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="55" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a4a6f3d75735da18d7a41b6057dba8d83" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawBackground</definition>
+        <argsstring>()</argsstring>
+        <name>drawBackground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="44" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="270" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1ad786ccf49e95fd289c663180a3a2e041" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawLinesText</definition>
+        <argsstring>()</argsstring>
+        <name>drawLinesText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="45" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="283" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1ac49e85106242c9f70588c54700b63345" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawRoullete</definition>
+        <argsstring>(float angle)</argsstring>
+        <name>drawRoullete</name>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="46" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="384" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a0a13508a3a6916c3233594dea084dba9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawLegendArrow</definition>
+        <argsstring>()</argsstring>
+        <name>drawLegendArrow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="47" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="362" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a0d242517619462b306cf2c0527679294" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawButtons</definition>
+        <argsstring>()</argsstring>
+        <name>drawButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="48" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="339" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1acaaf34ec8ddb262c462b951893925931" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawAvatar</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>drawAvatar</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="49" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="482" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a4fad18d707557d1e0ce1e7b7191964e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawPlayerInfo</definition>
+        <argsstring>(const char *playerName, const char *methodology, int currentPoints, int currentMoney, const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;companies)</argsstring>
+        <name>drawPlayerInfo</name>
+        <param>
+          <type>const char *</type>
+          <declname>playerName</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>methodology</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>currentPoints</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>currentMoney</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>companies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1ac8b957d6eb5670552260b5fc20e99d14" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawOtherPlayers</definition>
+        <argsstring>(const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;otherPlayers)</argsstring>
+        <name>drawOtherPlayers</name>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>otherPlayers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1aa23cd6de77074d4fb9fc2eff7f8e0b53" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawRounds</definition>
+        <argsstring>(int roundNumber, int totalRounds)</argsstring>
+        <name>drawRounds</name>
+        <param>
+          <type>int</type>
+          <declname>roundNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>totalRounds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="53" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="397" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a3abb57a41ac05a0132fea2fb2b0322cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::rotateRoullete</definition>
+        <argsstring>()</argsstring>
+        <name>rotateRoullete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a14c2e26b39bdc9f36ffb50e967090d5b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::confirmPurchase</definition>
+        <argsstring>()</argsstring>
+        <name>confirmPurchase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a0720b3cfbd832b3524f8380bb6acdaf1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::confirmCertification</definition>
+        <argsstring>()</argsstring>
+        <name>confirmCertification</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a6e79ef23190420f2347b22dcd6f77f31" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::showQuestion</definition>
+        <argsstring>(bool specific)</argsstring>
+        <name>showQuestion</name>
+        <param>
+          <type>bool</type>
+          <declname>specific</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1ac44b0cf1e38e4d0a0efefaf6dd82c934" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::showCard</definition>
+        <argsstring>(bool lucky)</argsstring>
+        <name>showCard</name>
+        <param>
+          <type>bool</type>
+          <declname>lucky</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1acbe5e16a755d7c0c04540b2b67adc7ea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawScreen</definition>
+        <argsstring>()</argsstring>
+        <name>drawScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a4a6f3d75735da18d7a41b6057dba8d83" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawBackground</definition>
+        <argsstring>()</argsstring>
+        <name>drawBackground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1ad786ccf49e95fd289c663180a3a2e041" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawLinesText</definition>
+        <argsstring>()</argsstring>
+        <name>drawLinesText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1ac49e85106242c9f70588c54700b63345" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawRoullete</definition>
+        <argsstring>(float angle)</argsstring>
+        <name>drawRoullete</name>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a0a13508a3a6916c3233594dea084dba9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawLegendArrow</definition>
+        <argsstring>()</argsstring>
+        <name>drawLegendArrow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a0d242517619462b306cf2c0527679294" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawButtons</definition>
+        <argsstring>()</argsstring>
+        <name>drawButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1acaaf34ec8ddb262c462b951893925931" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawAvatar</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>drawAvatar</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a4fad18d707557d1e0ce1e7b7191964e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawPlayerInfo</definition>
+        <argsstring>(const char *playerName, const char *methodology, int currentPoints, int currentMoney, const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;companies)</argsstring>
+        <name>drawPlayerInfo</name>
+        <param>
+          <type>const char *</type>
+          <declname>playerName</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>methodology</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>currentPoints</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>currentMoney</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>companies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1ac8b957d6eb5670552260b5fc20e99d14" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawOtherPlayers</definition>
+        <argsstring>(const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;otherPlayers)</argsstring>
+        <name>drawOtherPlayers</name>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>otherPlayers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1aa23cd6de77074d4fb9fc2eff7f8e0b53" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawRounds</definition>
+        <argsstring>(int roundNumber, int totalRounds)</argsstring>
+        <name>drawRounds</name>
+        <param>
+          <type>int</type>
+          <declname>roundNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>totalRounds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="52" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMainScreen_1afe04f97c6cbff7dc13f03344c74e3253" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainScreen::MainScreen</definition>
+        <argsstring>()</argsstring>
+        <name>MainScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="56" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="12" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1aa060b16684e89d25104f2fa9cc751961" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawScreen</definition>
+        <argsstring>(const char *fileImageAvatar, int numRound, int maxRounds, const char *namePlayer, const char *methodologyPlayer, int points, int resources, const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;companiesPlayer, const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;otherPlayers)</argsstring>
+        <name>drawScreen</name>
+        <param>
+          <type>const char *</type>
+          <declname>fileImageAvatar</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numRound</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxRounds</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>namePlayer</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>methodologyPlayer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>resources</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>companiesPlayer</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>otherPlayers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a44cfe11e0495894b7cce6fbba1395a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::waitForEvent</definition>
+        <argsstring>()</argsstring>
+        <name>waitForEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="60" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="148" bodyend="185"/>
+        <references refid="MainScreen_8h_1a95248267b1e9860a49b38b91d6060ac3" compoundref="MainScreen_8h" startline="13">VERT_LINE_PLAYERS_WIDTH</references>
+        <references refid="MainScreen_8h_1a317b5109da7c376133ac189c84b42640" compoundref="MainScreen_8h" startline="11">HOR_LINE_INFO_PLAYER_HEIGHT</references>
+        <references refid="MainScreen_8h_1a7e18b3decda36fa1ea88693a2e3db612" compoundref="MainScreen_8h" startline="12">HOR_LINE_ROUNDS_HEIGHT</references>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a055b854813b4a149f4eb43d0a7a4c574" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainScreen::showMessage</definition>
+        <argsstring>(const char *caption, const char *header, const char *text, bool error)</argsstring>
+        <name>showMessage</name>
+        <param>
+          <type>const char *</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="61" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc" bodystart="188" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1afe04f97c6cbff7dc13f03344c74e3253" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainScreen::MainScreen</definition>
+        <argsstring>()</argsstring>
+        <name>MainScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1aa060b16684e89d25104f2fa9cc751961" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::drawScreen</definition>
+        <argsstring>(const char *fileImageAvatar, int numRound, int maxRounds, const char *namePlayer, const char *methodologyPlayer, int points, int resources, const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;companiesPlayer, const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;otherPlayers)</argsstring>
+        <name>drawScreen</name>
+        <param>
+          <type>const char *</type>
+          <declname>fileImageAvatar</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numRound</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxRounds</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>namePlayer</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>methodologyPlayer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>resources</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>companiesPlayer</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>otherPlayers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a44cfe11e0495894b7cce6fbba1395a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MainScreen::waitForEvent</definition>
+        <argsstring>()</argsstring>
+        <name>waitForEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainScreen_1a055b854813b4a149f4eb43d0a7a4c574" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainScreen::showMessage</definition>
+        <argsstring>(const char *caption, const char *header, const char *text, bool error)</argsstring>
+        <name>showMessage</name>
+        <param>
+          <type>const char *</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/Screen.h" line="20" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" line="23" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h" bodystart="22" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classMainScreen_1af4a08d4c39cb5c322db9bdd04ca20194" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>angle</name></member>
+      <member refid="classMainScreen_1a456c53e779f39d12531d928f293c0f82" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>companiesPlayer</name></member>
+      <member refid="classMainScreen_1a0720b3cfbd832b3524f8380bb6acdaf1" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>confirmCertification</name></member>
+      <member refid="classMainScreen_1a0720b3cfbd832b3524f8380bb6acdaf1" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>confirmCertification</name></member>
+      <member refid="classMainScreen_1a14c2e26b39bdc9f36ffb50e967090d5b" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>confirmPurchase</name></member>
+      <member refid="classMainScreen_1a14c2e26b39bdc9f36ffb50e967090d5b" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>confirmPurchase</name></member>
+      <member refid="classMainScreen_1acd84a4744564ada8ad8a8a9ea8d25b2a" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>disp_data</name></member>
+      <member refid="classMainScreen_1a46cbd98c245991838a1f20807693b7c7" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>display</name></member>
+      <member refid="classMainScreen_1acaaf34ec8ddb262c462b951893925931" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawAvatar</name></member>
+      <member refid="classMainScreen_1acaaf34ec8ddb262c462b951893925931" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawAvatar</name></member>
+      <member refid="classMainScreen_1a4a6f3d75735da18d7a41b6057dba8d83" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawBackground</name></member>
+      <member refid="classMainScreen_1a4a6f3d75735da18d7a41b6057dba8d83" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawBackground</name></member>
+      <member refid="classMainScreen_1a0d242517619462b306cf2c0527679294" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawButtons</name></member>
+      <member refid="classMainScreen_1a0d242517619462b306cf2c0527679294" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawButtons</name></member>
+      <member refid="classMainScreen_1a0a13508a3a6916c3233594dea084dba9" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawLegendArrow</name></member>
+      <member refid="classMainScreen_1a0a13508a3a6916c3233594dea084dba9" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawLegendArrow</name></member>
+      <member refid="classMainScreen_1ad786ccf49e95fd289c663180a3a2e041" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawLinesText</name></member>
+      <member refid="classMainScreen_1ad786ccf49e95fd289c663180a3a2e041" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawLinesText</name></member>
+      <member refid="classMainScreen_1ac8b957d6eb5670552260b5fc20e99d14" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawOtherPlayers</name></member>
+      <member refid="classMainScreen_1ac8b957d6eb5670552260b5fc20e99d14" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawOtherPlayers</name></member>
+      <member refid="classMainScreen_1a4fad18d707557d1e0ce1e7b7191964e2" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawPlayerInfo</name></member>
+      <member refid="classMainScreen_1a4fad18d707557d1e0ce1e7b7191964e2" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawPlayerInfo</name></member>
+      <member refid="classMainScreen_1ac49e85106242c9f70588c54700b63345" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawRoullete</name></member>
+      <member refid="classMainScreen_1ac49e85106242c9f70588c54700b63345" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawRoullete</name></member>
+      <member refid="classMainScreen_1aa23cd6de77074d4fb9fc2eff7f8e0b53" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawRounds</name></member>
+      <member refid="classMainScreen_1aa23cd6de77074d4fb9fc2eff7f8e0b53" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawRounds</name></member>
+      <member refid="classMainScreen_1acbe5e16a755d7c0c04540b2b67adc7ea" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawScreen</name></member>
+      <member refid="classMainScreen_1aa060b16684e89d25104f2fa9cc751961" prot="public" virt="non-virtual"><scope>MainScreen</scope><name>drawScreen</name></member>
+      <member refid="classMainScreen_1aa060b16684e89d25104f2fa9cc751961" prot="public" virt="non-virtual"><scope>MainScreen</scope><name>drawScreen</name></member>
+      <member refid="classMainScreen_1acbe5e16a755d7c0c04540b2b67adc7ea" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>drawScreen</name></member>
+      <member refid="classMainScreen_1aa5ed4882ec02ec4cc2b93354d142e092" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>fileImageAvatar</name></member>
+      <member refid="classMainScreen_1a27f057ad7619e6d4c429bf1f7f30c5ed" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>height</name></member>
+      <member refid="classMainScreen_1a7bc906b9476810a9b540aa8342155b23" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>imageRoullete</name></member>
+      <member refid="classMainScreen_1afe04f97c6cbff7dc13f03344c74e3253" prot="public" virt="non-virtual"><scope>MainScreen</scope><name>MainScreen</name></member>
+      <member refid="classMainScreen_1afe04f97c6cbff7dc13f03344c74e3253" prot="public" virt="non-virtual"><scope>MainScreen</scope><name>MainScreen</name></member>
+      <member refid="classMainScreen_1a14a3704ea95e4641ca7239fca0af1872" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>maxRounds</name></member>
+      <member refid="classMainScreen_1a3350a59069d77414fc030bd9a869f443" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>methodologyPlayer</name></member>
+      <member refid="classMainScreen_1aa49463a63ae76b636c24d1fcd2873517" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>namePlayer</name></member>
+      <member refid="classMainScreen_1a166fea5002b8d8fa6376fa969303a030" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>numRound</name></member>
+      <member refid="classMainScreen_1a12146d5fe2d643b124a446aea8fc0f0a" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>otherPlayers</name></member>
+      <member refid="classMainScreen_1adbc6e46c5651229f90c3050750054579" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>pointsPlayer</name></member>
+      <member refid="classMainScreen_1a36329c88db4a122bc5d7e5ba327c7a3c" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>resourcePlayer</name></member>
+      <member refid="classMainScreen_1a3abb57a41ac05a0132fea2fb2b0322cb" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>rotateRoullete</name></member>
+      <member refid="classMainScreen_1a3abb57a41ac05a0132fea2fb2b0322cb" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>rotateRoullete</name></member>
+      <member refid="classMainScreen_1ac44b0cf1e38e4d0a0efefaf6dd82c934" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>showCard</name></member>
+      <member refid="classMainScreen_1ac44b0cf1e38e4d0a0efefaf6dd82c934" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>showCard</name></member>
+      <member refid="classMainScreen_1a055b854813b4a149f4eb43d0a7a4c574" prot="public" virt="non-virtual"><scope>MainScreen</scope><name>showMessage</name></member>
+      <member refid="classMainScreen_1a055b854813b4a149f4eb43d0a7a4c574" prot="public" virt="non-virtual"><scope>MainScreen</scope><name>showMessage</name></member>
+      <member refid="classMainScreen_1a6e79ef23190420f2347b22dcd6f77f31" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>showQuestion</name></member>
+      <member refid="classMainScreen_1a6e79ef23190420f2347b22dcd6f77f31" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>showQuestion</name></member>
+      <member refid="classMainScreen_1a44cfe11e0495894b7cce6fbba1395a90" prot="public" virt="non-virtual"><scope>MainScreen</scope><name>waitForEvent</name></member>
+      <member refid="classMainScreen_1a44cfe11e0495894b7cce6fbba1395a90" prot="public" virt="non-virtual"><scope>MainScreen</scope><name>waitForEvent</name></member>
+      <member refid="classMainScreen_1a086aba68f88c7fc23938a5e7a7f18f2e" prot="private" virt="non-virtual"><scope>MainScreen</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.4">
+  <compound refid="classCard" kind="class"><name>Card</name>
+    <member refid="classCard_1a9ac20d5a37d06362333f0e891ab4d0ef" kind="variable"><name>image</name></member>
+    <member refid="classCard_1add10caa072ea176ae0d59ae8020be705" kind="variable"><name>effect</name></member>
+    <member refid="classCard_1acd6d8426ebaf95d0969e7fa07e7c7a6a" kind="variable"><name>magnitude</name></member>
+    <member refid="classCard_1ae6fb6f495bba4d639696f934b495c15f" kind="variable"><name>id</name></member>
+    <member refid="classCard_1a849a1503562f1c3bc80134d4eab83d99" kind="function"><name>Card</name></member>
+    <member refid="classCard_1a7cc686dc64c240cf346d6a676b9fa57d" kind="function"><name>getEffect</name></member>
+    <member refid="classCard_1a03bec0d54ee5c50e76d690b9ca73954b" kind="function"><name>getMagnitude</name></member>
+    <member refid="classCard_1a017122109ae10b3c0cce6b267f323414" kind="function"><name>getId</name></member>
+  </compound>
+  <compound refid="classCompany" kind="class"><name>Company</name>
+    <member refid="classCompany_1a524778e3cd1a4712fe1ef6ffcfa07e1f" kind="variable"><name>nameCompany</name></member>
+    <member refid="classCompany_1aab7c59fd0abd2ca11a2ed71767ff81ef" kind="variable"><name>levelCMMI</name></member>
+    <member refid="classCompany_1a3487b164500da1693c1ff028b55a4511" kind="function"><name>Company</name></member>
+    <member refid="classCompany_1a368dd41a62752e49b4b43052548920ab" kind="function"><name>getName</name></member>
+    <member refid="classCompany_1ad38560ac7e495830ed55568a0f4f3321" kind="function"><name>upLevel</name></member>
+    <member refid="classCompany_1adf93037d4dd38136f5921afcde718ce6" kind="function"><name>downLevel</name></member>
+    <member refid="classCompany_1a724de8d3a259952e4b434eaa51d1564d" kind="function"><name>getLevel</name></member>
+    <member refid="classCompany_1aa66f315e9f43f7818457ca424106e322" kind="function"><name>getCertificationCost</name></member>
+  </compound>
+  <compound refid="classGame" kind="class"><name>Game</name>
+    <member refid="classGame_1a3e37d580dd4ee4cdb3ec502c68ab6648" kind="variable"><name>players</name></member>
+    <member refid="classGame_1a9c7b8c4e2f085dcad6693be878a260b3" kind="variable"><name>cards</name></member>
+    <member refid="classGame_1a62634f4f0ae7d0d8f78ec39fcd82d9e4" kind="variable"><name>questions</name></member>
+    <member refid="classGame_1ae0c0dcabdffb0f209f486dc1b87027c0" kind="variable"><name>currentRound</name></member>
+    <member refid="classGame_1a074e1fe4375efe681eac0429f90a377b" kind="variable"><name>numberRounds</name></member>
+    <member refid="classGame_1a805e202d0785434ad963ed77291f6e11" kind="function"><name>round</name></member>
+    <member refid="classGame_1a7d88788cf4b0da39a0245d418aa6f37a" kind="function"><name>endGame</name></member>
+    <member refid="classGame_1a44f47382ce13570a98591a8248b65316" kind="function"><name>Game</name></member>
+    <member refid="classGame_1ae8638ccdb0ef3bf39a6affa30aa1258f" kind="function"><name>startGame</name></member>
+  </compound>
+  <compound refid="classMainScreen" kind="class"><name>MainScreen</name>
+    <member refid="classMainScreen_1a46cbd98c245991838a1f20807693b7c7" kind="variable"><name>display</name></member>
+    <member refid="classMainScreen_1acd84a4744564ada8ad8a8a9ea8d25b2a" kind="variable"><name>disp_data</name></member>
+    <member refid="classMainScreen_1a7bc906b9476810a9b540aa8342155b23" kind="variable"><name>imageRoullete</name></member>
+    <member refid="classMainScreen_1a27f057ad7619e6d4c429bf1f7f30c5ed" kind="variable"><name>height</name></member>
+    <member refid="classMainScreen_1a086aba68f88c7fc23938a5e7a7f18f2e" kind="variable"><name>width</name></member>
+    <member refid="classMainScreen_1af4a08d4c39cb5c322db9bdd04ca20194" kind="variable"><name>angle</name></member>
+    <member refid="classMainScreen_1aa5ed4882ec02ec4cc2b93354d142e092" kind="variable"><name>fileImageAvatar</name></member>
+    <member refid="classMainScreen_1aa49463a63ae76b636c24d1fcd2873517" kind="variable"><name>namePlayer</name></member>
+    <member refid="classMainScreen_1a3350a59069d77414fc030bd9a869f443" kind="variable"><name>methodologyPlayer</name></member>
+    <member refid="classMainScreen_1adbc6e46c5651229f90c3050750054579" kind="variable"><name>pointsPlayer</name></member>
+    <member refid="classMainScreen_1a36329c88db4a122bc5d7e5ba327c7a3c" kind="variable"><name>resourcePlayer</name></member>
+    <member refid="classMainScreen_1a166fea5002b8d8fa6376fa969303a030" kind="variable"><name>numRound</name></member>
+    <member refid="classMainScreen_1a14a3704ea95e4641ca7239fca0af1872" kind="variable"><name>maxRounds</name></member>
+    <member refid="classMainScreen_1a12146d5fe2d643b124a446aea8fc0f0a" kind="variable"><name>otherPlayers</name></member>
+    <member refid="classMainScreen_1a456c53e779f39d12531d928f293c0f82" kind="variable"><name>companiesPlayer</name></member>
+    <member refid="classMainScreen_1a3abb57a41ac05a0132fea2fb2b0322cb" kind="function"><name>rotateRoullete</name></member>
+    <member refid="classMainScreen_1a14c2e26b39bdc9f36ffb50e967090d5b" kind="function"><name>confirmPurchase</name></member>
+    <member refid="classMainScreen_1a0720b3cfbd832b3524f8380bb6acdaf1" kind="function"><name>confirmCertification</name></member>
+    <member refid="classMainScreen_1a6e79ef23190420f2347b22dcd6f77f31" kind="function"><name>showQuestion</name></member>
+    <member refid="classMainScreen_1ac44b0cf1e38e4d0a0efefaf6dd82c934" kind="function"><name>showCard</name></member>
+    <member refid="classMainScreen_1acbe5e16a755d7c0c04540b2b67adc7ea" kind="function"><name>drawScreen</name></member>
+    <member refid="classMainScreen_1a4a6f3d75735da18d7a41b6057dba8d83" kind="function"><name>drawBackground</name></member>
+    <member refid="classMainScreen_1ad786ccf49e95fd289c663180a3a2e041" kind="function"><name>drawLinesText</name></member>
+    <member refid="classMainScreen_1ac49e85106242c9f70588c54700b63345" kind="function"><name>drawRoullete</name></member>
+    <member refid="classMainScreen_1a0a13508a3a6916c3233594dea084dba9" kind="function"><name>drawLegendArrow</name></member>
+    <member refid="classMainScreen_1a0d242517619462b306cf2c0527679294" kind="function"><name>drawButtons</name></member>
+    <member refid="classMainScreen_1acaaf34ec8ddb262c462b951893925931" kind="function"><name>drawAvatar</name></member>
+    <member refid="classMainScreen_1a4fad18d707557d1e0ce1e7b7191964e2" kind="function"><name>drawPlayerInfo</name></member>
+    <member refid="classMainScreen_1ac8b957d6eb5670552260b5fc20e99d14" kind="function"><name>drawOtherPlayers</name></member>
+    <member refid="classMainScreen_1aa23cd6de77074d4fb9fc2eff7f8e0b53" kind="function"><name>drawRounds</name></member>
+    <member refid="classMainScreen_1a3abb57a41ac05a0132fea2fb2b0322cb" kind="function"><name>rotateRoullete</name></member>
+    <member refid="classMainScreen_1a14c2e26b39bdc9f36ffb50e967090d5b" kind="function"><name>confirmPurchase</name></member>
+    <member refid="classMainScreen_1a0720b3cfbd832b3524f8380bb6acdaf1" kind="function"><name>confirmCertification</name></member>
+    <member refid="classMainScreen_1a6e79ef23190420f2347b22dcd6f77f31" kind="function"><name>showQuestion</name></member>
+    <member refid="classMainScreen_1ac44b0cf1e38e4d0a0efefaf6dd82c934" kind="function"><name>showCard</name></member>
+    <member refid="classMainScreen_1acbe5e16a755d7c0c04540b2b67adc7ea" kind="function"><name>drawScreen</name></member>
+    <member refid="classMainScreen_1a4a6f3d75735da18d7a41b6057dba8d83" kind="function"><name>drawBackground</name></member>
+    <member refid="classMainScreen_1ad786ccf49e95fd289c663180a3a2e041" kind="function"><name>drawLinesText</name></member>
+    <member refid="classMainScreen_1ac49e85106242c9f70588c54700b63345" kind="function"><name>drawRoullete</name></member>
+    <member refid="classMainScreen_1a0a13508a3a6916c3233594dea084dba9" kind="function"><name>drawLegendArrow</name></member>
+    <member refid="classMainScreen_1a0d242517619462b306cf2c0527679294" kind="function"><name>drawButtons</name></member>
+    <member refid="classMainScreen_1acaaf34ec8ddb262c462b951893925931" kind="function"><name>drawAvatar</name></member>
+    <member refid="classMainScreen_1a4fad18d707557d1e0ce1e7b7191964e2" kind="function"><name>drawPlayerInfo</name></member>
+    <member refid="classMainScreen_1ac8b957d6eb5670552260b5fc20e99d14" kind="function"><name>drawOtherPlayers</name></member>
+    <member refid="classMainScreen_1aa23cd6de77074d4fb9fc2eff7f8e0b53" kind="function"><name>drawRounds</name></member>
+    <member refid="classMainScreen_1afe04f97c6cbff7dc13f03344c74e3253" kind="function"><name>MainScreen</name></member>
+    <member refid="classMainScreen_1aa060b16684e89d25104f2fa9cc751961" kind="function"><name>drawScreen</name></member>
+    <member refid="classMainScreen_1a44cfe11e0495894b7cce6fbba1395a90" kind="function"><name>waitForEvent</name></member>
+    <member refid="classMainScreen_1a055b854813b4a149f4eb43d0a7a4c574" kind="function"><name>showMessage</name></member>
+    <member refid="classMainScreen_1afe04f97c6cbff7dc13f03344c74e3253" kind="function"><name>MainScreen</name></member>
+    <member refid="classMainScreen_1aa060b16684e89d25104f2fa9cc751961" kind="function"><name>drawScreen</name></member>
+    <member refid="classMainScreen_1a44cfe11e0495894b7cce6fbba1395a90" kind="function"><name>waitForEvent</name></member>
+    <member refid="classMainScreen_1a055b854813b4a149f4eb43d0a7a4c574" kind="function"><name>showMessage</name></member>
+  </compound>
+  <compound refid="classPlayer" kind="class"><name>Player</name>
+    <member refid="classPlayer_1a31688cd73d7538ca14cc02c6980ae0b8" kind="variable"><name>namePlayer</name></member>
+    <member refid="classPlayer_1a091681e8f7b54426d716dadba3fe9194" kind="variable"><name>methodologyPlayer</name></member>
+    <member refid="classPlayer_1a753918671c0f81b47e08e6f557b380a4" kind="variable"><name>fileAvatar</name></member>
+    <member refid="classPlayer_1a129a3cf7d936aba4e349b43593cf562c" kind="variable"><name>listCompanies</name></member>
+    <member refid="classPlayer_1ae9453a8cbca4cf6a82b368030f5081e0" kind="variable"><name>pointsPlayer</name></member>
+    <member refid="classPlayer_1a3b55934519fa908cd881393e767b6407" kind="variable"><name>resourcesPlayer</name></member>
+    <member refid="classPlayer_1acb47d992c90e847ffa62855e25e3e42c" kind="function"><name>updatePoints</name></member>
+    <member refid="classPlayer_1a71bfdf4e61822929e6cc678159653b9f" kind="function"><name>Player</name></member>
+    <member refid="classPlayer_1a63af5762c820d47e9ed31915ac0ceed9" kind="function"><name>getName</name></member>
+    <member refid="classPlayer_1ad98ff5b24bb1ddc41f0390d50ceac3a4" kind="function"><name>getMethodology</name></member>
+    <member refid="classPlayer_1acd9a2131d61ae05f83063900b205d9ff" kind="function"><name>getNumEmpresas</name></member>
+    <member refid="classPlayer_1a2d9d894f68e52cc6d9dfdbc0e6cd3e53" kind="function"><name>getPoints</name></member>
+    <member refid="classPlayer_1abfaf379855ef276b27da1bd47d7b037d" kind="function"><name>getResources</name></member>
+    <member refid="classPlayer_1ab4beffed28357e5e05f601a7290c9fb8" kind="function"><name>addResources</name></member>
+    <member refid="classPlayer_1afd36b40cd4f3950f2e3516904c4b6fba" kind="function"><name>removeResources</name></member>
+    <member refid="classPlayer_1a0bc0123924856c22e17fd932114f268a" kind="function"><name>buyCompany</name></member>
+    <member refid="classPlayer_1aecc72601f8778fc18a767a450e1fb7e8" kind="function"><name>certifyCompany</name></member>
+    <member refid="classPlayer_1a8bca0e3d8ce5e75e0798aba334e9763b" kind="function"><name>getCompanies</name></member>
+    <member refid="classPlayer_1addd52384a5062bc06c6fa4d4cf381f86" kind="function"><name>getFileAvatar</name></member>
+  </compound>
+  <compound refid="classQuestion" kind="class"><name>Question</name>
+    <member refid="classQuestion_1a74c9df52f7df8e5386a79e93419105e8" kind="variable"><name>text</name></member>
+    <member refid="classQuestion_1af85363e7315b2a8b2d613ad69a955361" kind="variable"><name>options</name></member>
+    <member refid="classQuestion_1abb4e53882ad2b882cd3076835d4e9195" kind="variable"><name>correct</name></member>
+    <member refid="classQuestion_1adff6a55fdc0b839fa229577298e41c3e" kind="variable"><name>type</name></member>
+    <member refid="classQuestion_1af7f9eb95975927abe9ba3c5d1b30ff8f" kind="function"><name>Question</name></member>
+    <member refid="classQuestion_1a1db3faeccdd4f750ac2136e82ba1f990" kind="function"><name>getText</name></member>
+    <member refid="classQuestion_1a00c1940d7ad5eb3f7533b0c6d1c9f5d5" kind="function"><name>getOptions</name></member>
+    <member refid="classQuestion_1afe41e13a020e12ada7ffb5deb2d6f7bd" kind="function"><name>getCorrectOption</name></member>
+    <member refid="classQuestion_1a968ac1a598766a8a428abc0646926640" kind="function"><name>getType</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="Card_8cc" kind="file"><name>Card.cc</name>
+  </compound>
+  <compound refid="Card_8h" kind="file"><name>Card.h</name>
+  </compound>
+  <compound refid="Company_8cc" kind="file"><name>Company.cc</name>
+  </compound>
+  <compound refid="Company_8h" kind="file"><name>Company.h</name>
+    <member refid="Company_8h_1ace2d0ad84a4d98a49c509063dbbf9a1c" kind="define"><name>COMPANY_PRICE</name></member>
+  </compound>
+  <compound refid="Game_8cc" kind="file"><name>Game.cc</name>
+  </compound>
+  <compound refid="Game_8h" kind="file"><name>Game.h</name>
+  </compound>
+  <compound refid="main_8cc" kind="file"><name>main.cc</name>
+    <member refid="main_8cc_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="Player_8cc" kind="file"><name>Player.cc</name>
+  </compound>
+  <compound refid="Player_8h" kind="file"><name>Player.h</name>
+    <member refid="Player_8h_1a984027001c10072051bf999609f9167d" kind="define"><name>INITIAL_RESOURCES</name></member>
+  </compound>
+  <compound refid="Question_8cc" kind="file"><name>Question.cc</name>
+  </compound>
+  <compound refid="Question_8h" kind="file"><name>Question.h</name>
+  </compound>
+  <compound refid="MainScreen_8cc" kind="file"><name>MainScreen.cc</name>
+  </compound>
+  <compound refid="MainScreen_8h" kind="file"><name>MainScreen.h</name>
+    <member refid="MainScreen_8h_1a317b5109da7c376133ac189c84b42640" kind="define"><name>HOR_LINE_INFO_PLAYER_HEIGHT</name></member>
+    <member refid="MainScreen_8h_1a7e18b3decda36fa1ea88693a2e3db612" kind="define"><name>HOR_LINE_ROUNDS_HEIGHT</name></member>
+    <member refid="MainScreen_8h_1a95248267b1e9860a49b38b91d6060ac3" kind="define"><name>VERT_LINE_PLAYERS_WIDTH</name></member>
+    <member refid="MainScreen_8h_1a85b60dfcd77a2e87a8c3cad02c69fd57" kind="define"><name>VERT_LINE_AVATAR_WIDTH</name></member>
+    <member refid="MainScreen_8h_1a18c12502cb14f5c3534be1cd0abff393" kind="define"><name>INVENTORY_HEIGHT_POS</name></member>
+    <member refid="MainScreen_8h_1a25d2fe10be4c43346aba598e8b6011cf" kind="define"><name>INVENTORY_WIDTH_POS</name></member>
+    <member refid="MainScreen_8h_1a59ff38ce73af72905372fda08af0e6ef" kind="define"><name>INVENTORY_HEIGHT</name></member>
+    <member refid="MainScreen_8h_1a2da9fa54c9fc60662dbda40b0139a1e9" kind="define"><name>INVENTORY_WIDTH</name></member>
+    <member refid="MainScreen_8h_1adeacbb83e11064c564e0730c739d4322" kind="define"><name>INVENTORY_TITLE_WIDTH</name></member>
+    <member refid="MainScreen_8h_1a287d362f882751508f72d74b3df95386" kind="define"><name>INVENTORY_TITLE_HEIGHT</name></member>
+  </compound>
+  <compound refid="Screen_8cc" kind="file"><name>Screen.cc</name>
+  </compound>
+  <compound refid="Screen_8h" kind="file"><name>Screen.h</name>
+  </compound>
+  <compound refid="dir_3b1d316f3ce6448c9cec05638e06d169" kind="dir"><name>Card</name>
+  </compound>
+  <compound refid="dir_777c2fd2e055b4b0576076bed2eed377" kind="dir"><name>Company</name>
+  </compound>
+  <compound refid="dir_c33286056d2acf479cd8641ef845fec1" kind="dir"><name>Game</name>
+  </compound>
+  <compound refid="dir_c049039abd2482638da2b3d05566ace6" kind="dir"><name>Player</name>
+  </compound>
+  <compound refid="dir_d6f4d682892680c15fa07df9d2774c5a" kind="dir"><name>Question</name>
+  </compound>
+  <compound refid="dir_0fcd53cf412201ba6bcc436c9d42eb1f" kind="dir"><name>Screen</name>
+  </compound>
+</doxygenindex>

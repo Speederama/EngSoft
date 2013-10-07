@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Player/../Company/Company.h
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Player/../Company/Company.h
 string
 -
 
-/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Player/Player.cc
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Player/Player.cc
 cstdlib
 -
 cstring
 -
 Player.h
-/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Player/Player.h
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Player/Player.h
 
-/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Player/Player.h
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Player/Player.h
 list
 -
 string
 -
 ../Company/Company.h
-/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Player/../Company/Company.h
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Player/../Company/Company.h
 

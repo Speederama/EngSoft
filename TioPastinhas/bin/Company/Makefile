@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src
+CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin
+CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/Company/CMakeFiles/progress.marks
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Company/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 0
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Company/CMakeFiles/progress.marks
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Company/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Company/clean
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Company/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,22 +88,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Company/preinstall
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Company/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Company/preinstall
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Company/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Company/CMakeFiles/Company.dir/rule:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Company/CMakeFiles/Company.dir/rule
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Company/CMakeFiles/Company.dir/rule
 .PHONY : Company/CMakeFiles/Company.dir/rule
 
 # Convenience name for target.
@@ -112,7 +112,7 @@ Company: Company/CMakeFiles/Company.dir/rule
 
 # fast build rule for target.
 Company/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/build
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/build
 .PHONY : Company/fast
 
 Company.o: Company.cc.o
@@ -120,7 +120,7 @@ Company.o: Company.cc.o
 
 # target to build an object file
 Company.cc.o:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/Company.cc.o
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/Company.cc.o
 .PHONY : Company.cc.o
 
 Company.i: Company.cc.i
@@ -128,7 +128,7 @@ Company.i: Company.cc.i
 
 # target to preprocess a source file
 Company.cc.i:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/Company.cc.i
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/Company.cc.i
 .PHONY : Company.cc.i
 
 Company.s: Company.cc.s
@@ -136,7 +136,7 @@ Company.s: Company.cc.s
 
 # target to generate assembly for a file
 Company.cc.s:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/Company.cc.s
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/Company.cc.s
 .PHONY : Company.cc.s
 
 # Help Target
@@ -162,6 +162,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

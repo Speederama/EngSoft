@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Company/Company.cc
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Company/Company.cc
 cstring
 -
 cstdlib
 -
 Company.h
-/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Company/Company.h
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Company/Company.h
 
-/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Company/Company.h
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Company/Company.h
 string
 -
 

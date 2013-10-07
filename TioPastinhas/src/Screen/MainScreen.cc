@@ -70,10 +70,10 @@ int MainScreen::drawScreen()
 		fprintf(stderr, "failed to create display!\n");
 		return -1;
 	}
-	al_clear_to_color(al_map_rgb(255, 255, 255));
+	al_clear_to_color(al_map_rgb(190, 190, 190));
 
 	// Draw static stuff...
-	drawBackground();
+	//drawBackground();
 	drawLinesText();
 	drawRoullete(angle);
 	drawLegendArrow();
@@ -124,10 +124,10 @@ int MainScreen::drawScreen(const char* fileImageAvatar, int numRound, int maxRou
 		fprintf(stderr, "failed to create display!\n");
 		return -1;
 	}
-	al_clear_to_color(al_map_rgb(255, 255, 255));
+	al_clear_to_color(al_map_rgb(190, 190, 190));
 
 	// Draw static stuff...
-	drawBackground();
+	//drawBackground();
 	drawLinesText();
 	drawRoullete(angle);
 	drawLegendArrow();

@@ -50,23 +50,23 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src
+CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin
+CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin
 
 #=============================================================================
 # Target rules for target CMakeFiles/game.dir
 
 # All Build rule for target.
-CMakeFiles/game.dir/all: Game/CMakeFiles/Game.dir/all
-CMakeFiles/game.dir/all: Question/CMakeFiles/Question.dir/all
-CMakeFiles/game.dir/all: Card/CMakeFiles/Card.dir/all
-CMakeFiles/game.dir/all: Player/CMakeFiles/Player.dir/all
 CMakeFiles/game.dir/all: Screen/CMakeFiles/Screen.dir/all
+CMakeFiles/game.dir/all: Player/CMakeFiles/Player.dir/all
+CMakeFiles/game.dir/all: Question/CMakeFiles/Question.dir/all
+CMakeFiles/game.dir/all: Game/CMakeFiles/Game.dir/all
+CMakeFiles/game.dir/all: Card/CMakeFiles/Card.dir/all
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/depend
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles  7
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  7
 	@echo "Built target game"
 .PHONY : CMakeFiles/game.dir/all
 
@@ -76,9 +76,9 @@ all: CMakeFiles/game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : CMakeFiles/game.dir/rule
 
 # Convenience name for target.
@@ -116,7 +116,7 @@ Card/preinstall:
 Card/CMakeFiles/Card.dir/all:
 	$(MAKE) -f Card/CMakeFiles/Card.dir/build.make Card/CMakeFiles/Card.dir/depend
 	$(MAKE) -f Card/CMakeFiles/Card.dir/build.make Card/CMakeFiles/Card.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  1
 	@echo "Built target Card"
 .PHONY : Card/CMakeFiles/Card.dir/all
 
@@ -126,9 +126,9 @@ all: Card/CMakeFiles/Card.dir/all
 
 # Build rule for subdir invocation for target.
 Card/CMakeFiles/Card.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 Card/CMakeFiles/Card.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Card/CMakeFiles/Card.dir/rule
 
 # Convenience name for target.
@@ -163,14 +163,14 @@ Game/preinstall:
 # Target rules for target Game/CMakeFiles/Game.dir
 
 # All Build rule for target.
-Game/CMakeFiles/Game.dir/all: Company/CMakeFiles/Company.dir/all
-Game/CMakeFiles/Game.dir/all: Question/CMakeFiles/Question.dir/all
-Game/CMakeFiles/Game.dir/all: Card/CMakeFiles/Card.dir/all
-Game/CMakeFiles/Game.dir/all: Player/CMakeFiles/Player.dir/all
 Game/CMakeFiles/Game.dir/all: Screen/CMakeFiles/Screen.dir/all
+Game/CMakeFiles/Game.dir/all: Player/CMakeFiles/Player.dir/all
+Game/CMakeFiles/Game.dir/all: Question/CMakeFiles/Question.dir/all
+Game/CMakeFiles/Game.dir/all: Company/CMakeFiles/Company.dir/all
+Game/CMakeFiles/Game.dir/all: Card/CMakeFiles/Card.dir/all
 	$(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/depend
 	$(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  3
 	@echo "Built target Game"
 .PHONY : Game/CMakeFiles/Game.dir/all
 
@@ -180,9 +180,9 @@ all: Game/CMakeFiles/Game.dir/all
 
 # Build rule for subdir invocation for target.
 Game/CMakeFiles/Game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 Game/CMakeFiles/Game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Game/CMakeFiles/Game.dir/rule
 
 # Convenience name for target.
@@ -220,7 +220,7 @@ Screen/preinstall:
 Screen/CMakeFiles/Screen.dir/all:
 	$(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/depend
 	$(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  6
 	@echo "Built target Screen"
 .PHONY : Screen/CMakeFiles/Screen.dir/all
 
@@ -230,9 +230,9 @@ all: Screen/CMakeFiles/Screen.dir/all
 
 # Build rule for subdir invocation for target.
 Screen/CMakeFiles/Screen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Screen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Screen/CMakeFiles/Screen.dir/rule
 
 # Convenience name for target.
@@ -270,7 +270,7 @@ Player/preinstall:
 Player/CMakeFiles/Player.dir/all: Company/CMakeFiles/Company.dir/all
 	$(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/depend
 	$(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  4
 	@echo "Built target Player"
 .PHONY : Player/CMakeFiles/Player.dir/all
 
@@ -280,9 +280,9 @@ all: Player/CMakeFiles/Player.dir/all
 
 # Build rule for subdir invocation for target.
 Player/CMakeFiles/Player.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Player/CMakeFiles/Player.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Player/CMakeFiles/Player.dir/rule
 
 # Convenience name for target.
@@ -320,7 +320,7 @@ Company/preinstall:
 Company/CMakeFiles/Company.dir/all:
 	$(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/depend
 	$(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  2
 	@echo "Built target Company"
 .PHONY : Company/CMakeFiles/Company.dir/all
 
@@ -330,9 +330,9 @@ all: Company/CMakeFiles/Company.dir/all
 
 # Build rule for subdir invocation for target.
 Company/CMakeFiles/Company.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 Company/CMakeFiles/Company.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Company/CMakeFiles/Company.dir/rule
 
 # Convenience name for target.
@@ -370,7 +370,7 @@ Question/preinstall:
 Question/CMakeFiles/Question.dir/all:
 	$(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/depend
 	$(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  5
 	@echo "Built target Question"
 .PHONY : Question/CMakeFiles/Question.dir/all
 
@@ -380,9 +380,9 @@ all: Question/CMakeFiles/Question.dir/all
 
 # Build rule for subdir invocation for target.
 Question/CMakeFiles/Question.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 Question/CMakeFiles/Question.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Question/CMakeFiles/Question.dir/rule
 
 # Convenience name for target.

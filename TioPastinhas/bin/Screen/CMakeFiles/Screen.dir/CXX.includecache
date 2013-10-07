@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Screen/MainScreen.cc
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.cc
 stdio.h
 -
 math.h
@@ -16,9 +16,9 @@ time.h
 list
 -
 MainScreen.h
-/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Screen/MainScreen.h
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h
 
-/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Screen/MainScreen.h
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/MainScreen.h
 allegro5/allegro.h
 -
 allegro5/allegro_image.h

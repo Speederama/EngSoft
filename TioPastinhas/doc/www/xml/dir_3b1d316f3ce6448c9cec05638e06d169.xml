@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="dir_3b1d316f3ce6448c9cec05638e06d169" kind="dir">
+    <compoundname>Card</compoundname>
+    <innerfile refid="Card_8cc">Card.cc</innerfile>
+    <innerfile refid="Card_8h">Card.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/"/>
+  </compounddef>
+</doxygen>

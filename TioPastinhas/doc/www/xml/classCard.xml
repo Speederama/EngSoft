@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classCard" kind="class" prot="public">
+    <compoundname>Card</compoundname>
+    <includes refid="Card_8h" local="no">Card.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCard_1a9ac20d5a37d06362333f0e891ab4d0ef" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Card::image</definition>
+        <argsstring></argsstring>
+        <name>image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" line="6" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCard_1add10caa072ea176ae0d59ae8020be705" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Card::effect</definition>
+        <argsstring></argsstring>
+        <name>effect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" line="7" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCard_1acd6d8426ebaf95d0969e7fa07e7c7a6a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Card::magnitude</definition>
+        <argsstring></argsstring>
+        <name>magnitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" line="8" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCard_1ae6fb6f495bba4d639696f934b495c15f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Card::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" line="9" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCard_1a849a1503562f1c3bc80134d4eab83d99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Card::Card</definition>
+        <argsstring>(const char *image, int effect, int magnitude, int id)</argsstring>
+        <name>Card</name>
+        <param>
+          <type>const char *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>effect</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>magnitude</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCard_1a7cc686dc64c240cf346d6a676b9fa57d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Card::getEffect</definition>
+        <argsstring>()</argsstring>
+        <name>getEffect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCard_1a03bec0d54ee5c50e76d690b9ca73954b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Card::getMagnitude</definition>
+        <argsstring>()</argsstring>
+        <name>getMagnitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCard_1a017122109ae10b3c0cce6b267f323414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Card::getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" line="15" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" line="4" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Card/Card.h" bodystart="3" bodyend="16"/>
+    <listofallmembers>
+      <member refid="classCard_1a849a1503562f1c3bc80134d4eab83d99" prot="public" virt="non-virtual"><scope>Card</scope><name>Card</name></member>
+      <member refid="classCard_1add10caa072ea176ae0d59ae8020be705" prot="private" virt="non-virtual"><scope>Card</scope><name>effect</name></member>
+      <member refid="classCard_1a7cc686dc64c240cf346d6a676b9fa57d" prot="public" virt="non-virtual"><scope>Card</scope><name>getEffect</name></member>
+      <member refid="classCard_1a017122109ae10b3c0cce6b267f323414" prot="public" virt="non-virtual"><scope>Card</scope><name>getId</name></member>
+      <member refid="classCard_1a03bec0d54ee5c50e76d690b9ca73954b" prot="public" virt="non-virtual"><scope>Card</scope><name>getMagnitude</name></member>
+      <member refid="classCard_1ae6fb6f495bba4d639696f934b495c15f" prot="private" virt="non-virtual"><scope>Card</scope><name>id</name></member>
+      <member refid="classCard_1a9ac20d5a37d06362333f0e891ab4d0ef" prot="private" virt="non-virtual"><scope>Card</scope><name>image</name></member>
+      <member refid="classCard_1acd6d8426ebaf95d0969e7fa07e7c7a6a" prot="private" virt="non-virtual"><scope>Card</scope><name>magnitude</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

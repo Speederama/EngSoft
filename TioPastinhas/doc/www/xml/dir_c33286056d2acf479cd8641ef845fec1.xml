@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="dir_c33286056d2acf479cd8641ef845fec1" kind="dir">
+    <compoundname>Game</compoundname>
+    <innerfile refid="Game_8cc">Game.cc</innerfile>
+    <innerfile refid="Game_8h">Game.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Game/"/>
+  </compounddef>
+</doxygen>

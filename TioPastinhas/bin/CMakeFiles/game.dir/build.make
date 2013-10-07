@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src
+CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin
+CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin
 
 # Include any dependencies generated for this target.
 include CMakeFiles/game.dir/depend.make
@@ -53,18 +53,18 @@ include CMakeFiles/game.dir/progress.make
 include CMakeFiles/game.dir/flags.make
 
 CMakeFiles/game.dir/main.cc.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/main.cc.o: /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/main.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/game.dir/main.cc.o: /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/game.dir/main.cc.o"
-	g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/main.cc.o -c /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/main.cc
+	g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/main.cc.o -c /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cc
 
 CMakeFiles/game.dir/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/main.cc.i"
-	g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/main.cc > CMakeFiles/game.dir/main.cc.i
+	g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cc > CMakeFiles/game.dir/main.cc.i
 
 CMakeFiles/game.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/main.cc.s"
-	g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/main.cc -o CMakeFiles/game.dir/main.cc.s
+	g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cc -o CMakeFiles/game.dir/main.cc.s
 
 CMakeFiles/game.dir/main.cc.o.requires:
 .PHONY : CMakeFiles/game.dir/main.cc.o.requires
@@ -106,6 +106,6 @@ CMakeFiles/game.dir/clean:
 .PHONY : CMakeFiles/game.dir/clean
 
 CMakeFiles/game.dir/depend:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles/game.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles/game.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/game.dir/depend
 

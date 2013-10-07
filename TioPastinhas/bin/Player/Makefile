@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src
+CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin
+CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/Player/CMakeFiles/progress.marks
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Player/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles 0
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Player/CMakeFiles/progress.marks
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Player/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Player/clean
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Player/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,22 +88,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Player/preinstall
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Player/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Player/preinstall
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Player/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Player/CMakeFiles/Player.dir/rule:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Player/CMakeFiles/Player.dir/rule
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Player/CMakeFiles/Player.dir/rule
 .PHONY : Player/CMakeFiles/Player.dir/rule
 
 # Convenience name for target.
@@ -112,7 +112,7 @@ Player: Player/CMakeFiles/Player.dir/rule
 
 # fast build rule for target.
 Player/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/build
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/build
 .PHONY : Player/fast
 
 Player.o: Player.cc.o
@@ -120,7 +120,7 @@ Player.o: Player.cc.o
 
 # target to build an object file
 Player.cc.o:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/Player.cc.o
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/Player.cc.o
 .PHONY : Player.cc.o
 
 Player.i: Player.cc.i
@@ -128,7 +128,7 @@ Player.i: Player.cc.i
 
 # target to preprocess a source file
 Player.cc.i:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/Player.cc.i
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/Player.cc.i
 .PHONY : Player.cc.i
 
 Player.s: Player.cc.s
@@ -136,7 +136,7 @@ Player.s: Player.cc.s
 
 # target to generate assembly for a file
 Player.cc.s:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/Player.cc.s
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/Player.cc.s
 .PHONY : Player.cc.s
 
 # Help Target
@@ -162,6 +162,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

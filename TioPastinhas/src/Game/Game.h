@@ -10,6 +10,8 @@ class Game
 {
 	private:
 		std::vector<Player> players;
+		std::vector<Card> cards;
+		std::vector<Question> questions;
 		int currentRound;
 		int numberRounds;
 
