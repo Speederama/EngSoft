@@ -1,0 +1,2 @@
+/usr/bin/ar cr libQuestion.a  CMakeFiles/Question.dir/Question.cc.o
+/usr/bin/ranlib libQuestion.a

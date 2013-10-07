@@ -1,0 +1,7 @@
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/Card/CMakeFiles/Card.dir
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/Company/CMakeFiles/Company.dir
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/Game/CMakeFiles/Game.dir
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/Player/CMakeFiles/Player.dir
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/Question/CMakeFiles/Question.dir
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/Screen/CMakeFiles/Screen.dir
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/bin/CMakeFiles/game.dir

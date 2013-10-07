@@ -1,0 +1,113 @@
+\hypertarget{classCompany}{\section{Company Class Reference}
+\label{classCompany}\index{Company@{Company}}
+}
+
+
+{\ttfamily \#include $<$Company.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCompany_a3487b164500da1693c1ff028b55a4511}{Company} (const char $\ast$name)
+\item 
+const char $\ast$ \hyperlink{classCompany_a368dd41a62752e49b4b43052548920ab}{get\-Name} () const 
+\item 
+void \hyperlink{classCompany_ad38560ac7e495830ed55568a0f4f3321}{up\-Level} ()
+\item 
+void \hyperlink{classCompany_adf93037d4dd38136f5921afcde718ce6}{down\-Level} ()
+\item 
+int \hyperlink{classCompany_a724de8d3a259952e4b434eaa51d1564d}{get\-Level} () const 
+\item 
+int \hyperlink{classCompany_aa66f315e9f43f7818457ca424106e322}{get\-Certification\-Cost} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCompany_a3487b164500da1693c1ff028b55a4511}{\index{Company@{Company}!Company@{Company}}
+\index{Company@{Company}!Company@{Company}}
+\subsubsection[{Company}]{\setlength{\rightskip}{0pt plus 5cm}Company\-::\-Company (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{classCompany_a3487b164500da1693c1ff028b55a4511}
+
+\begin{DoxyCode}
+7 \{
+8     nameCompany = name;
+9     levelCMMI = 1;
+10 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCompany_adf93037d4dd38136f5921afcde718ce6}{\index{Company@{Company}!down\-Level@{down\-Level}}
+\index{down\-Level@{down\-Level}!Company@{Company}}
+\subsubsection[{down\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void Company\-::down\-Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCompany_adf93037d4dd38136f5921afcde718ce6}
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keywordflow}{if} (levelCMMI > 1)
+21         levelCMMI -= 1;
+22 \}
+\end{DoxyCode}
+\hypertarget{classCompany_aa66f315e9f43f7818457ca424106e322}{\index{Company@{Company}!get\-Certification\-Cost@{get\-Certification\-Cost}}
+\index{get\-Certification\-Cost@{get\-Certification\-Cost}!Company@{Company}}
+\subsubsection[{get\-Certification\-Cost}]{\setlength{\rightskip}{0pt plus 5cm}int Company\-::get\-Certification\-Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classCompany_aa66f315e9f43f7818457ca424106e322}
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{comment}{//TODO}
+27 
+28     \textcolor{keywordflow}{return} 100000 * levelCMMI;
+29 \}
+\end{DoxyCode}
+\hypertarget{classCompany_a724de8d3a259952e4b434eaa51d1564d}{\index{Company@{Company}!get\-Level@{get\-Level}}
+\index{get\-Level@{get\-Level}!Company@{Company}}
+\subsubsection[{get\-Level}]{\setlength{\rightskip}{0pt plus 5cm}int Company\-::get\-Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCompany_a724de8d3a259952e4b434eaa51d1564d}
+
+\begin{DoxyCode}
+17 \{ \textcolor{keywordflow}{return} levelCMMI; \}
+\end{DoxyCode}
+\hypertarget{classCompany_a368dd41a62752e49b4b43052548920ab}{\index{Company@{Company}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!Company@{Company}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Company\-::get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCompany_a368dd41a62752e49b4b43052548920ab}
+
+\begin{DoxyCode}
+13 \{ \textcolor{keywordflow}{return} nameCompany.data(); \}
+\end{DoxyCode}
+\hypertarget{classCompany_ad38560ac7e495830ed55568a0f4f3321}{\index{Company@{Company}!up\-Level@{up\-Level}}
+\index{up\-Level@{up\-Level}!Company@{Company}}
+\subsubsection[{up\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void Company\-::up\-Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCompany_ad38560ac7e495830ed55568a0f4f3321}
+
+\begin{DoxyCode}
+13 \{
+14     \textcolor{keywordflow}{if} (levelCMMI < 5)
+15         levelCMMI += 1;
+16 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Company/\hyperlink{Company_8h}{Company.\-h}\item 
+Company/\hyperlink{Company_8cc}{Company.\-cc}\end{DoxyCompactItemize}

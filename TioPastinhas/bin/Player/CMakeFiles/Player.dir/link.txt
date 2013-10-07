@@ -1,0 +1,2 @@
+/usr/bin/ar cr libPlayer.a  CMakeFiles/Player.dir/Player.cc.o
+/usr/bin/ranlib libPlayer.a

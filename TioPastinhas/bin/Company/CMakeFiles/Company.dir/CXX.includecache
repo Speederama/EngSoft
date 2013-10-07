@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Company/Company.cc
+cstring
+-
+cstdlib
+-
+Company.h
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Company/Company.h
+
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Company/Company.h
+string
+-
+

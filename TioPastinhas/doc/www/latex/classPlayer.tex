@@ -1,0 +1,235 @@
+\hypertarget{classPlayer}{\section{Player Class Reference}
+\label{classPlayer}\index{Player@{Player}}
+}
+
+
+{\ttfamily \#include $<$Player.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPlayer_a71bfdf4e61822929e6cc678159653b9f}{Player} (const char $\ast$name\-Player, const char $\ast$methodology\-Player, const char $\ast$file\-Avatar)
+\item 
+const char $\ast$ \hyperlink{classPlayer_a63af5762c820d47e9ed31915ac0ceed9}{get\-Name} () const 
+\item 
+const char $\ast$ \hyperlink{classPlayer_ad98ff5b24bb1ddc41f0390d50ceac3a4}{get\-Methodology} () const 
+\item 
+int \hyperlink{classPlayer_acd9a2131d61ae05f83063900b205d9ff}{get\-Num\-Empresas} () const 
+\item 
+int \hyperlink{classPlayer_a2d9d894f68e52cc6d9dfdbc0e6cd3e53}{get\-Points} () const 
+\item 
+int \hyperlink{classPlayer_abfaf379855ef276b27da1bd47d7b037d}{get\-Resources} () const 
+\item 
+void \hyperlink{classPlayer_ab4beffed28357e5e05f601a7290c9fb8}{add\-Resources} (int resources)
+\item 
+int \hyperlink{classPlayer_afd36b40cd4f3950f2e3516904c4b6fba}{remove\-Resources} (int resources, bool force)
+\item 
+int \hyperlink{classPlayer_a0bc0123924856c22e17fd932114f268a}{buy\-Company} (const char $\ast$name\-Company)
+\item 
+int \hyperlink{classPlayer_aecc72601f8778fc18a767a450e1fb7e8}{certify\-Company} (const char $\ast$name\-Company)
+\item 
+const std\-::list$<$ \hyperlink{classCompany}{Company} $>$ \& \hyperlink{classPlayer_a8bca0e3d8ce5e75e0798aba334e9763b}{get\-Companies} () const 
+\item 
+const char $\ast$ \hyperlink{classPlayer_addd52384a5062bc06c6fa4d4cf381f86}{get\-File\-Avatar} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPlayer_a71bfdf4e61822929e6cc678159653b9f}{\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\subsubsection[{Player}]{\setlength{\rightskip}{0pt plus 5cm}Player\-::\-Player (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name\-Player, }
+\item[{const char $\ast$}]{methodology\-Player, }
+\item[{const char $\ast$}]{file\-Avatar}
+\end{DoxyParamCaption}
+)}}\label{classPlayer_a71bfdf4e61822929e6cc678159653b9f}
+
+\begin{DoxyCode}
+9 \{
+10     Player::namePlayer = namePlayer;
+11     Player::methodologyPlayer = methodologyPlayer;
+12     Player::fileAvatar = fileAvatar;
+13 
+14     pointsPlayer = 0;
+15     resourcesPlayer = \hyperlink{Player_8h_a984027001c10072051bf999609f9167d}{INITIAL\_RESOURCES};
+16 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPlayer_ab4beffed28357e5e05f601a7290c9fb8}{\index{Player@{Player}!add\-Resources@{add\-Resources}}
+\index{add\-Resources@{add\-Resources}!Player@{Player}}
+\subsubsection[{add\-Resources}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-::add\-Resources (
+\begin{DoxyParamCaption}
+\item[{int}]{resources}
+\end{DoxyParamCaption}
+)}}\label{classPlayer_ab4beffed28357e5e05f601a7290c9fb8}
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keywordflow}{if} (resources > 0)
+21         resourcesPlayer += resources;
+22 \}
+\end{DoxyCode}
+\hypertarget{classPlayer_a0bc0123924856c22e17fd932114f268a}{\index{Player@{Player}!buy\-Company@{buy\-Company}}
+\index{buy\-Company@{buy\-Company}!Player@{Player}}
+\subsubsection[{buy\-Company}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::buy\-Company (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name\-Company}
+\end{DoxyParamCaption}
+)}}\label{classPlayer_a0bc0123924856c22e17fd932114f268a}
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{keywordflow}{for} (list<Company>::iterator it = listCompanies.begin(); it != listCompanies.end(); ++it)
+42     \{
+43         \textcolor{keywordflow}{if} (strcmp(it->getName(), nameCompany) == 0)
+44             \textcolor{keywordflow}{return} -1;
+45     \}
+46     \textcolor{keywordflow}{if} (\hyperlink{classPlayer_afd36b40cd4f3950f2e3516904c4b6fba}{removeResources}(\hyperlink{Company_8h_ace2d0ad84a4d98a49c509063dbbf9a1c}{COMPANY\_PRICE}, \textcolor{keyword}{false}) == 1)
+47     \{
+48         \hyperlink{classCompany}{Company} company(nameCompany);
+49         listCompanies.push\_back(company);
+50         updatePoints();
+51         \textcolor{keywordflow}{return} 1;
+52     \}
+53     \textcolor{keywordflow}{else}
+54         \textcolor{keywordflow}{return} 0;
+55 \}
+\end{DoxyCode}
+\hypertarget{classPlayer_aecc72601f8778fc18a767a450e1fb7e8}{\index{Player@{Player}!certify\-Company@{certify\-Company}}
+\index{certify\-Company@{certify\-Company}!Player@{Player}}
+\subsubsection[{certify\-Company}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::certify\-Company (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name\-Company}
+\end{DoxyParamCaption}
+)}}\label{classPlayer_aecc72601f8778fc18a767a450e1fb7e8}
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{keywordflow}{for} (list<Company>::iterator it = listCompanies.begin(); it != listCompanies.end(); ++it)
+60     \{
+61         \textcolor{keywordflow}{if} (strcmp(it->getName(), nameCompany) == 0)
+62         \{
+63             \textcolor{keywordflow}{if} (\hyperlink{classPlayer_afd36b40cd4f3950f2e3516904c4b6fba}{removeResources}(it->getCertificationCost(), \textcolor{keyword}{false}) == 1)
+64             \{
+65                 it->upLevel();
+66                 updatePoints();
+67                 \textcolor{keywordflow}{return} 1;
+68             \}
+69             \textcolor{keywordflow}{else}
+70                 \textcolor{keywordflow}{return} 0;
+71         \}
+72     \}
+73 
+74     \textcolor{keywordflow}{return} -1;
+75 \}
+\end{DoxyCode}
+\hypertarget{classPlayer_a8bca0e3d8ce5e75e0798aba334e9763b}{\index{Player@{Player}!get\-Companies@{get\-Companies}}
+\index{get\-Companies@{get\-Companies}!Player@{Player}}
+\subsubsection[{get\-Companies}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::list$<${\bf Company}$>$\& Player\-::get\-Companies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classPlayer_a8bca0e3d8ce5e75e0798aba334e9763b}
+
+\begin{DoxyCode}
+37 \{ \textcolor{keywordflow}{return} listCompanies; \}
+\end{DoxyCode}
+\hypertarget{classPlayer_addd52384a5062bc06c6fa4d4cf381f86}{\index{Player@{Player}!get\-File\-Avatar@{get\-File\-Avatar}}
+\index{get\-File\-Avatar@{get\-File\-Avatar}!Player@{Player}}
+\subsubsection[{get\-File\-Avatar}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Player\-::get\-File\-Avatar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classPlayer_addd52384a5062bc06c6fa4d4cf381f86}
+
+\begin{DoxyCode}
+39 \{ \textcolor{keywordflow}{return} fileAvatar.data(); \}
+\end{DoxyCode}
+\hypertarget{classPlayer_ad98ff5b24bb1ddc41f0390d50ceac3a4}{\index{Player@{Player}!get\-Methodology@{get\-Methodology}}
+\index{get\-Methodology@{get\-Methodology}!Player@{Player}}
+\subsubsection[{get\-Methodology}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Player\-::get\-Methodology (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classPlayer_ad98ff5b24bb1ddc41f0390d50ceac3a4}
+
+\begin{DoxyCode}
+23 \{ \textcolor{keywordflow}{return} methodologyPlayer.data(); \}
+\end{DoxyCode}
+\hypertarget{classPlayer_a63af5762c820d47e9ed31915ac0ceed9}{\index{Player@{Player}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!Player@{Player}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Player\-::get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classPlayer_a63af5762c820d47e9ed31915ac0ceed9}
+
+\begin{DoxyCode}
+21 \{ \textcolor{keywordflow}{return} namePlayer.data(); \}
+\end{DoxyCode}
+\hypertarget{classPlayer_acd9a2131d61ae05f83063900b205d9ff}{\index{Player@{Player}!get\-Num\-Empresas@{get\-Num\-Empresas}}
+\index{get\-Num\-Empresas@{get\-Num\-Empresas}!Player@{Player}}
+\subsubsection[{get\-Num\-Empresas}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::get\-Num\-Empresas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classPlayer_acd9a2131d61ae05f83063900b205d9ff}
+
+\begin{DoxyCode}
+25 \{ \textcolor{keywordflow}{return} listCompanies.size(); \}
+\end{DoxyCode}
+\hypertarget{classPlayer_a2d9d894f68e52cc6d9dfdbc0e6cd3e53}{\index{Player@{Player}!get\-Points@{get\-Points}}
+\index{get\-Points@{get\-Points}!Player@{Player}}
+\subsubsection[{get\-Points}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::get\-Points (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classPlayer_a2d9d894f68e52cc6d9dfdbc0e6cd3e53}
+
+\begin{DoxyCode}
+27 \{ \textcolor{keywordflow}{return} pointsPlayer; \}
+\end{DoxyCode}
+\hypertarget{classPlayer_abfaf379855ef276b27da1bd47d7b037d}{\index{Player@{Player}!get\-Resources@{get\-Resources}}
+\index{get\-Resources@{get\-Resources}!Player@{Player}}
+\subsubsection[{get\-Resources}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::get\-Resources (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classPlayer_abfaf379855ef276b27da1bd47d7b037d}
+
+\begin{DoxyCode}
+29 \{ \textcolor{keywordflow}{return} resourcesPlayer; \}
+\end{DoxyCode}
+\hypertarget{classPlayer_afd36b40cd4f3950f2e3516904c4b6fba}{\index{Player@{Player}!remove\-Resources@{remove\-Resources}}
+\index{remove\-Resources@{remove\-Resources}!Player@{Player}}
+\subsubsection[{remove\-Resources}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-::remove\-Resources (
+\begin{DoxyParamCaption}
+\item[{int}]{resources, }
+\item[{bool}]{force}
+\end{DoxyParamCaption}
+)}}\label{classPlayer_afd36b40cd4f3950f2e3516904c4b6fba}
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{keywordflow}{if} (resources > 0 && resources <= resourcesPlayer)
+27     \{
+28         resourcesPlayer -= resources;
+29         \textcolor{keywordflow}{return} 1;
+30     \}
+31     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (force)
+32     \{
+33         resourcesPlayer = 0;
+34         \textcolor{keywordflow}{return} 1;
+35     \}
+36     \textcolor{keywordflow}{return} 0;
+37 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Player/\hyperlink{Player_8h}{Player.\-h}\item 
+Player/\hyperlink{Player_8cc}{Player.\-cc}\end{DoxyCompactItemize}

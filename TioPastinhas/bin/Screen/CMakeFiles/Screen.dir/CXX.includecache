@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Screen/MainScreen.cc
+stdio.h
+-
+math.h
+-
+time.h
+-
+list
+-
+MainScreen.h
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Screen/MainScreen.h
+
+/home/rubens/UFMG/Grad/8/SE/EngSoft/Pastinhas/src/Screen/MainScreen.h
+allegro5/allegro.h
+-
+allegro5/allegro_image.h
+-
+allegro5/allegro_primitives.h
+-
+allegro5/allegro_font.h
+-
+allegro5/allegro_ttf.h
+-
+allegro5/allegro_native_dialog.h
+-
+list
+-
+string
+-
+
