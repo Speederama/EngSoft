@@ -10,6 +10,7 @@
 	. apresentar justificativas de atrasos e outros;
 
 - evidenciar testes: [1,2]
+	. definir roteiro de testes para executar testes de lógica;
 	. mostrar testes da lógica do jogo: evidenciar quais os casos
 	possíveis de ocorrer, e os respectivos testes -- apresentar
 	printscreen de etapas de interação;
