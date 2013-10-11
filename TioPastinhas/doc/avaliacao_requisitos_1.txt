@@ -1,0 +1,95 @@
+>>> Trabalho Prático de Engenharia de Software:
+
+---------------------------------------------------------------------
+
+1. Requisitos funcionais:
+	
+	-----------------------------------------------------------------
+	1.1 A fazer:
+
+	h) ao término do jogo, o sistema deve informar a classificação
+	final de cada participante;
+
+	i) o jogo deve possuir eventos de sorte e azar, disparados pela
+	roleta;
+
+	-----------------------------------------------------------------
+	1.2 Em andamento:
+
+	b) o sistema deve ter uma tela de configuração, onde devem
+	ser informados:
+		- quantidade de jogadores;
+		- número de rodadas;
+		- metodologia de desenvolvimento de software de cada jogador
+		(SCRUM, XP, Kanban, Praxis);
+		- apelidos dos jogadores;
+
+	b*) o protótipo inicial da tela de configurações já foi definido,
+	mas falta realizar a impĺementação do mesmo sobre a engine
+	de desenvolvimento de jogos escolhida, o Allegro;
+
+	e) o sistema deve permitir que o usuário adquira empresas
+	com nível inicial de maturidade;
+
+	e*) o jogo já permite que usuário adquira empresas com nível
+	inicial de maturidade, mas ainda é necessário definir quais os
+	custos associados às empresas de forma a manter o balanceamento
+	e jogabilidade da aplicação;
+
+	f) o sistema deve permitir que o usuário aumente o nível
+	de maturidade das empresas que possuir;
+
+	f*) o jogo já permite que usuário aumente o nível de maturidade
+	das empresas que possuir; é necessário definir quais os
+	custos associados às certificações das empresas;
+
+	g) o sistema deve pontuar os usuários de acordo com as empresas
+	que o usuário possuir;
+
+	g*) apesar de o jogo disponibilizar uma pontuação inicial
+	a cada jogador, ainda é necessário balancear o método
+	de distribuição dos pontos;
+
+	-----------------------------------------------------------------
+	1.3 Atingidos:
+
+	a) o sistema deve suportar de dois a quatro participantes;
+
+	c) o sistema deve possuir mecânica de turno, em que cada turno
+	respeita o autômato abaixo;
+
+	d) o sistema deve possuir uma tela principal de interação com
+	o usuário; a tela deve ser implementada segundo o protótipo
+	já definido;
+
+	j) o jogo deve apresentar perguntas ao usuário, de acordo com
+	a posição em que a roleta parar;
+
+	k) o jogo deve validar a resposta do usuário, verificando se
+	o mesmo acertou ou errou a questão, e recompensando-o
+	adequadamente;
+
+
+---------------------------------------------------------------------
+
+2. Requisitos não-funcionais:
+	
+	-----------------------------------------------------------------
+	2.1 A fazer:
+
+	a) os conhecimentos do usuário sobre engenharia de software
+	devem ser testados e avaliados;
+	d) o sistema deve ser portável para diversos sistemas
+	operacionais;
+	
+	-----------------------------------------------------------------
+	2.2 Em andamento:
+	
+	b) o sistema deve ser intuitivo e de fácil interação;
+	e) o sistema deve possuir bom desempenho.
+
+	-----------------------------------------------------------------
+	2.3 Atingidos:
+
+	c) o sistema deve simular a roleta -- definida no protótipo --
+	de forma realística;
