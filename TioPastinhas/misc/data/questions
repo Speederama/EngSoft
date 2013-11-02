@@ -9,4 +9,9 @@
 7|0|Qual das seguintes opções não é uma vantagem esperada da CBSE com Reuso?|Simplificar o processo de software|Reduzir a quantidade de software a ser desenvolvida|Reduzir os custos e riscos|Entregar o produto mais rápido ao cliente|A
 8|0|As opções abaixo são grupos de áreas de processo do CMMI, exceto.|Gerenciamento de processos|Gerenciamento de projetos|Solução técnica|Engenharia|C
 9|0|Qual das seguintes opções não é um estágio do CMMI por Estágios?|Gerenciado|Definido|Inicial|Todas as opções acima são estágios do CMMI por Estágios|D
-10|Os três fatores são citados por afetarem a qualidade do produto de software, exceto.|Tecnologia de desenvolvimento|Qualidade de processo|Custo, tempo e cronograma|Qualidade da documentação|D
+10|0|Os três fatores são citados por afetarem a qualidade do produto de software, exceto.|Tecnologia de desenvolvimento|Qualidade de processo|Custo, tempo e cronograma|Qualidade da documentação|D
+11|1|Como são expressos os requisitos de software no XP?|Histórias de usuário|Casos de uso|Tarefas|Product Backlog|A
+12|1|Qual das seguintes opções não corresponde a uma prática do XP?|Planejamento incremental|Refatoração|Programar para reusar|Ritmo sustentável|C
+13|1|Como o XP lida com testes?|Testes devem ser implementados e executados somente após cada modificação do código.|Testes devem ser implementados antes do código.|Testes devem ser implementados e executados somente após uma modificação significativa do código.|Testes devem ser implementados e executados somente após a criação de uma release do sistema para o cliente.|B
+14|1|Assinale a afirmativa falsa.|O XP utiliza o conceito de metáforas para estabelecer um sistema de nomes e facilitar a comunicação da equipe.|Desenvolvimento dirigido por testes é um dos princípios do XP.|No XP, um trecho de código deve ser de responsabilidade de um único codificador.|O XP valoriza a interação com o cliente.|C
+15|1|São práticas recomendadas pelo XP, EXCETO a|Programação em pares|Integração contínua|Documentação abundante e detalhada|Refatoração frequente|C
