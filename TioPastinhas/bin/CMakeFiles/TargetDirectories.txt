@@ -1,7 +1,7 @@
-/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Card/CMakeFiles/Card.dir
-/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Company/CMakeFiles/Company.dir
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Config.dir
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/End.dir
 /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Game/CMakeFiles/Game.dir
-/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Player/CMakeFiles/Player.dir
-/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Question/CMakeFiles/Question.dir
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Main.dir
 /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Screen.dir
+/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Splash.dir
 /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles/game.dir

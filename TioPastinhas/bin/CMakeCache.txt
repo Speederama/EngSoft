@@ -135,29 +135,29 @@ CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Dependencies for target
-Card_LIB_DEPENDS:STATIC=
-
-//Dependencies for target
-Company_LIB_DEPENDS:STATIC=
+//Dependencies for the target
+Config_LIB_DEPENDS:STATIC=general;Screen;
 
 //Dependencies for the target
-Game_LIB_DEPENDS:STATIC=general;allegro;general;Card;general;Player;general;Screen;general;Question;
+End_LIB_DEPENDS:STATIC=general;Screen;
 
 //Dependencies for the target
-Player_LIB_DEPENDS:STATIC=general;Company;
+Game_LIB_DEPENDS:STATIC=general;allegro;general;allegro_ttf;general;allegro_font;general;allegro_image;general;allegro_audio;general;allegro_acodec;general;allegro_dialog;general;allegro_primitives;general;Splash;general;Config;general;Main;general;End;
+
+//Dependencies for the target
+Main_LIB_DEPENDS:STATIC=general;Screen;
 
 //Dependencies for target
-Question_LIB_DEPENDS:STATIC=
-
-//Dependencies for the target
-Screen_LIB_DEPENDS:STATIC=general;allegro;general;allegro_image;general;allegro_primitives;general;allegro_font;general;allegro_ttf;general;allegro_dialog;
+Screen_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 SpeedGames_BINARY_DIR:STATIC=/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin
 
 //Value Computed by CMake
 SpeedGames_SOURCE_DIR:STATIC=/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src
+
+//Dependencies for the target
+Splash_LIB_DEPENDS:STATIC=general;Screen;
 
 
 ########################
@@ -240,7 +240,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=7
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

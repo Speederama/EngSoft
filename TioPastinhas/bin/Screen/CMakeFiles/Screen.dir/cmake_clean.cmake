@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/Screen.dir/MainScreen.cc.o"
+  "CMakeFiles/Screen.dir/Screen.cpp.o"
   "libScreen.pdb"
   "libScreen.a"
 )

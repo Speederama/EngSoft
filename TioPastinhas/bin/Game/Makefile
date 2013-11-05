@@ -115,29 +115,29 @@ Game/fast:
 	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/build
 .PHONY : Game/fast
 
-Game.o: Game.cc.o
+Game.o: Game.cpp.o
 .PHONY : Game.o
 
 # target to build an object file
-Game.cc.o:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/Game.cc.o
-.PHONY : Game.cc.o
+Game.cpp.o:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/Game.cpp.o
+.PHONY : Game.cpp.o
 
-Game.i: Game.cc.i
+Game.i: Game.cpp.i
 .PHONY : Game.i
 
 # target to preprocess a source file
-Game.cc.i:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/Game.cc.i
-.PHONY : Game.cc.i
+Game.cpp.i:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/Game.cpp.i
+.PHONY : Game.cpp.i
 
-Game.s: Game.cc.s
+Game.s: Game.cpp.s
 .PHONY : Game.s
 
 # target to generate assembly for a file
-Game.cc.s:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/Game.cc.s
-.PHONY : Game.cc.s
+Game.cpp.s:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/Game.cpp.s
+.PHONY : Game.cpp.s
 
 # Help Target
 help:

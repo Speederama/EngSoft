@@ -5,8 +5,8 @@
 
 #define INITIAL_RESOURCES 2000000
 
-class Player
-{
+class Player {
+
 	private:
 		std::string namePlayer;
 		std::string methodologyPlayer;

@@ -115,19 +115,6 @@ game/fast:
 .PHONY : game/fast
 
 #=============================================================================
-# Target rules for targets named Card
-
-# Build rule for target.
-Card: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Card
-.PHONY : Card
-
-# fast build rule for target.
-Card/fast:
-	$(MAKE) -f Card/CMakeFiles/Card.dir/build.make Card/CMakeFiles/Card.dir/build
-.PHONY : Card/fast
-
-#=============================================================================
 # Target rules for targets named Game
 
 # Build rule for target.
@@ -139,6 +126,45 @@ Game: cmake_check_build_system
 Game/fast:
 	$(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/build
 .PHONY : Game/fast
+
+#=============================================================================
+# Target rules for targets named Config
+
+# Build rule for target.
+Config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Config
+.PHONY : Config
+
+# fast build rule for target.
+Config/fast:
+	$(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/build
+.PHONY : Config/fast
+
+#=============================================================================
+# Target rules for targets named End
+
+# Build rule for target.
+End: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 End
+.PHONY : End
+
+# fast build rule for target.
+End/fast:
+	$(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/build
+.PHONY : End/fast
+
+#=============================================================================
+# Target rules for targets named Main
+
+# Build rule for target.
+Main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Main
+.PHONY : Main
+
+# fast build rule for target.
+Main/fast:
+	$(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/build
+.PHONY : Main/fast
 
 #=============================================================================
 # Target rules for targets named Screen
@@ -154,67 +180,41 @@ Screen/fast:
 .PHONY : Screen/fast
 
 #=============================================================================
-# Target rules for targets named Player
+# Target rules for targets named Splash
 
 # Build rule for target.
-Player: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Player
-.PHONY : Player
+Splash: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Splash
+.PHONY : Splash
 
 # fast build rule for target.
-Player/fast:
-	$(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/build
-.PHONY : Player/fast
+Splash/fast:
+	$(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/build
+.PHONY : Splash/fast
 
-#=============================================================================
-# Target rules for targets named Company
-
-# Build rule for target.
-Company: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Company
-.PHONY : Company
-
-# fast build rule for target.
-Company/fast:
-	$(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/build
-.PHONY : Company/fast
-
-#=============================================================================
-# Target rules for targets named Question
-
-# Build rule for target.
-Question: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Question
-.PHONY : Question
-
-# fast build rule for target.
-Question/fast:
-	$(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/build
-.PHONY : Question/fast
-
-main.o: main.cc.o
+main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
-main.cc.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cc.o
-.PHONY : main.cc.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-main.i: main.cc.i
+main.i: main.cpp.i
 .PHONY : main.i
 
 # target to preprocess a source file
-main.cc.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cc.i
-.PHONY : main.cc.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-main.s: main.cc.s
+main.s: main.cpp.s
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.cc.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cc.s
-.PHONY : main.cc.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -225,12 +225,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... game"
 	@echo "... rebuild_cache"
-	@echo "... Card"
 	@echo "... Game"
+	@echo "... Config"
+	@echo "... End"
+	@echo "... Main"
 	@echo "... Screen"
-	@echo "... Player"
-	@echo "... Company"
-	@echo "... Question"
+	@echo "... Splash"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,0 +1,2 @@
+/usr/bin/ar cr libEnd.a  CMakeFiles/End.dir/End.cpp.o
+/usr/bin/ranlib libEnd.a

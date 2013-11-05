@@ -59,11 +59,11 @@ CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin
 # Target rules for target CMakeFiles/game.dir
 
 # All Build rule for target.
-CMakeFiles/game.dir/all: Screen/CMakeFiles/Screen.dir/all
-CMakeFiles/game.dir/all: Player/CMakeFiles/Player.dir/all
-CMakeFiles/game.dir/all: Question/CMakeFiles/Question.dir/all
 CMakeFiles/game.dir/all: Game/CMakeFiles/Game.dir/all
-CMakeFiles/game.dir/all: Card/CMakeFiles/Card.dir/all
+CMakeFiles/game.dir/all: Screen/CMakeFiles/Splash.dir/all
+CMakeFiles/game.dir/all: Screen/CMakeFiles/Config.dir/all
+CMakeFiles/game.dir/all: Screen/CMakeFiles/Main.dir/all
+CMakeFiles/game.dir/all: Screen/CMakeFiles/End.dir/all
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/depend
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  7
@@ -95,56 +95,6 @@ clean: CMakeFiles/game.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory Card
-
-# Convenience name for "all" pass in the directory.
-Card/all: Card/CMakeFiles/Card.dir/all
-.PHONY : Card/all
-
-# Convenience name for "clean" pass in the directory.
-Card/clean: Card/CMakeFiles/Card.dir/clean
-.PHONY : Card/clean
-
-# Convenience name for "preinstall" pass in the directory.
-Card/preinstall:
-.PHONY : Card/preinstall
-
-#=============================================================================
-# Target rules for target Card/CMakeFiles/Card.dir
-
-# All Build rule for target.
-Card/CMakeFiles/Card.dir/all:
-	$(MAKE) -f Card/CMakeFiles/Card.dir/build.make Card/CMakeFiles/Card.dir/depend
-	$(MAKE) -f Card/CMakeFiles/Card.dir/build.make Card/CMakeFiles/Card.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  1
-	@echo "Built target Card"
-.PHONY : Card/CMakeFiles/Card.dir/all
-
-# Include target in all.
-all: Card/CMakeFiles/Card.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-Card/CMakeFiles/Card.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 Card/CMakeFiles/Card.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
-.PHONY : Card/CMakeFiles/Card.dir/rule
-
-# Convenience name for target.
-Card: Card/CMakeFiles/Card.dir/rule
-.PHONY : Card
-
-# clean rule for target.
-Card/CMakeFiles/Card.dir/clean:
-	$(MAKE) -f Card/CMakeFiles/Card.dir/build.make Card/CMakeFiles/Card.dir/clean
-.PHONY : Card/CMakeFiles/Card.dir/clean
-
-# clean rule for target.
-clean: Card/CMakeFiles/Card.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Directory level rules for directory Game
 
 # Convenience name for "all" pass in the directory.
@@ -163,11 +113,11 @@ Game/preinstall:
 # Target rules for target Game/CMakeFiles/Game.dir
 
 # All Build rule for target.
+Game/CMakeFiles/Game.dir/all: Screen/CMakeFiles/Splash.dir/all
+Game/CMakeFiles/Game.dir/all: Screen/CMakeFiles/Config.dir/all
+Game/CMakeFiles/Game.dir/all: Screen/CMakeFiles/Main.dir/all
+Game/CMakeFiles/Game.dir/all: Screen/CMakeFiles/End.dir/all
 Game/CMakeFiles/Game.dir/all: Screen/CMakeFiles/Screen.dir/all
-Game/CMakeFiles/Game.dir/all: Player/CMakeFiles/Player.dir/all
-Game/CMakeFiles/Game.dir/all: Question/CMakeFiles/Question.dir/all
-Game/CMakeFiles/Game.dir/all: Company/CMakeFiles/Company.dir/all
-Game/CMakeFiles/Game.dir/all: Card/CMakeFiles/Card.dir/all
 	$(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/depend
 	$(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  3
@@ -202,16 +152,129 @@ clean: Game/CMakeFiles/Game.dir/clean
 # Directory level rules for directory Screen
 
 # Convenience name for "all" pass in the directory.
+Screen/all: Screen/CMakeFiles/Config.dir/all
+Screen/all: Screen/CMakeFiles/End.dir/all
+Screen/all: Screen/CMakeFiles/Main.dir/all
 Screen/all: Screen/CMakeFiles/Screen.dir/all
+Screen/all: Screen/CMakeFiles/Splash.dir/all
 .PHONY : Screen/all
 
 # Convenience name for "clean" pass in the directory.
+Screen/clean: Screen/CMakeFiles/Config.dir/clean
+Screen/clean: Screen/CMakeFiles/End.dir/clean
+Screen/clean: Screen/CMakeFiles/Main.dir/clean
 Screen/clean: Screen/CMakeFiles/Screen.dir/clean
+Screen/clean: Screen/CMakeFiles/Splash.dir/clean
 .PHONY : Screen/clean
 
 # Convenience name for "preinstall" pass in the directory.
 Screen/preinstall:
 .PHONY : Screen/preinstall
+
+#=============================================================================
+# Target rules for target Screen/CMakeFiles/Config.dir
+
+# All Build rule for target.
+Screen/CMakeFiles/Config.dir/all: Screen/CMakeFiles/Screen.dir/all
+	$(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/depend
+	$(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  1
+	@echo "Built target Config"
+.PHONY : Screen/CMakeFiles/Config.dir/all
+
+# Include target in all.
+all: Screen/CMakeFiles/Config.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Screen/CMakeFiles/Config.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Config.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
+.PHONY : Screen/CMakeFiles/Config.dir/rule
+
+# Convenience name for target.
+Config: Screen/CMakeFiles/Config.dir/rule
+.PHONY : Config
+
+# clean rule for target.
+Screen/CMakeFiles/Config.dir/clean:
+	$(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/clean
+.PHONY : Screen/CMakeFiles/Config.dir/clean
+
+# clean rule for target.
+clean: Screen/CMakeFiles/Config.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Screen/CMakeFiles/End.dir
+
+# All Build rule for target.
+Screen/CMakeFiles/End.dir/all: Screen/CMakeFiles/Screen.dir/all
+	$(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/depend
+	$(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  2
+	@echo "Built target End"
+.PHONY : Screen/CMakeFiles/End.dir/all
+
+# Include target in all.
+all: Screen/CMakeFiles/End.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Screen/CMakeFiles/End.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/End.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
+.PHONY : Screen/CMakeFiles/End.dir/rule
+
+# Convenience name for target.
+End: Screen/CMakeFiles/End.dir/rule
+.PHONY : End
+
+# clean rule for target.
+Screen/CMakeFiles/End.dir/clean:
+	$(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/clean
+.PHONY : Screen/CMakeFiles/End.dir/clean
+
+# clean rule for target.
+clean: Screen/CMakeFiles/End.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Screen/CMakeFiles/Main.dir
+
+# All Build rule for target.
+Screen/CMakeFiles/Main.dir/all: Screen/CMakeFiles/Screen.dir/all
+	$(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/depend
+	$(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  4
+	@echo "Built target Main"
+.PHONY : Screen/CMakeFiles/Main.dir/all
+
+# Include target in all.
+all: Screen/CMakeFiles/Main.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Screen/CMakeFiles/Main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
+.PHONY : Screen/CMakeFiles/Main.dir/rule
+
+# Convenience name for target.
+Main: Screen/CMakeFiles/Main.dir/rule
+.PHONY : Main
+
+# clean rule for target.
+Screen/CMakeFiles/Main.dir/clean:
+	$(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/clean
+.PHONY : Screen/CMakeFiles/Main.dir/clean
+
+# clean rule for target.
+clean: Screen/CMakeFiles/Main.dir/clean
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target Screen/CMakeFiles/Screen.dir
@@ -220,7 +283,7 @@ Screen/preinstall:
 Screen/CMakeFiles/Screen.dir/all:
 	$(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/depend
 	$(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  5
 	@echo "Built target Screen"
 .PHONY : Screen/CMakeFiles/Screen.dir/all
 
@@ -249,153 +312,38 @@ clean: Screen/CMakeFiles/Screen.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory Player
-
-# Convenience name for "all" pass in the directory.
-Player/all: Player/CMakeFiles/Player.dir/all
-.PHONY : Player/all
-
-# Convenience name for "clean" pass in the directory.
-Player/clean: Player/CMakeFiles/Player.dir/clean
-.PHONY : Player/clean
-
-# Convenience name for "preinstall" pass in the directory.
-Player/preinstall:
-.PHONY : Player/preinstall
-
-#=============================================================================
-# Target rules for target Player/CMakeFiles/Player.dir
+# Target rules for target Screen/CMakeFiles/Splash.dir
 
 # All Build rule for target.
-Player/CMakeFiles/Player.dir/all: Company/CMakeFiles/Company.dir/all
-	$(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/depend
-	$(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  4
-	@echo "Built target Player"
-.PHONY : Player/CMakeFiles/Player.dir/all
+Screen/CMakeFiles/Splash.dir/all: Screen/CMakeFiles/Screen.dir/all
+	$(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/depend
+	$(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  6
+	@echo "Built target Splash"
+.PHONY : Screen/CMakeFiles/Splash.dir/all
 
 # Include target in all.
-all: Player/CMakeFiles/Player.dir/all
+all: Screen/CMakeFiles/Splash.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-Player/CMakeFiles/Player.dir/rule: cmake_check_build_system
+Screen/CMakeFiles/Splash.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 Player/CMakeFiles/Player.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Splash.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
-.PHONY : Player/CMakeFiles/Player.dir/rule
+.PHONY : Screen/CMakeFiles/Splash.dir/rule
 
 # Convenience name for target.
-Player: Player/CMakeFiles/Player.dir/rule
-.PHONY : Player
+Splash: Screen/CMakeFiles/Splash.dir/rule
+.PHONY : Splash
 
 # clean rule for target.
-Player/CMakeFiles/Player.dir/clean:
-	$(MAKE) -f Player/CMakeFiles/Player.dir/build.make Player/CMakeFiles/Player.dir/clean
-.PHONY : Player/CMakeFiles/Player.dir/clean
+Screen/CMakeFiles/Splash.dir/clean:
+	$(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/clean
+.PHONY : Screen/CMakeFiles/Splash.dir/clean
 
 # clean rule for target.
-clean: Player/CMakeFiles/Player.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory Company
-
-# Convenience name for "all" pass in the directory.
-Company/all: Company/CMakeFiles/Company.dir/all
-.PHONY : Company/all
-
-# Convenience name for "clean" pass in the directory.
-Company/clean: Company/CMakeFiles/Company.dir/clean
-.PHONY : Company/clean
-
-# Convenience name for "preinstall" pass in the directory.
-Company/preinstall:
-.PHONY : Company/preinstall
-
-#=============================================================================
-# Target rules for target Company/CMakeFiles/Company.dir
-
-# All Build rule for target.
-Company/CMakeFiles/Company.dir/all:
-	$(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/depend
-	$(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  2
-	@echo "Built target Company"
-.PHONY : Company/CMakeFiles/Company.dir/all
-
-# Include target in all.
-all: Company/CMakeFiles/Company.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-Company/CMakeFiles/Company.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 Company/CMakeFiles/Company.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
-.PHONY : Company/CMakeFiles/Company.dir/rule
-
-# Convenience name for target.
-Company: Company/CMakeFiles/Company.dir/rule
-.PHONY : Company
-
-# clean rule for target.
-Company/CMakeFiles/Company.dir/clean:
-	$(MAKE) -f Company/CMakeFiles/Company.dir/build.make Company/CMakeFiles/Company.dir/clean
-.PHONY : Company/CMakeFiles/Company.dir/clean
-
-# clean rule for target.
-clean: Company/CMakeFiles/Company.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory Question
-
-# Convenience name for "all" pass in the directory.
-Question/all: Question/CMakeFiles/Question.dir/all
-.PHONY : Question/all
-
-# Convenience name for "clean" pass in the directory.
-Question/clean: Question/CMakeFiles/Question.dir/clean
-.PHONY : Question/clean
-
-# Convenience name for "preinstall" pass in the directory.
-Question/preinstall:
-.PHONY : Question/preinstall
-
-#=============================================================================
-# Target rules for target Question/CMakeFiles/Question.dir
-
-# All Build rule for target.
-Question/CMakeFiles/Question.dir/all:
-	$(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/depend
-	$(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles  5
-	@echo "Built target Question"
-.PHONY : Question/CMakeFiles/Question.dir/all
-
-# Include target in all.
-all: Question/CMakeFiles/Question.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-Question/CMakeFiles/Question.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 Question/CMakeFiles/Question.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
-.PHONY : Question/CMakeFiles/Question.dir/rule
-
-# Convenience name for target.
-Question: Question/CMakeFiles/Question.dir/rule
-.PHONY : Question
-
-# clean rule for target.
-Question/CMakeFiles/Question.dir/clean:
-	$(MAKE) -f Question/CMakeFiles/Question.dir/build.make Question/CMakeFiles/Question.dir/clean
-.PHONY : Question/CMakeFiles/Question.dir/clean
-
-# clean rule for target.
-clean: Question/CMakeFiles/Question.dir/clean
+clean: Screen/CMakeFiles/Splash.dir/clean
 .PHONY : clean
 
 #=============================================================================

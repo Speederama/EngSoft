@@ -19,17 +19,15 @@ set (CMAKE_CXX_FLAGS "-std=c++0x -O3")
 set (CMAKE_DISABLE_IN_SOURCE_BUILD ON)
 
 # Paths
-add_subdirectory (Card)
 add_subdirectory (Game)
 add_subdirectory (Screen)
-add_subdirectory (Player)
-add_subdirectory (Company)
-add_subdirectory (Question)
+# add_subdirectory (Player)
+# add_subdirectory (Company)
 
 link_directories (/usr/lib)
 link_directories (${CMAKE_BINARY_DIR}/Game)
 
 # Build
-add_executable (${OUTPUT} main.cc)
+add_executable (${OUTPUT} main.cpp)
 add_dependencies (${OUTPUT} Game)
 target_link_libraries (${OUTPUT} Game)

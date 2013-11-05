@@ -1,0 +1,2 @@
+/usr/bin/ar cr libSplash.a  CMakeFiles/Splash.dir/Splash.cpp.o
+/usr/bin/ranlib libSplash.a

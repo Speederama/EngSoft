@@ -1,0 +1,2 @@
+/usr/bin/ar cr libMain.a  CMakeFiles/Main.dir/Main.cpp.o
+/usr/bin/ranlib libMain.a

@@ -52,44 +52,44 @@ include CMakeFiles/game.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/game.dir/flags.make
 
-CMakeFiles/game.dir/main.cc.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/main.cc.o: /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cc
+CMakeFiles/game.dir/main.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/main.cpp.o: /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/game.dir/main.cc.o"
-	g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/main.cc.o -c /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/game.dir/main.cpp.o"
+	g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/main.cpp.o -c /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cpp
 
-CMakeFiles/game.dir/main.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/main.cc.i"
-	g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cc > CMakeFiles/game.dir/main.cc.i
+CMakeFiles/game.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/main.cpp.i"
+	g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cpp > CMakeFiles/game.dir/main.cpp.i
 
-CMakeFiles/game.dir/main.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/main.cc.s"
-	g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cc -o CMakeFiles/game.dir/main.cc.s
+CMakeFiles/game.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/main.cpp.s"
+	g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/main.cpp -o CMakeFiles/game.dir/main.cpp.s
 
-CMakeFiles/game.dir/main.cc.o.requires:
-.PHONY : CMakeFiles/game.dir/main.cc.o.requires
+CMakeFiles/game.dir/main.cpp.o.requires:
+.PHONY : CMakeFiles/game.dir/main.cpp.o.requires
 
-CMakeFiles/game.dir/main.cc.o.provides: CMakeFiles/game.dir/main.cc.o.requires
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cc.o.provides.build
-.PHONY : CMakeFiles/game.dir/main.cc.o.provides
+CMakeFiles/game.dir/main.cpp.o.provides: CMakeFiles/game.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/game.dir/main.cpp.o.provides
 
-CMakeFiles/game.dir/main.cc.o.provides.build: CMakeFiles/game.dir/main.cc.o
+CMakeFiles/game.dir/main.cpp.o.provides.build: CMakeFiles/game.dir/main.cpp.o
 
 # Object files for target game
 game_OBJECTS = \
-"CMakeFiles/game.dir/main.cc.o"
+"CMakeFiles/game.dir/main.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
 
-game: CMakeFiles/game.dir/main.cc.o
+game: CMakeFiles/game.dir/main.cpp.o
 game: CMakeFiles/game.dir/build.make
 game: Game/libGame.a
-game: Card/libCard.a
-game: Player/libPlayer.a
-game: Company/libCompany.a
+game: Screen/libSplash.a
+game: Screen/libConfig.a
+game: Screen/libMain.a
+game: Screen/libEnd.a
 game: Screen/libScreen.a
-game: Question/libQuestion.a
 game: CMakeFiles/game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
@@ -98,7 +98,7 @@ game: CMakeFiles/game.dir/link.txt
 CMakeFiles/game.dir/build: game
 .PHONY : CMakeFiles/game.dir/build
 
-CMakeFiles/game.dir/requires: CMakeFiles/game.dir/main.cc.o.requires
+CMakeFiles/game.dir/requires: CMakeFiles/game.dir/main.cpp.o.requires
 .PHONY : CMakeFiles/game.dir/requires
 
 CMakeFiles/game.dir/clean:

@@ -34,12 +34,8 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Card/cmake_install.cmake")
   INCLUDE("/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Game/cmake_install.cmake")
   INCLUDE("/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/cmake_install.cmake")
-  INCLUDE("/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Player/cmake_install.cmake")
-  INCLUDE("/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Company/cmake_install.cmake")
-  INCLUDE("/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Question/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

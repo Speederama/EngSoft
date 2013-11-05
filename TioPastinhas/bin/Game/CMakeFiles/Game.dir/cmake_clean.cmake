@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/Game.dir/Game.cc.o"
+  "CMakeFiles/Game.dir/Game.cpp.o"
   "libGame.pdb"
   "libGame.a"
 )

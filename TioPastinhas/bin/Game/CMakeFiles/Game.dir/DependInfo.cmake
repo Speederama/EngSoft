@@ -4,17 +4,17 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Game/Game.cc" "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Game/CMakeFiles/Game.dir/Game.cc.o"
+  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Game/Game.cpp" "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Game/CMakeFiles/Game.dir/Game.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Card/CMakeFiles/Card.dir/DependInfo.cmake"
-  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Player/CMakeFiles/Player.dir/DependInfo.cmake"
+  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Splash.dir/DependInfo.cmake"
+  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Config.dir/DependInfo.cmake"
+  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Main.dir/DependInfo.cmake"
+  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/End.dir/DependInfo.cmake"
   "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Screen.dir/DependInfo.cmake"
-  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Question/CMakeFiles/Question.dir/DependInfo.cmake"
-  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Company/CMakeFiles/Company.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

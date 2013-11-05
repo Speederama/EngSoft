@@ -102,6 +102,48 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+Screen/CMakeFiles/Config.dir/rule:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Config.dir/rule
+.PHONY : Screen/CMakeFiles/Config.dir/rule
+
+# Convenience name for target.
+Config: Screen/CMakeFiles/Config.dir/rule
+.PHONY : Config
+
+# fast build rule for target.
+Config/fast:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/build
+.PHONY : Config/fast
+
+# Convenience name for target.
+Screen/CMakeFiles/End.dir/rule:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/End.dir/rule
+.PHONY : Screen/CMakeFiles/End.dir/rule
+
+# Convenience name for target.
+End: Screen/CMakeFiles/End.dir/rule
+.PHONY : End
+
+# fast build rule for target.
+End/fast:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/build
+.PHONY : End/fast
+
+# Convenience name for target.
+Screen/CMakeFiles/Main.dir/rule:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Main.dir/rule
+.PHONY : Screen/CMakeFiles/Main.dir/rule
+
+# Convenience name for target.
+Main: Screen/CMakeFiles/Main.dir/rule
+.PHONY : Main
+
+# fast build rule for target.
+Main/fast:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/build
+.PHONY : Main/fast
+
+# Convenience name for target.
 Screen/CMakeFiles/Screen.dir/rule:
 	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Screen.dir/rule
 .PHONY : Screen/CMakeFiles/Screen.dir/rule
@@ -115,29 +157,139 @@ Screen/fast:
 	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/build
 .PHONY : Screen/fast
 
-MainScreen.o: MainScreen.cc.o
-.PHONY : MainScreen.o
+# Convenience name for target.
+Screen/CMakeFiles/Splash.dir/rule:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Splash.dir/rule
+.PHONY : Screen/CMakeFiles/Splash.dir/rule
+
+# Convenience name for target.
+Splash: Screen/CMakeFiles/Splash.dir/rule
+.PHONY : Splash
+
+# fast build rule for target.
+Splash/fast:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/build
+.PHONY : Splash/fast
+
+Config.o: Config.cpp.o
+.PHONY : Config.o
 
 # target to build an object file
-MainScreen.cc.o:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/MainScreen.cc.o
-.PHONY : MainScreen.cc.o
+Config.cpp.o:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/Config.cpp.o
+.PHONY : Config.cpp.o
 
-MainScreen.i: MainScreen.cc.i
-.PHONY : MainScreen.i
+Config.i: Config.cpp.i
+.PHONY : Config.i
 
 # target to preprocess a source file
-MainScreen.cc.i:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/MainScreen.cc.i
-.PHONY : MainScreen.cc.i
+Config.cpp.i:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/Config.cpp.i
+.PHONY : Config.cpp.i
 
-MainScreen.s: MainScreen.cc.s
-.PHONY : MainScreen.s
+Config.s: Config.cpp.s
+.PHONY : Config.s
 
 # target to generate assembly for a file
-MainScreen.cc.s:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/MainScreen.cc.s
-.PHONY : MainScreen.cc.s
+Config.cpp.s:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/Config.cpp.s
+.PHONY : Config.cpp.s
+
+End.o: End.cpp.o
+.PHONY : End.o
+
+# target to build an object file
+End.cpp.o:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/End.cpp.o
+.PHONY : End.cpp.o
+
+End.i: End.cpp.i
+.PHONY : End.i
+
+# target to preprocess a source file
+End.cpp.i:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/End.cpp.i
+.PHONY : End.cpp.i
+
+End.s: End.cpp.s
+.PHONY : End.s
+
+# target to generate assembly for a file
+End.cpp.s:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/End.cpp.s
+.PHONY : End.cpp.s
+
+Main.o: Main.cpp.o
+.PHONY : Main.o
+
+# target to build an object file
+Main.cpp.o:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/Main.cpp.o
+.PHONY : Main.cpp.o
+
+Main.i: Main.cpp.i
+.PHONY : Main.i
+
+# target to preprocess a source file
+Main.cpp.i:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/Main.cpp.i
+.PHONY : Main.cpp.i
+
+Main.s: Main.cpp.s
+.PHONY : Main.s
+
+# target to generate assembly for a file
+Main.cpp.s:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/Main.cpp.s
+.PHONY : Main.cpp.s
+
+Screen.o: Screen.cpp.o
+.PHONY : Screen.o
+
+# target to build an object file
+Screen.cpp.o:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/Screen.cpp.o
+.PHONY : Screen.cpp.o
+
+Screen.i: Screen.cpp.i
+.PHONY : Screen.i
+
+# target to preprocess a source file
+Screen.cpp.i:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/Screen.cpp.i
+.PHONY : Screen.cpp.i
+
+Screen.s: Screen.cpp.s
+.PHONY : Screen.s
+
+# target to generate assembly for a file
+Screen.cpp.s:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/Screen.cpp.s
+.PHONY : Screen.cpp.s
+
+Splash.o: Splash.cpp.o
+.PHONY : Splash.o
+
+# target to build an object file
+Splash.cpp.o:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/Splash.cpp.o
+.PHONY : Splash.cpp.o
+
+Splash.i: Splash.cpp.i
+.PHONY : Splash.i
+
+# target to preprocess a source file
+Splash.cpp.i:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/Splash.cpp.i
+.PHONY : Splash.cpp.i
+
+Splash.s: Splash.cpp.s
+.PHONY : Splash.s
+
+# target to generate assembly for a file
+Splash.cpp.s:
+	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/Splash.cpp.s
+.PHONY : Splash.cpp.s
 
 # Help Target
 help:
@@ -145,12 +297,28 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... Config"
+	@echo "... End"
+	@echo "... Main"
 	@echo "... Screen"
+	@echo "... Splash"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... MainScreen.o"
-	@echo "... MainScreen.i"
-	@echo "... MainScreen.s"
+	@echo "... Config.o"
+	@echo "... Config.i"
+	@echo "... Config.s"
+	@echo "... End.o"
+	@echo "... End.i"
+	@echo "... End.s"
+	@echo "... Main.o"
+	@echo "... Main.i"
+	@echo "... Main.s"
+	@echo "... Screen.o"
+	@echo "... Screen.i"
+	@echo "... Screen.s"
+	@echo "... Splash.o"
+	@echo "... Splash.i"
+	@echo "... Splash.s"
 .PHONY : help
 
 
