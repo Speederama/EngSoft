@@ -1,2 +1,0 @@
-/usr/bin/ar cr libCompany.a  CMakeFiles/Company.dir/Company.cc.o
-/usr/bin/ranlib libCompany.a
