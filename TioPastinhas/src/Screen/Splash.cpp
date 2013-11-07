@@ -56,8 +56,8 @@ const bool Splash::draw(void) {
 	}
 
 	Image::set_target(_display);
-	_image["back"]->draw<Image::SCALED>(0, 0);
-	_image["cover"]->draw<Image::NORMAL>(0, 0);
+	_image["back"]->draw<Image::SCALED>(1, 1);
+	_image["cover"]->draw<Image::NORMAL>(1, 1);
 
 	return false;
 

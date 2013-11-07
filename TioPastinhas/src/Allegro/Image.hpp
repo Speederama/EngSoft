@@ -35,7 +35,6 @@ public:
 
 		_width = al_get_bitmap_width(_image);
 		_height = al_get_bitmap_height(_image);
-		std::cout << _width << " AND " << _height << std::endl;
 
 	}
 

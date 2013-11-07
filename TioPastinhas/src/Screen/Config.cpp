@@ -48,8 +48,8 @@ void Config::_background(void) {
 		_image["cover"]->draw<Image::NORMAL>(.025, .05);
 	}
 
-	if (_button["add"]->draw()) std::cout << "ADD!" << std::endl;
-	if (_button["sub"]->draw()) std::cout << "SUB!" << std::endl;
-	if (_button["mul"]->draw()) std::cout << "MUL!" << std::endl;
+	_button["add"]->draw();
+	_button["sub"]->draw();
+	_button["mul"]->draw();
 
 }
