@@ -18,8 +18,8 @@ _step(0) {
 	// Allegro5 initialization
 	if (not al_init()) config::error::init();
 
-	al_init_ttf_addon();
 	al_init_font_addon();
+	al_init_ttf_addon();
 	al_init_image_addon();
 	al_init_acodec_addon();
 	al_init_primitives_addon();

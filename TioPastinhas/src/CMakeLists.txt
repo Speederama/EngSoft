@@ -13,7 +13,7 @@ cmake_minimum_required (VERSION 2.8)
 project (SpeedGames CXX)
 
 # Compiler
-set (OUTPUT game)
+set (OUTPUT gIrAfA)
 set (CMAKE_CXX_COMPILER "g++")
 set (CMAKE_CXX_FLAGS "-std=c++0x -O3")
 set (CMAKE_DISABLE_IN_SOURCE_BUILD ON)

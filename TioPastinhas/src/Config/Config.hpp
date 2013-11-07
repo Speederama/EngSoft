@@ -38,7 +38,7 @@ namespace config {
 		namespace image {
 			const std::string path("../misc/images/");
 			const std::string splash(path + "splash2.png");
-			const std::string config(path + "background.jpg");
+			const std::string config(path + "background.png");
 		}
 
 		namespace avatar {
