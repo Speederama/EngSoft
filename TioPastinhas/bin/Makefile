@@ -30,22 +30,22 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+CMAKE_EDIT_COMMAND = /usr/local/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src
+CMAKE_SOURCE_DIR = /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin
+CMAKE_BINARY_DIR = /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -63,7 +63,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -102,17 +102,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named game
+# Target rules for targets named gIrAfA
 
 # Build rule for target.
-game: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 game
-.PHONY : game
+gIrAfA: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gIrAfA
+.PHONY : gIrAfA
 
 # fast build rule for target.
-game/fast:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
-.PHONY : game/fast
+gIrAfA/fast:
+	$(MAKE) -f CMakeFiles/gIrAfA.dir/build.make CMakeFiles/gIrAfA.dir/build
+.PHONY : gIrAfA/fast
 
 #=============================================================================
 # Target rules for targets named Game
@@ -197,7 +197,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/gIrAfA.dir/build.make CMakeFiles/gIrAfA.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -205,7 +205,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/gIrAfA.dir/build.make CMakeFiles/gIrAfA.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -213,7 +213,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/gIrAfA.dir/build.make CMakeFiles/gIrAfA.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -223,7 +223,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... game"
+	@echo "... gIrAfA"
 	@echo "... rebuild_cache"
 	@echo "... Game"
 	@echo "... Config"

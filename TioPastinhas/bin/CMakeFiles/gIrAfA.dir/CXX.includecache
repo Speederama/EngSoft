@@ -94,30 +94,6 @@ allegro5/allegro_acodec.h
 Allegro.hpp
 /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Allegro/Allegro.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/../Game/Data.hpp
-Card.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/../Game/Card.hpp
-Question.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/../Game/Question.hpp
-
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/Config.hpp
-Screen.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/Screen.hpp
-../Game/Data.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/../Game/Data.hpp
-
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/End.hpp
-Screen.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/Screen.hpp
-../Game/Data.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/../Game/Data.hpp
-
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/Main.hpp
-Screen.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/Screen.hpp
-../Game/Data.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/../Game/Data.hpp
-
 /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/Screen.hpp
 string
 -
@@ -125,12 +101,6 @@ unordered_map
 -
 ../Allegro/Allegro.hpp
 /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/../Allegro/Allegro.hpp
-
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/Splash.hpp
-Screen.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/Screen.hpp
-../Game/Data.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/../Game/Data.hpp
 
 /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/Card.hpp
 string
@@ -147,22 +117,6 @@ Card.hpp
 /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/Card.hpp
 Question.hpp
 /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/Question.hpp
-
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/Game.cpp
-vector
--
-iostream
--
-Game.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/Game.hpp
-../Screen/Splash.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/Splash.hpp
-../Screen/Config.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/Config.hpp
-../Screen/Main.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/Main.hpp
-../Screen/End.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/../Screen/End.hpp
 
 /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/Game.hpp
 vector
@@ -185,4 +139,8 @@ fstream
 -
 iostream
 -
+
+/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/main.cpp
+Game/Game.hpp
+/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Game/Game.hpp
 

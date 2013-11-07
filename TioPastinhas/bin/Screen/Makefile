@@ -30,22 +30,22 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+CMAKE_EDIT_COMMAND = /usr/local/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src
+CMAKE_SOURCE_DIR = /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin
+CMAKE_BINARY_DIR = /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -63,7 +63,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/progress.marks
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/CMakeFiles 0
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/progress.marks
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/clean
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,22 +88,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/preinstall
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/preinstall
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Screen/CMakeFiles/Config.dir/rule:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Config.dir/rule
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Config.dir/rule
 .PHONY : Screen/CMakeFiles/Config.dir/rule
 
 # Convenience name for target.
@@ -112,12 +112,12 @@ Config: Screen/CMakeFiles/Config.dir/rule
 
 # fast build rule for target.
 Config/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/build
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/build
 .PHONY : Config/fast
 
 # Convenience name for target.
 Screen/CMakeFiles/End.dir/rule:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/End.dir/rule
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/End.dir/rule
 .PHONY : Screen/CMakeFiles/End.dir/rule
 
 # Convenience name for target.
@@ -126,12 +126,12 @@ End: Screen/CMakeFiles/End.dir/rule
 
 # fast build rule for target.
 End/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/build
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/build
 .PHONY : End/fast
 
 # Convenience name for target.
 Screen/CMakeFiles/Main.dir/rule:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Main.dir/rule
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Main.dir/rule
 .PHONY : Screen/CMakeFiles/Main.dir/rule
 
 # Convenience name for target.
@@ -140,12 +140,12 @@ Main: Screen/CMakeFiles/Main.dir/rule
 
 # fast build rule for target.
 Main/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/build
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/build
 .PHONY : Main/fast
 
 # Convenience name for target.
 Screen/CMakeFiles/Screen.dir/rule:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Screen.dir/rule
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Screen.dir/rule
 .PHONY : Screen/CMakeFiles/Screen.dir/rule
 
 # Convenience name for target.
@@ -154,12 +154,12 @@ Screen: Screen/CMakeFiles/Screen.dir/rule
 
 # fast build rule for target.
 Screen/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/build
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/build
 .PHONY : Screen/fast
 
 # Convenience name for target.
 Screen/CMakeFiles/Splash.dir/rule:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Splash.dir/rule
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Splash.dir/rule
 .PHONY : Screen/CMakeFiles/Splash.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ Splash: Screen/CMakeFiles/Splash.dir/rule
 
 # fast build rule for target.
 Splash/fast:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/build
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/build
 .PHONY : Splash/fast
 
 Config.o: Config.cpp.o
@@ -176,7 +176,7 @@ Config.o: Config.cpp.o
 
 # target to build an object file
 Config.cpp.o:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/Config.cpp.o
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/Config.cpp.o
 .PHONY : Config.cpp.o
 
 Config.i: Config.cpp.i
@@ -184,7 +184,7 @@ Config.i: Config.cpp.i
 
 # target to preprocess a source file
 Config.cpp.i:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/Config.cpp.i
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/Config.cpp.i
 .PHONY : Config.cpp.i
 
 Config.s: Config.cpp.s
@@ -192,7 +192,7 @@ Config.s: Config.cpp.s
 
 # target to generate assembly for a file
 Config.cpp.s:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/Config.cpp.s
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/Config.cpp.s
 .PHONY : Config.cpp.s
 
 End.o: End.cpp.o
@@ -200,7 +200,7 @@ End.o: End.cpp.o
 
 # target to build an object file
 End.cpp.o:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/End.cpp.o
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/End.cpp.o
 .PHONY : End.cpp.o
 
 End.i: End.cpp.i
@@ -208,7 +208,7 @@ End.i: End.cpp.i
 
 # target to preprocess a source file
 End.cpp.i:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/End.cpp.i
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/End.cpp.i
 .PHONY : End.cpp.i
 
 End.s: End.cpp.s
@@ -216,7 +216,7 @@ End.s: End.cpp.s
 
 # target to generate assembly for a file
 End.cpp.s:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/End.cpp.s
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/End.cpp.s
 .PHONY : End.cpp.s
 
 Main.o: Main.cpp.o
@@ -224,7 +224,7 @@ Main.o: Main.cpp.o
 
 # target to build an object file
 Main.cpp.o:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/Main.cpp.o
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/Main.cpp.o
 .PHONY : Main.cpp.o
 
 Main.i: Main.cpp.i
@@ -232,7 +232,7 @@ Main.i: Main.cpp.i
 
 # target to preprocess a source file
 Main.cpp.i:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/Main.cpp.i
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/Main.cpp.i
 .PHONY : Main.cpp.i
 
 Main.s: Main.cpp.s
@@ -240,7 +240,7 @@ Main.s: Main.cpp.s
 
 # target to generate assembly for a file
 Main.cpp.s:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/Main.cpp.s
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/Main.cpp.s
 .PHONY : Main.cpp.s
 
 Screen.o: Screen.cpp.o
@@ -248,7 +248,7 @@ Screen.o: Screen.cpp.o
 
 # target to build an object file
 Screen.cpp.o:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/Screen.cpp.o
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/Screen.cpp.o
 .PHONY : Screen.cpp.o
 
 Screen.i: Screen.cpp.i
@@ -256,7 +256,7 @@ Screen.i: Screen.cpp.i
 
 # target to preprocess a source file
 Screen.cpp.i:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/Screen.cpp.i
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/Screen.cpp.i
 .PHONY : Screen.cpp.i
 
 Screen.s: Screen.cpp.s
@@ -264,7 +264,7 @@ Screen.s: Screen.cpp.s
 
 # target to generate assembly for a file
 Screen.cpp.s:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/Screen.cpp.s
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/Screen.cpp.s
 .PHONY : Screen.cpp.s
 
 Splash.o: Splash.cpp.o
@@ -272,7 +272,7 @@ Splash.o: Splash.cpp.o
 
 # target to build an object file
 Splash.cpp.o:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/Splash.cpp.o
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/Splash.cpp.o
 .PHONY : Splash.cpp.o
 
 Splash.i: Splash.cpp.i
@@ -280,7 +280,7 @@ Splash.i: Splash.cpp.i
 
 # target to preprocess a source file
 Splash.cpp.i:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/Splash.cpp.i
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/Splash.cpp.i
 .PHONY : Splash.cpp.i
 
 Splash.s: Splash.cpp.s
@@ -288,7 +288,7 @@ Splash.s: Splash.cpp.s
 
 # target to generate assembly for a file
 Splash.cpp.s:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/Splash.cpp.s
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/Splash.cpp.s
 .PHONY : Splash.cpp.s
 
 # Help Target
@@ -330,6 +330,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

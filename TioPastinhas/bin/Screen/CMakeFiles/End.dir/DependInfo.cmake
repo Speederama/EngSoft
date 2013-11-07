@@ -4,13 +4,13 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/End.cpp" "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/End.dir/End.cpp.o"
+  "/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/End.cpp" "/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/End.dir/End.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Screen.dir/DependInfo.cmake"
+  "/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Screen.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
