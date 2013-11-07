@@ -43,21 +43,22 @@ const bool Splash::draw(void) {
 	}
 
 	// Screen image
+	Image::set_target(_display);
+	_image["back"]->draw<Image::SCALED>(0, 0, _width, _height);
+
 	switch (step) {
 	case 0:
+		if (_event.type != ALLEGRO_EVENT_TIMER) break;
 		++counter %= 3, alpha -= ((not counter) * 0.05 * alpha);
 		step = (alpha <= 0 ? step + 1 : step);
 		_image["cover"]->set_color(_palette, "black", alpha);
+		Image::set_target(_display);
+		_image["cover"]->draw<Image::NORMAL>(1, 1);
 		break;
 	case 1:
 		_font["text"]->draw<Font::CENTER>(_palette, .5, .85,
 				"Pressione <ENTER> para continuar");
-		return false;
 	}
-
-	Image::set_target(_display);
-	_image["back"]->draw<Image::SCALED>(1, 1);
-	_image["cover"]->draw<Image::NORMAL>(1, 1);
 
 	return false;
 

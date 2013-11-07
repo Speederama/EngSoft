@@ -75,9 +75,9 @@ public:
 			break;
 		case 1:
 			al_draw_scaled_bitmap(_image, 0, 0, _width, _height,
-					0, 0,
 					config::screen::width * x,
 					config::screen::height * y,
+					width, height,
 					flag);
 			break;
 		}

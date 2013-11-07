@@ -1,4 +1,4 @@
-# Install script for directory: /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen
+# Install script for directory: /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

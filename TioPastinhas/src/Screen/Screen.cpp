@@ -37,8 +37,9 @@ Screen::~Screen(void) {
 	_sound.clear();
 	_button.clear();
 
-	al_clear_to_color(al_map_rgb(0, 0, 0));
 	Image::set_target(_display);
+	al_clear_to_color(al_map_rgb(0, 0, 0));
+	al_flip_display();
 
 }
 

@@ -26,22 +26,16 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
-
-# Escaping for special characters.
-EQUALS = =
-
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/local/bin/ccmake
+RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src
+CMAKE_SOURCE_DIR = /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin
+CMAKE_BINARY_DIR = /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gIrAfA.dir/depend.make
@@ -53,18 +47,18 @@ include CMakeFiles/gIrAfA.dir/progress.make
 include CMakeFiles/gIrAfA.dir/flags.make
 
 CMakeFiles/gIrAfA.dir/main.cpp.o: CMakeFiles/gIrAfA.dir/flags.make
-CMakeFiles/gIrAfA.dir/main.cpp.o: /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/gIrAfA.dir/main.cpp.o: /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gIrAfA.dir/main.cpp.o"
-	g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gIrAfA.dir/main.cpp.o -c /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/main.cpp
+	g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gIrAfA.dir/main.cpp.o -c /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/main.cpp
 
 CMakeFiles/gIrAfA.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gIrAfA.dir/main.cpp.i"
-	g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/main.cpp > CMakeFiles/gIrAfA.dir/main.cpp.i
+	g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/main.cpp > CMakeFiles/gIrAfA.dir/main.cpp.i
 
 CMakeFiles/gIrAfA.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gIrAfA.dir/main.cpp.s"
-	g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/main.cpp -o CMakeFiles/gIrAfA.dir/main.cpp.s
+	g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/main.cpp -o CMakeFiles/gIrAfA.dir/main.cpp.s
 
 CMakeFiles/gIrAfA.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/gIrAfA.dir/main.cpp.o.requires
@@ -83,13 +77,13 @@ gIrAfA_OBJECTS = \
 gIrAfA_EXTERNAL_OBJECTS =
 
 gIrAfA: CMakeFiles/gIrAfA.dir/main.cpp.o
-gIrAfA: CMakeFiles/gIrAfA.dir/build.make
 gIrAfA: Game/libGame.a
 gIrAfA: Screen/libSplash.a
 gIrAfA: Screen/libConfig.a
 gIrAfA: Screen/libMain.a
 gIrAfA: Screen/libEnd.a
 gIrAfA: Screen/libScreen.a
+gIrAfA: CMakeFiles/gIrAfA.dir/build.make
 gIrAfA: CMakeFiles/gIrAfA.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable gIrAfA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gIrAfA.dir/link.txt --verbose=$(VERBOSE)
@@ -106,6 +100,6 @@ CMakeFiles/gIrAfA.dir/clean:
 .PHONY : CMakeFiles/gIrAfA.dir/clean
 
 CMakeFiles/gIrAfA.dir/depend:
-	cd /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles/gIrAfA.dir/DependInfo.cmake --color=$(COLOR)
+	cd /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles/gIrAfA.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gIrAfA.dir/depend
 

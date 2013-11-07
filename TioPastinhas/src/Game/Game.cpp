@@ -30,7 +30,7 @@ _step(0) {
 	al_install_keyboard();
 
 	// Display initialization
-	// al_set_new_display_flags(ALLEGRO_FULLSCREEN_WINDOW);
+	al_set_new_display_flags(ALLEGRO_FULLSCREEN_WINDOW);
 	_display = al_create_display(_width, _height);
 
 	if (_display == NULL) config::error::display();
@@ -64,36 +64,37 @@ Game::~Game(void) {
 void Game::run(void) {
 
 	al_start_timer(_timer);
-	do while (al_get_next_event(_queue, &_event)) {
+	do {
+		al_wait_for_event(_queue, &_event);
+		do {
+			if (_event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) return;
 
-		if (_event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) return;
+			switch (_step) {
+			case 0:
+				++_step;
+				Card::loader(_event, config::data::path::card,
+						_data.card);
+				Question::loader(config::data::path::question,
+						_data.question);
+				break;
+			case 1:
+				if (_update<Splash>()) ++_step;
+				break;
+			case 2:
+				if (_update<Config>()) ++_step;
+				break;
+			case 3:
+				if (_update<Main>()) ++_step;
+				break;
+			case 4:
+				if (_update<End>()) ++_step;
+				break;
+			case 5:
+				return;
+			}
 
-		switch (_step) {
-		case 0:
-			++_step;
-			Card::loader(_event, config::data::path::card,
-					_data.card);
-			Question::loader(config::data::path::question,
-					_data.question);
-			break;
-		case 1:
-			if (_update<Splash>()) ++_step;
-			break;
-		case 2:
-			if (_update<Config>()) ++_step;
-			break;
-		case 3:
-			if (_update<Main>()) ++_step;
-			break;
-		case 4:
-			if (_update<End>()) ++_step;
-			break;
-		case 5:
-			return;
-		}
-
-		if (_event.type == ALLEGRO_EVENT_TIMER) al_flip_display();
-
+			if (_event.type == ALLEGRO_EVENT_TIMER) al_flip_display();
+		} while (al_get_next_event(_queue, &_event));
 	} while (true);
 
 }

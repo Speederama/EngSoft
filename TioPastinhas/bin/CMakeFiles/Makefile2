@@ -38,35 +38,25 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
-
-# Escaping for special characters.
-EQUALS = =
-
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/local/bin/ccmake
+RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src
+CMAKE_SOURCE_DIR = /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin
+CMAKE_BINARY_DIR = /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin
 
 #=============================================================================
 # Target rules for target CMakeFiles/gIrAfA.dir
 
 # All Build rule for target.
 CMakeFiles/gIrAfA.dir/all: Game/CMakeFiles/Game.dir/all
-CMakeFiles/gIrAfA.dir/all: Screen/CMakeFiles/Splash.dir/all
-CMakeFiles/gIrAfA.dir/all: Screen/CMakeFiles/Config.dir/all
-CMakeFiles/gIrAfA.dir/all: Screen/CMakeFiles/Main.dir/all
-CMakeFiles/gIrAfA.dir/all: Screen/CMakeFiles/End.dir/all
 	$(MAKE) -f CMakeFiles/gIrAfA.dir/build.make CMakeFiles/gIrAfA.dir/depend
 	$(MAKE) -f CMakeFiles/gIrAfA.dir/build.make CMakeFiles/gIrAfA.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles  7
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles  7
 	@echo "Built target gIrAfA"
 .PHONY : CMakeFiles/gIrAfA.dir/all
 
@@ -76,9 +66,9 @@ all: CMakeFiles/gIrAfA.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gIrAfA.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/gIrAfA.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : CMakeFiles/gIrAfA.dir/rule
 
 # Convenience name for target.
@@ -117,10 +107,9 @@ Game/CMakeFiles/Game.dir/all: Screen/CMakeFiles/Splash.dir/all
 Game/CMakeFiles/Game.dir/all: Screen/CMakeFiles/Config.dir/all
 Game/CMakeFiles/Game.dir/all: Screen/CMakeFiles/Main.dir/all
 Game/CMakeFiles/Game.dir/all: Screen/CMakeFiles/End.dir/all
-Game/CMakeFiles/Game.dir/all: Screen/CMakeFiles/Screen.dir/all
 	$(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/depend
 	$(MAKE) -f Game/CMakeFiles/Game.dir/build.make Game/CMakeFiles/Game.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles  3
 	@echo "Built target Game"
 .PHONY : Game/CMakeFiles/Game.dir/all
 
@@ -130,9 +119,9 @@ all: Game/CMakeFiles/Game.dir/all
 
 # Build rule for subdir invocation for target.
 Game/CMakeFiles/Game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 Game/CMakeFiles/Game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Game/CMakeFiles/Game.dir/rule
 
 # Convenience name for target.
@@ -178,7 +167,7 @@ Screen/preinstall:
 Screen/CMakeFiles/Config.dir/all: Screen/CMakeFiles/Screen.dir/all
 	$(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/depend
 	$(MAKE) -f Screen/CMakeFiles/Config.dir/build.make Screen/CMakeFiles/Config.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles  1
 	@echo "Built target Config"
 .PHONY : Screen/CMakeFiles/Config.dir/all
 
@@ -188,9 +177,9 @@ all: Screen/CMakeFiles/Config.dir/all
 
 # Build rule for subdir invocation for target.
 Screen/CMakeFiles/Config.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Config.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Screen/CMakeFiles/Config.dir/rule
 
 # Convenience name for target.
@@ -213,7 +202,7 @@ clean: Screen/CMakeFiles/Config.dir/clean
 Screen/CMakeFiles/End.dir/all: Screen/CMakeFiles/Screen.dir/all
 	$(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/depend
 	$(MAKE) -f Screen/CMakeFiles/End.dir/build.make Screen/CMakeFiles/End.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles  2
 	@echo "Built target End"
 .PHONY : Screen/CMakeFiles/End.dir/all
 
@@ -223,9 +212,9 @@ all: Screen/CMakeFiles/End.dir/all
 
 # Build rule for subdir invocation for target.
 Screen/CMakeFiles/End.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/End.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Screen/CMakeFiles/End.dir/rule
 
 # Convenience name for target.
@@ -248,7 +237,7 @@ clean: Screen/CMakeFiles/End.dir/clean
 Screen/CMakeFiles/Main.dir/all: Screen/CMakeFiles/Screen.dir/all
 	$(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/depend
 	$(MAKE) -f Screen/CMakeFiles/Main.dir/build.make Screen/CMakeFiles/Main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles  4
 	@echo "Built target Main"
 .PHONY : Screen/CMakeFiles/Main.dir/all
 
@@ -258,9 +247,9 @@ all: Screen/CMakeFiles/Main.dir/all
 
 # Build rule for subdir invocation for target.
 Screen/CMakeFiles/Main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Screen/CMakeFiles/Main.dir/rule
 
 # Convenience name for target.
@@ -283,7 +272,7 @@ clean: Screen/CMakeFiles/Main.dir/clean
 Screen/CMakeFiles/Screen.dir/all:
 	$(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/depend
 	$(MAKE) -f Screen/CMakeFiles/Screen.dir/build.make Screen/CMakeFiles/Screen.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles  5
 	@echo "Built target Screen"
 .PHONY : Screen/CMakeFiles/Screen.dir/all
 
@@ -293,9 +282,9 @@ all: Screen/CMakeFiles/Screen.dir/all
 
 # Build rule for subdir invocation for target.
 Screen/CMakeFiles/Screen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Screen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Screen/CMakeFiles/Screen.dir/rule
 
 # Convenience name for target.
@@ -318,7 +307,7 @@ clean: Screen/CMakeFiles/Screen.dir/clean
 Screen/CMakeFiles/Splash.dir/all: Screen/CMakeFiles/Screen.dir/all
 	$(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/depend
 	$(MAKE) -f Screen/CMakeFiles/Splash.dir/build.make Screen/CMakeFiles/Splash.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles  6
 	@echo "Built target Splash"
 .PHONY : Screen/CMakeFiles/Splash.dir/all
 
@@ -328,9 +317,9 @@ all: Screen/CMakeFiles/Splash.dir/all
 
 # Build rule for subdir invocation for target.
 Screen/CMakeFiles/Splash.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Screen/CMakeFiles/Splash.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles 0
 .PHONY : Screen/CMakeFiles/Splash.dir/rule
 
 # Convenience name for target.

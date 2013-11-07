@@ -22,7 +22,7 @@ namespace config {
 	// Screen constants
 	namespace screen {
 
-		const int fps = 60;
+		const int fps = 20;
 		const int width = 1366;
 		const int height = 768;
 
@@ -39,12 +39,18 @@ namespace config {
 			const std::string path("../misc/images/");
 			const std::string splash(path + "splash2.png");
 			const std::string config(path + "background.png");
+			const std::string roulette(path + "roleta.png");
+			const std::string arrow(path + "seta.png");
 		}
 
 		namespace avatar {
 			const int count = 1;
-			const std::string path("../misc/avatar/");
+			const std::string path("../misc/images/");
 			const std::string avatar[2] = {path, ".png"};
+			const std::string silvio(path + "avatar.jpg");
+			const std::string hebe(path + "hebe.jpg");
+			const std::string xuxa(path + "xuxa.jpg");
+			//const std::string gugu(path + "avatar.png");
 		}
 
 		namespace sound {
@@ -56,6 +62,7 @@ namespace config {
 			const std::string path("../misc/buttons/");
 			const std::string add[2] = {path + "add", ".png"};
 			const std::string cert[2] = {path + "certifica", ".png"};
+			const std::string buy[2] = {path + "compra", ".png"};
 			const std::string green[2] = {path + "verde", ".png"};
 		}
 

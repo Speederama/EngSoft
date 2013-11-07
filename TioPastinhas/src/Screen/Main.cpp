@@ -10,6 +10,22 @@ Screen(display, event), _data(data), _step(0) {
 	_load_font("main", config::misc::font::dejavu,
 			25, {"white"});
 
+	_load_image("back", config::misc::image::config);
+	_load_image("silvio", config::misc::avatar::silvio);
+	_load_image("roulette", config::misc::image::roulette);
+	_load_image("arrow", config::misc::image::arrow);
+
+	_create_image("cover", .95 * _width, .9 * _height);
+        _image["cover"]->set_color(_palette, "black", 200);
+
+	_create_image("playerHor", .95 * _width, .3 * _height);
+	_image["playerHor"]->set_color(_palette, "grey", 200);
+
+	//_create_image("playerVert", .3 * _height, .9 * _height - (.3 * _height));
+	_create_image("playerVert", .35 * _height, .626 * _height);
+	_image["playerVert"]->set_color(_palette, "grey", 200);
+
+	_load_button<Button::PUSH>("certification", config::misc::button::add, 0, 0, 80, 80);
 }
 
 // Destructor
@@ -23,6 +39,22 @@ const bool Main::draw(void) {
 
 	_font["main"]->draw<Font::CENTER>(_palette, .5, .85,
 			"MAIN SCREN!!! Wanna quit? press <ESC>");
+	Image::set_target(_display);
+	_image["back"]->draw<Image::SCALED>(0, 0, _width, _height);
+	_image["cover"]->draw<Image::NORMAL>(.025, .05);
+	_image["playerHor"]->draw<Image::NORMAL>(.025, .675);
+	_image["playerVert"]->draw<Image::NORMAL>((_width - (.35 * _height)) 
+		/ _width - .025, .05);
+	_image["silvio"]->draw<Image::SCALED>(.025, .675, .15 * _width, 
+		.3 * _height);
+	_image["roulette"]->draw<Image::NORMAL>(((.95 - (.35 * _height) 
+		/ _width) / 2 + 0.025) - (254.0 / _width), .07);
+	_image["arrow"]->draw<Image::SCALED>(((.95 - (.35 * _height) 
+		/ _width) / 2 + 0.025) - (25.0 / _width), .65 - (50.0
+		/ _height), 50, 50);
+
+	_button["certification"]->draw();
+
 	return false;
 
 }

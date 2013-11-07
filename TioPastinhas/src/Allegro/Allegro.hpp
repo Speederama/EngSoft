@@ -70,6 +70,7 @@ inline Allegro::Palette::Palette(void) {
 	// Available colors
 	_color["black"] = {0, 0, 0};
 	_color["white"] = {255, 255, 255};
+	_color["grey"] = {125, 125, 125};
 
 }
 

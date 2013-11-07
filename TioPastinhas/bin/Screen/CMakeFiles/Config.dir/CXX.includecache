@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/../Config/Config.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/../Config/Config.hpp
 string
 -
 Error.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/../Config/Error.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/../Config/Error.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/../Config/Error.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/../Config/Error.hpp
 string
 -
 iostream
 -
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
 string
 -
 vector
@@ -34,27 +34,27 @@ allegro5/allegro_primitives.h
 allegro5/allegro_native_dialog.h
 -
 ../Config/Config.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/../Config/Config.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/../Config/Config.hpp
 Font.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Font.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Font.hpp
 Image.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Image.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Image.hpp
 Sound.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Sound.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Sound.hpp
 Button.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Button.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Button.hpp
 Keyboard.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Keyboard.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Keyboard.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Button.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Button.hpp
 vector
 -
 allegro5/allegro.h
 -
 Allegro.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Font.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Font.hpp
 allegro5/allegro.h
 -
 allegro5/allegro_ttf.h
@@ -62,9 +62,9 @@ allegro5/allegro_ttf.h
 allegro5/allegro_font.h
 -
 Allegro.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Image.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Image.hpp
 allegro5/allegro.h
 -
 allegro5/allegro_ttf.h
@@ -72,9 +72,9 @@ allegro5/allegro_ttf.h
 allegro5/allegro_font.h
 -
 Allegro.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Keyboard.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Keyboard.hpp
 vector
 -
 allegro5/allegro.h
@@ -82,9 +82,9 @@ allegro5/allegro.h
 allegro5/keyboard.h
 -
 Allegro.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Sound.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Sound.hpp
 allegro5/allegro.h
 -
 allegro5/allegro_audio.h
@@ -92,9 +92,9 @@ allegro5/allegro_audio.h
 allegro5/allegro_acodec.h
 -
 Allegro.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Game/Card.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Game/Card.hpp
 string
 -
 fstream
@@ -102,15 +102,15 @@ fstream
 iostream
 -
 ../Allegro/Allegro.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Game/../Allegro/Allegro.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Game/../Allegro/Allegro.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Game/Data.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Game/Data.hpp
 Card.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Game/Card.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Game/Card.hpp
 Question.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Game/Question.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Game/Question.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Game/Question.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Game/Question.hpp
 string
 -
 vector
@@ -120,21 +120,21 @@ fstream
 iostream
 -
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/Config.cpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/Config.cpp
 Config.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/Config.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/Config.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/Config.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/Config.hpp
 Screen.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/Screen.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/Screen.hpp
 ../Game/Data.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Game/Data.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Game/Data.hpp
 
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/Screen.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/Screen.hpp
 string
 -
 unordered_map
 -
 ../Allegro/Allegro.hpp
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/src/Screen/../Allegro/Allegro.hpp
 

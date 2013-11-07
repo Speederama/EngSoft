@@ -42,14 +42,15 @@ const bool Config::draw(void) {
 void Config::_background(void) {
 
 	static bool has_drawn(false);
-	if (not has_drawn) {
+//	if (not has_drawn) {
 		Image::set_target(_display), has_drawn = true;
-		_image["back"]->draw<Image::SCALED>(1, 1);
+		_image["back"]->draw<Image::SCALED>(0, 0, _width, _height);
 		_image["cover"]->draw<Image::NORMAL>(.025, .05);
-	}
+//	}
 
 	_button["add"]->draw();
 	_button["sub"]->draw();
 	_button["mul"]->draw();
+	al_flip_display();
 
 }

@@ -1,7 +1,7 @@
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Config.dir
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/End.dir
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/Game/CMakeFiles/Game.dir
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Main.dir
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Screen.dir
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Splash.dir
-/home/paulo/Dropbox/UFMG/EngSoft/EngSoft/TioPastinhas/bin/CMakeFiles/gIrAfA.dir
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Config.dir
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/End.dir
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/Game/CMakeFiles/Game.dir
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Main.dir
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Screen.dir
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/Screen/CMakeFiles/Splash.dir
+/media/DADOS/UFMG/EngSoft/TP/src/EngSoft/TioPastinhas/bin/CMakeFiles/gIrAfA.dir
