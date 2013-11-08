@@ -4,11 +4,10 @@
 // Constructor
 Main::Main(ALLEGRO_DISPLAY *display, ALLEGRO_EVENT& event,
 		Data& data) :
-Screen(display, event), _data(data), _step(0) {
+Screen(display, event), _data(data) {
 
 	// Fonts
-	_load_font("main", config::misc::font::dejavu,
-			25, {"white"});
+	_load_font("main", config::misc::font::dejavu, 25);
 
 	_load_image("back", config::misc::image::config);
 	_load_image("silvio", config::misc::avatar::silvio);
@@ -32,14 +31,23 @@ Screen(display, event), _data(data), _step(0) {
 Main::~Main(void) {
 }
 
-// Draws contents to display
-const bool Main::draw(void) {
+// Processes new events
+const bool Main::process(void) {
 
 	if (_key.is_released(ALLEGRO_KEY_ESCAPE)) return true;
+	return false;
 
-	_font["main"]->draw<Font::CENTER>(_palette, .5, .85,
-			"MAIN SCREN!!! Wanna quit? press <ESC>");
+}
+
+// Draws contents to display
+void Main::draw(void) {
+
 	Image::set_target(_display);
+
+	_font["main"]->draw<Font::CENTER>(_palette, "white",
+			.5, .85,
+			"MAIN SCREN!!! Wanna quit? press <ESC>");
+
 	_image["back"]->draw<Image::SCALED>(0, 0, _width, _height);
 	_image["cover"]->draw<Image::NORMAL>(.025, .05);
 	_image["playerHor"]->draw<Image::NORMAL>(.025, .675);
@@ -54,8 +62,6 @@ const bool Main::draw(void) {
 		/ _height), 50, 50);
 
 	_button["certification"]->draw();
-
-	return false;
 
 }
 

@@ -17,10 +17,18 @@ public:
 	// Destructor
 	virtual ~Screen(void);
 
+	// Processes new events
+	virtual const bool process(void);
+
 	// Draws contents to display
-	virtual const bool draw();
+	virtual void draw(void);
 
 protected:
+
+	bool _finished;
+
+	int _step;
+	uint64_t _counter;
 
 	ALLEGRO_EVENT& _event;
 	ALLEGRO_DISPLAY *_display;
@@ -35,9 +43,7 @@ protected:
 
 	// Loads a font
 	void _load_font(const std::string& id,
-			const std::string& path, const int& size,
-			const std::vector<std::string>& color,
-			const int& timer = 0);
+			const std::string& path, const int& size);
 
 	// Creates an image
 	void _create_image(const std::string& id,

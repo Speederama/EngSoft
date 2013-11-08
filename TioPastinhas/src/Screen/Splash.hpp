@@ -13,7 +13,10 @@ public:
 	// Destructor
 	~Splash(void);
 
+	// Processes new events
+	const bool process(void);
+
 	// Draws contents to display
-	const bool draw(void);
+	void draw(void);
 
 };

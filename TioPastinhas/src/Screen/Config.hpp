@@ -13,12 +13,14 @@ public:
 	// Destructor
 	~Config(void);
 
+	// Processes new events
+	const bool process(void);
+
 	// Draws contents to display
-	const bool draw(void);
+	void draw(void);
 
 private:
 
-	char _step;
 	Data& _data;
 
 	// Draws the background
