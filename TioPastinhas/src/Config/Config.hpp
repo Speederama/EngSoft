@@ -19,6 +19,16 @@ namespace config {
 
 	}
 
+	// Game-related constants
+	namespace game {
+		const unsigned int initial = 2000000;
+		const unsigned int company = 500000;
+		const unsigned int certification[4] = 
+			{100000, 200000, 300000, 400000};
+		const unsigned int points[5] = 
+			{100, 200, 300, 400, 500};
+	}
+
 	// Screen constants
 	namespace screen {
 

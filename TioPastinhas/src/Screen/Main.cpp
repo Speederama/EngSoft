@@ -50,48 +50,50 @@ void Main::draw(void) {
 
 	Image::set_target(_display);
 
+	// Drawing grey panels...
 	_image["back"]->draw<Image::SCALED>(0, 0, _width, _height);
 	_image["cover"]->draw<Image::NORMAL>(.025, .05);
 	_image["playerHor"]->draw<Image::NORMAL>(.025, .675);
 	_image["playerVert"]->draw<Image::NORMAL>((_width - (.35 * _height)) 
 		/ _width - .025, .05);
 	_image["rounds"]->draw<Image::NORMAL>(.025, .05);
-	_image["silvio"]->draw<Image::SCALED>(.025, .675, .15 * _width, 
-		.3 * _height);
-	_image["roulette"]->draw<Image::NORMAL>(((.95 - (.35 * _height) 
-		/ _width) / 2 + 0.025) - (254.0 / _width), .07);
-	_image["arrow"]->draw<Image::SCALED>(((.95 - (.35 * _height) 
-		/ _width) / 2 + 0.025) - (25.0 / _width), .65 - (50.0
-		/ _height), 50, 50);
 
-	_image["buy"]->draw<Image::SCALED>(0.6, 0.2, 200, 130);
-	_image["certification"]->draw<Image::SCALED>(0.6, 0.4, 200, 130);
-
-	//_font["main"]->draw<Font::CENTER>(_palette, .5, .85,
-	//		"MAIN SCREN!!! Wanna quit? press <ESC>");
-	_font["main"]->draw(_palette, "white", .2, .69, "Nome: Sílvio Santos");
-	_font["main"]->draw(_palette, "white", .2, .77, "Processo: XP");
-	_font["main"]->draw(_palette, "white", .2, .85, "Recursos: 1000000");
-	_font["main"]->draw(_palette, "white", .2, .93, "Pontuação: 350");
-
-	_font["main"]->draw(_palette, "white", .5, .725, "Empresa 1 - CMMI 1");
-	_font["main"]->draw(_palette, "white", .5, .805, "Empresa 2 - CMMI 4");
-	_font["main"]->draw(_palette, "white", .5, .885, "Empresa 3 - CMMI 1");
-	_font["main"]->draw(_palette, "white", .7, .725, "Empresa 4 - CMMI 2");
-
-	_font["title"]->draw(_palette, "white", .03, .075, "Rodada #1 de 5");
-
-	_font["other"]->draw(_palette, "white", .8, .1, "Hebe Camargo - 710");
-	_font["other"]->draw(_palette, "white", .8, .2, "Xuxa Meneghel - 180");
-	_font["other"]->draw(_palette, "white", .8, .3, "Gugu Liberato - 575");
-
+	// Drawing box for company info...
 	_image["lineHor"]->draw<Image::NORMAL>(.49, .695);
 	_image["lineHor"]->draw<Image::NORMAL>(.49, .945);
 	_image["lineVer"]->draw<Image::NORMAL>(.49, .695);
 	_image["lineVer"]->draw<Image::NORMAL>(.889, .695);
 
+	// Drawing interactive elements
+	_image["roulette"]->draw<Image::NORMAL>(((.95 - (.35 * _height) 
+		/ _width) / 2 + 0.025) - (254.0 / _width), .07);
+	_image["arrow"]->draw<Image::SCALED>(((.95 - (.35 * _height) 
+		/ _width) / 2 + 0.025) - (25.0 / _width), .65 - (50.0
+		/ _height), 50, 50);
+	_image["buy"]->draw<Image::SCALED>(0.6, 0.2, 200, 130);
+	_image["certification"]->draw<Image::SCALED>(0.6, 0.4, 200, 130);
 
-//	return false;
+	// Drawing current player related stuff...
+	_image["silvio"]->draw<Image::SCALED>(.025, .675, .15 * _width, 
+		.3 * _height);
+	_font["main"]->draw(_palette, "white", .2, .69, "Nome: Sílvio Santos");
+	_font["main"]->draw(_palette, "white", .2, .77, "Processo: XP");
+	_font["main"]->draw(_palette, "white", .2, .85, "Recursos: 1000000");
+	_font["main"]->draw(_palette, "white", .2, .93, "Pontuação: 350");
+	_font["main"]->draw(_palette, "white", .5, .725, "Empresa 1 - CMMI 1");
+	_font["main"]->draw(_palette, "white", .5, .805, "Empresa 2 - CMMI 4");
+	_font["main"]->draw(_palette, "white", .5, .885, "Empresa 3 - CMMI 1");
+	_font["main"]->draw(_palette, "white", .7, .725, "Empresa 4 - CMMI 2");
+
+	// Drawing rounds info...
+	char roundsInfo[100];
+	sprintf(roundsInfo, "Rodada #%d de %d", _data.cur_round, _data.num_rounds);
+	_font["title"]->draw(_palette, "white", .03, .075, roundsInfo);
+
+	// Drawing info about other players...
+	_font["other"]->draw(_palette, "white", .8, .1, "Hebe Camargo - 710");
+	_font["other"]->draw(_palette, "white", .8, .2, "Xuxa Meneghel - 180");
+	_font["other"]->draw(_palette, "white", .8, .3, "Gugu Liberato - 575");
 }
 
 const bool Main::process()

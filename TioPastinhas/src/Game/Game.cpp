@@ -47,6 +47,10 @@ _step(0) {
 	al_register_event_source(_queue, al_get_mouse_event_source());
 	al_register_event_source(_queue, al_get_keyboard_event_source());
 
+	// JUST FOR TESTING
+	_data.num_rounds = 5;
+	_data.cur_round = 1;
+
 }
 
 // Destructor
