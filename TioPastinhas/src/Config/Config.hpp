@@ -22,7 +22,7 @@ namespace config {
 	// Screen constants
 	namespace screen {
 
-		const int fps = 20;
+		const int fps = 60;
 		const int width = 1366;
 		const int height = 768;
 
@@ -41,6 +41,8 @@ namespace config {
 			const std::string config(path + "background.png");
 			const std::string roulette(path + "roleta.png");
 			const std::string arrow(path + "seta.png");
+			const std::string buy("../misc/buttons/compra.png");
+			const std::string certification("../misc/buttons/certifica.png");
 		}
 
 		namespace avatar {

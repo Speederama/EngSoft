@@ -9,11 +9,17 @@ Screen(display, event), _data(data), _step(0) {
 	// Fonts
 	_load_font("main", config::misc::font::dejavu,
 			25, {"white"});
+	_load_font("other", config::misc::font::dejavu,
+			20, {"white"});
+	_load_font("title", config::misc::font::dejavu,
+			30, {"white"});
 
 	_load_image("back", config::misc::image::config);
 	_load_image("silvio", config::misc::avatar::silvio);
 	_load_image("roulette", config::misc::image::roulette);
 	_load_image("arrow", config::misc::image::arrow);
+	_load_image("buy", config::misc::image::buy);
+	_load_image("certification", config::misc::image::certification);
 
 	_create_image("cover", .95 * _width, .9 * _height);
         _image["cover"]->set_color(_palette, "black", 200);
@@ -25,7 +31,15 @@ Screen(display, event), _data(data), _step(0) {
 	_create_image("playerVert", .35 * _height, .626 * _height);
 	_image["playerVert"]->set_color(_palette, "grey", 200);
 
-	_load_button<Button::PUSH>("certification", config::misc::button::add, 0, 0, 80, 80);
+	_create_image("rounds", .95 * _width - .35 * _height + 1
+		, .1 * _height);
+	_image["rounds"]->set_color(_palette, "grey", 200);
+
+	_create_image("lineHor", .4 * _width, .01 * _height);
+	_image["lineHor"]->set_color(_palette, "white", 255);
+
+	_create_image("lineVer", .01 * _height, .26 * _height);
+	_image["lineVer"]->set_color(_palette, "white", 255);
 }
 
 // Destructor
@@ -37,14 +51,14 @@ const bool Main::draw(void) {
 
 	if (_key.is_released(ALLEGRO_KEY_ESCAPE)) return true;
 
-	_font["main"]->draw<Font::CENTER>(_palette, .5, .85,
-			"MAIN SCREN!!! Wanna quit? press <ESC>");
 	Image::set_target(_display);
+
 	_image["back"]->draw<Image::SCALED>(0, 0, _width, _height);
 	_image["cover"]->draw<Image::NORMAL>(.025, .05);
 	_image["playerHor"]->draw<Image::NORMAL>(.025, .675);
 	_image["playerVert"]->draw<Image::NORMAL>((_width - (.35 * _height)) 
 		/ _width - .025, .05);
+	_image["rounds"]->draw<Image::NORMAL>(.025, .05);
 	_image["silvio"]->draw<Image::SCALED>(.025, .675, .15 * _width, 
 		.3 * _height);
 	_image["roulette"]->draw<Image::NORMAL>(((.95 - (.35 * _height) 
@@ -53,10 +67,36 @@ const bool Main::draw(void) {
 		/ _width) / 2 + 0.025) - (25.0 / _width), .65 - (50.0
 		/ _height), 50, 50);
 
-	_button["certification"]->draw();
+	_image["buy"]->draw<Image::SCALED>(0.6, 0.2, 200, 130);
+	_image["certification"]->draw<Image::SCALED>(0.6, 0.4, 200, 130);
+
+	//_font["main"]->draw<Font::CENTER>(_palette, .5, .85,
+	//		"MAIN SCREN!!! Wanna quit? press <ESC>");
+	_font["main"]->draw(_palette, .2, .69, "Nome: Sílvio Santos");
+	_font["main"]->draw(_palette, .2, .77, "Processo: XP");
+	_font["main"]->draw(_palette, .2, .85, "Recursos: 1000000");
+	_font["main"]->draw(_palette, .2, .93, "Pontuação: 350");
+
+	_font["main"]->draw(_palette, .5, .725, "Empresa 1 - CMMI 1");
+	_font["main"]->draw(_palette, .5, .805, "Empresa 2 - CMMI 4");
+	_font["main"]->draw(_palette, .5, .885, "Empresa 3 - CMMI 1");
+	_font["main"]->draw(_palette, .7, .725, "Empresa 4 - CMMI 2");
+
+	_font["title"]->draw(_palette, .03, .075, "Rodada #1 de 5");
+
+	_font["other"]->draw(_palette, .8, .1, "Hebe Camargo - 710");
+	_font["other"]->draw(_palette, .8, .2, "Xuxa Meneghel - 180");
+	_font["other"]->draw(_palette, .8, .3, "Gugu Liberato - 575");
+
+	_image["lineHor"]->draw<Image::NORMAL>(.49, .695);
+	_image["lineHor"]->draw<Image::NORMAL>(.49, .945);
+	_image["lineVer"]->draw<Image::NORMAL>(.49, .695);
+	_image["lineVer"]->draw<Image::NORMAL>(.889, .695);
+
+	al_flip_display();
+	//al_flip_display();
 
 	return false;
-
 }
 
 /*
