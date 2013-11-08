@@ -4,15 +4,12 @@
 // Constructor
 Main::Main(ALLEGRO_DISPLAY *display, ALLEGRO_EVENT& event,
 		Data& data) :
-Screen(display, event), _data(data), _step(0) {
+Screen(display, event), _data(data) {
 
 	// Fonts
-	_load_font("main", config::misc::font::dejavu,
-			25, {"white"});
-	_load_font("other", config::misc::font::dejavu,
-			20, {"white"});
-	_load_font("title", config::misc::font::dejavu,
-			30, {"white"});
+	_load_font("main", config::misc::font::dejavu, 25);
+	_load_font("other", config::misc::font::dejavu,	20);
+	_load_font("title", config::misc::font::dejavu, 30);
 
 	_load_image("back", config::misc::image::config);
 	_load_image("silvio", config::misc::avatar::silvio);
@@ -47,9 +44,9 @@ Main::~Main(void) {
 }
 
 // Draws contents to display
-const bool Main::draw(void) {
+void Main::draw(void) {
 
-	if (_key.is_released(ALLEGRO_KEY_ESCAPE)) return true;
+//	if (_key.is_released(ALLEGRO_KEY_ESCAPE)) return true;
 
 	Image::set_target(_display);
 
@@ -72,32 +69,33 @@ const bool Main::draw(void) {
 
 	//_font["main"]->draw<Font::CENTER>(_palette, .5, .85,
 	//		"MAIN SCREN!!! Wanna quit? press <ESC>");
-	_font["main"]->draw(_palette, .2, .69, "Nome: Sílvio Santos");
-	_font["main"]->draw(_palette, .2, .77, "Processo: XP");
-	_font["main"]->draw(_palette, .2, .85, "Recursos: 1000000");
-	_font["main"]->draw(_palette, .2, .93, "Pontuação: 350");
+	_font["main"]->draw(_palette, "white", .2, .69, "Nome: Sílvio Santos");
+	_font["main"]->draw(_palette, "white", .2, .77, "Processo: XP");
+	_font["main"]->draw(_palette, "white", .2, .85, "Recursos: 1000000");
+	_font["main"]->draw(_palette, "white", .2, .93, "Pontuação: 350");
 
-	_font["main"]->draw(_palette, .5, .725, "Empresa 1 - CMMI 1");
-	_font["main"]->draw(_palette, .5, .805, "Empresa 2 - CMMI 4");
-	_font["main"]->draw(_palette, .5, .885, "Empresa 3 - CMMI 1");
-	_font["main"]->draw(_palette, .7, .725, "Empresa 4 - CMMI 2");
+	_font["main"]->draw(_palette, "white", .5, .725, "Empresa 1 - CMMI 1");
+	_font["main"]->draw(_palette, "white", .5, .805, "Empresa 2 - CMMI 4");
+	_font["main"]->draw(_palette, "white", .5, .885, "Empresa 3 - CMMI 1");
+	_font["main"]->draw(_palette, "white", .7, .725, "Empresa 4 - CMMI 2");
 
-	_font["title"]->draw(_palette, .03, .075, "Rodada #1 de 5");
+	_font["title"]->draw(_palette, "white", .03, .075, "Rodada #1 de 5");
 
-	_font["other"]->draw(_palette, .8, .1, "Hebe Camargo - 710");
-	_font["other"]->draw(_palette, .8, .2, "Xuxa Meneghel - 180");
-	_font["other"]->draw(_palette, .8, .3, "Gugu Liberato - 575");
+	_font["other"]->draw(_palette, "white", .8, .1, "Hebe Camargo - 710");
+	_font["other"]->draw(_palette, "white", .8, .2, "Xuxa Meneghel - 180");
+	_font["other"]->draw(_palette, "white", .8, .3, "Gugu Liberato - 575");
 
 	_image["lineHor"]->draw<Image::NORMAL>(.49, .695);
 	_image["lineHor"]->draw<Image::NORMAL>(.49, .945);
 	_image["lineVer"]->draw<Image::NORMAL>(.49, .695);
 	_image["lineVer"]->draw<Image::NORMAL>(.889, .695);
 
-	al_flip_display();
-	//al_flip_display();
 
-	return false;
+//	return false;
 }
+
+const bool Main::process()
+{ return false; }
 
 /*
 for (int i(0); i < _player.size(); ++i) {
