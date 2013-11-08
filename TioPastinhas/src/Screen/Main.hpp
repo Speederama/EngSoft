@@ -23,4 +23,11 @@ private:
 
 	Data& _data;
 
+	float _angle;
+	bool _rotating;
+
+	void _buy_company(void);
+
+	void _certify_company(void);
+
 };

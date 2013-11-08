@@ -57,6 +57,7 @@ public:
 	}
 
 	inline const bool _buy_company() {
+		if (_companies.size() >= 6) return false;
 		if (_remove_resources(config::game::company, false)) {
 			Company* company = new Company();
 			_companies.push_back(company);
