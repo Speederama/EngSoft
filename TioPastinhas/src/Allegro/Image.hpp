@@ -64,7 +64,7 @@ public:
 	// Draws the text given
 	template <char mode, int flag = 0>
 	inline void draw(const float& x, const float& y,
-			int width = -1, int height = -1) {
+			int width = -1, int height = -1) const {
 
 		if (width == -1) width = _width;
 		if (height == -1) height = _height;

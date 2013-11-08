@@ -50,6 +50,16 @@ _step(0) {
 	// JUST FOR TESTING
 	_data.num_rounds = 5;
 	_data.cur_round = 1;
+	ALLEGRO_EVENT e;
+	Allegro::Image* a1 = new Allegro::Image(_display, e, config::misc::avatar::silvio);
+	Allegro::Image* a2 = new Allegro::Image(_display, e, config::misc::avatar::hebe);
+	Allegro::Image* a3 = new Allegro::Image(_display, e, config::misc::avatar::xuxa);
+	Player *p = new Player("Júlio Albinati", "Kanban", a1);
+	Player *p1 = new Player("Paulo Viana", "XP", a2);
+	Player *p2 = new Player("Rubens Emilio", "Praxis", a3);
+	_data.player.push_back(p);
+	_data.player.push_back(p1);
+	_data.player.push_back(p2);
 
 }
 

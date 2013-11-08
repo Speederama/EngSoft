@@ -12,7 +12,6 @@ Screen(display, event), _data(data) {
 	_load_font("title", config::misc::font::dejavu, 30);
 
 	_load_image("back", config::misc::image::config);
-	_load_image("silvio", config::misc::avatar::silvio);
 	_load_image("roulette", config::misc::image::roulette);
 	_load_image("arrow", config::misc::image::arrow);
 	_load_image("buy", config::misc::image::buy);
@@ -74,16 +73,31 @@ void Main::draw(void) {
 	_image["certification"]->draw<Image::SCALED>(0.6, 0.4, 200, 130);
 
 	// Drawing current player related stuff...
-	_image["silvio"]->draw<Image::SCALED>(.025, .675, .15 * _width, 
-		.3 * _height);
-	_font["main"]->draw(_palette, "white", .2, .69, "Nome: Sílvio Santos");
-	_font["main"]->draw(_palette, "white", .2, .77, "Processo: XP");
-	_font["main"]->draw(_palette, "white", .2, .85, "Recursos: 1000000");
-	_font["main"]->draw(_palette, "white", .2, .93, "Pontuação: 350");
-	_font["main"]->draw(_palette, "white", .5, .725, "Empresa 1 - CMMI 1");
-	_font["main"]->draw(_palette, "white", .5, .805, "Empresa 2 - CMMI 4");
-	_font["main"]->draw(_palette, "white", .5, .885, "Empresa 3 - CMMI 1");
-	_font["main"]->draw(_palette, "white", .7, .725, "Empresa 4 - CMMI 2");
+	_data.player[_data.turn]->_avatar->draw<Image::SCALED>(.025, 
+		.675, .15 * _width, .3 * _height);
+
+	char namePlayer[100], procPlayer[100], recPlayer[100], 
+		pointsPlayer[100]; 
+	sprintf(namePlayer, "Nome: %s", _data.player[_data.turn]->_name.data());
+	sprintf(procPlayer, "Process: %s", _data.player[_data.turn]->_process.data());
+	sprintf(recPlayer, "Recursos: %d", _data.player[_data.turn]->_get_resources());
+	sprintf(pointsPlayer, "Pontuação: %d", _data.player[_data.turn]->_get_points());
+	_font["main"]->draw(_palette, "white", .2, .69, namePlayer);
+	_font["main"]->draw(_palette, "white", .2, .77, procPlayer);
+	_font["main"]->draw(_palette, "white", .2, .85, recPlayer);
+	_font["main"]->draw(_palette, "white", .2, .93, pointsPlayer);
+
+	for (int i(0); i < _data.player[_data.turn]->_num_companies(); ++i) {
+		char compInfo[100];
+		sprintf(compInfo, "Empresa %d - CMMI %d", i + 1, 
+			_data.player[_data.turn]->_get_companies()[i]->_level());
+		if (i < 3)
+			_font["main"]->draw(_palette, "white", .5,
+				.725 + 0.08 * i, compInfo);
+		else
+			_font["main"]->draw(_palette, "white", .7,
+				.725 + 0.08 * (i - 3), compInfo);
+	}
 
 	// Drawing rounds info...
 	char roundsInfo[100];
@@ -91,9 +105,16 @@ void Main::draw(void) {
 	_font["title"]->draw(_palette, "white", .03, .075, roundsInfo);
 
 	// Drawing info about other players...
-	_font["other"]->draw(_palette, "white", .8, .1, "Hebe Camargo - 710");
-	_font["other"]->draw(_palette, "white", .8, .2, "Xuxa Meneghel - 180");
-	_font["other"]->draw(_palette, "white", .8, .3, "Gugu Liberato - 575");
+	int count(0);
+	for (int i(0); i < _data.player.size(); ++i) {
+		if (i == _data.turn) continue;
+		char info[100];
+		sprintf(info, "%s - %d", _data.player[i]->_name.data(),
+			 _data.player[i]->_get_points());
+		_font["other"]->draw(_palette, "white", .8, 
+			.1 * (count + 1), info);
+		++count;
+	}
 }
 
 const bool Main::process()

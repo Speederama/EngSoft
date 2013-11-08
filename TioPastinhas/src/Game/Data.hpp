@@ -11,7 +11,7 @@ struct Data {
 
 public:
 
-	int num_rounds, cur_round;
+	int num_rounds, cur_round, turn;
 
 	// std::vector<Card *> card;
 	std::vector<Player *> player;
@@ -20,7 +20,7 @@ public:
 
 	// Constructor
 	inline Data() :
-	num_rounds(0), cur_round(0) {
+	num_rounds(0), cur_round(0), turn(0) {
 	}
 
 	// Destructor
