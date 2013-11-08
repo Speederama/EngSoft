@@ -24,10 +24,11 @@ private:
 	Data& _data;
 
 	float _angle;
-	bool _rotating;
+	int _time_to_stop, _time_rotating;
+	bool _solve_roulette;
 
 	void _buy_company(void);
-
 	void _certify_company(void);
+	void _resolve_roulette(void);
 
 };
