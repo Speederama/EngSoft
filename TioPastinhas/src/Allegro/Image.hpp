@@ -14,10 +14,11 @@ public:
 	};
 
 	// Constructor -- create
-	inline Image(const ALLEGRO_EVENT& event,
+	inline Image(ALLEGRO_DISPLAY *display,
+			const ALLEGRO_EVENT& event,
 			const int& width, const int& height) :
 	_width(width), _height(height), _path(""),
-	_event(event) {
+	_display(display), _event(event) {
 
 		_image = al_create_bitmap(width, height);
 		if (_image == NULL) config::error::create("image");;
@@ -25,10 +26,11 @@ public:
 	}
 
 	// Constructor -- load
-	inline Image(const ALLEGRO_EVENT& event,
+	inline Image(ALLEGRO_DISPLAY *display,
+			const ALLEGRO_EVENT& event,
 			const std::string& path) :
 	_width(0), _height(0), _path(path),
-	_event(event) {
+	_display(display), _event(event) {
 
 		_image = al_load_bitmap(path.c_str());
 		if (_image == NULL) config::error::load(path);
@@ -55,6 +57,7 @@ public:
 
 		al_set_target_bitmap(_image);
 		al_clear_to_color(palette(color, alpha));
+		al_set_target_bitmap(al_get_backbuffer(_display));
 
 	}
 
@@ -90,6 +93,7 @@ private:
 	const std::string _path;
 
 	ALLEGRO_BITMAP *_image;
+	ALLEGRO_DISPLAY *_display;
 	const ALLEGRO_EVENT& _event;
 
 };

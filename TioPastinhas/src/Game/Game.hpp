@@ -41,7 +41,11 @@ private:
 			_screen = new T(_display, _event, _data);
 		}
 
-		if (_screen->draw()) delete _screen, _screen = NULL;
+		if (_screen->process()) delete _screen, _screen = NULL;
+		else if (_event.type == ALLEGRO_EVENT_TIMER) {
+			_screen->draw(), al_flip_display();
+		}
+
 		return (_screen == NULL);
 
 	}

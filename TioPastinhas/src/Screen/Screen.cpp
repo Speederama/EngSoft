@@ -9,6 +9,7 @@
 // Constructor
 Screen::Screen(ALLEGRO_DISPLAY *display, ALLEGRO_EVENT& event,
 		const int& num_samples) :
+_finished(false), _step(0), _counter(0),
 _key(event), _event(event), _display(display) {
 	al_reserve_samples(num_samples);
 }
@@ -43,20 +44,22 @@ Screen::~Screen(void) {
 
 }
 
+// Processes new events
+const bool Screen::process() {
+}
+
 // Draws screen contents
-const bool Screen::draw() {
+void Screen::draw() {
 }
 
 // Loads a font
 void Screen::_load_font(const std::string& id,
-		const std::string& path, const int& size,
-		const std::vector<std::string>& color,
-		const int& timer) {
+		const std::string& path, const int& size) {
 
 	if (_font.find(id) != _font.end()) {
 		config::error::load("font[" + id + "] already taken");
 	}
-	_font[id] = new Font(_event, path, size, color, timer);
+	_font[id] = new Font(_event, path, size);
 
 }
 
@@ -67,7 +70,7 @@ void Screen::_create_image(const std::string& id,
 	if (_image.find(id) != _image.end()) {
 		config::error::load("image[" + id + "] already taken");
 	}
-	_image[id] = new Image(_event, width, height);
+	_image[id] = new Image(_display, _event, width, height);
 
 }
 
@@ -78,7 +81,7 @@ void Screen::_load_image(const std::string& id,
 	if (_image.find(id) != _image.end()) {
 		config::error::load("image[" + id + "] already taken");
 	}
-	_image[id] = new Image(_event, path);
+	_image[id] = new Image(_display, _event, path);
 
 }
 
