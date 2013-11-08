@@ -27,6 +27,8 @@ namespace config {
 			{100000, 200000, 300000, 400000};
 		const unsigned int points[5] = 
 			{100, 200, 300, 400, 500};
+		const unsigned int specific = 200000;
+		const unsigned int general = 100000;
 	}
 
 	// Screen constants
@@ -59,9 +61,9 @@ namespace config {
 			const int count = 1;
 			const std::string path("../misc/images/");
 			const std::string avatar[2] = {path, ".png"};
-			const std::string silvio(path + "avatar.jpg");
-			const std::string hebe(path + "hebe.jpg");
-			const std::string xuxa(path + "xuxa.jpg");
+			const std::string silvio(path + "silvio.png");
+			const std::string hebe(path + "hebe.png");
+			const std::string xuxa(path + "xuxa.png");
 			//const std::string gugu(path + "avatar.png");
 		}
 

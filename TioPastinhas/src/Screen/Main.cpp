@@ -1,10 +1,13 @@
 # include "Main.hpp"
 
+# include <cmath>
+
 
 // Constructor
 Main::Main(ALLEGRO_DISPLAY *display, ALLEGRO_EVENT& event,
 		Data& data) :
-Screen(display, event), _data(data) {
+Screen(display, event), _data(data), _angle(0.0), 
+_time_to_stop(0), _time_rotating(0), _solve_roulette(false) {
 
 	// Fonts
 	_load_font("main", config::misc::font::dejavu, 25);
@@ -23,7 +26,6 @@ Screen(display, event), _data(data) {
 	_create_image("playerHor", .95 * _width, .3 * _height);
 	_image["playerHor"]->set_color(_palette, "grey", 200);
 
-	//_create_image("playerVert", .3 * _height, .9 * _height - (.3 * _height));
 	_create_image("playerVert", .35 * _height, .626 * _height);
 	_image["playerVert"]->set_color(_palette, "grey", 200);
 
@@ -64,8 +66,10 @@ void Main::draw(void) {
 	_image["lineVer"]->draw<Image::NORMAL>(.889, .695);
 
 	// Drawing interactive elements
-	_image["roulette"]->draw<Image::NORMAL>(((.95 - (.35 * _height) 
-		/ _width) / 2 + 0.025) - (254.0 / _width), .07);
+//	_image["roulette"]->draw<Image::NORMAL>(((.95 - (.35 * _height) 
+//		/ _width) / 2 + 0.025) - (254.0 / _width), .07);
+	_image["roulette"]->draw<Image::ROTATED>(((.95 - (.35 * _height) 
+		/ _width) / 2 + 0.025), .4, 254, 232, _angle);
 	_image["arrow"]->draw<Image::SCALED>(((.95 - (.35 * _height) 
 		/ _width) / 2 + 0.025) - (25.0 / _width), .65 - (50.0
 		/ _height), 50, 50);
@@ -115,10 +119,175 @@ void Main::draw(void) {
 			.1 * (count + 1), info);
 		++count;
 	}
+	
+	if (_time_rotating < _time_to_stop) {
+		_angle += 3.1415 / (10 + exp((_time_rotating - 
+			_time_to_stop / 2) * .1) * .01);
+		if (_angle > 6.283) _angle -= 6.283;
+		++_time_rotating;
+	}
+	else if (_time_rotating > 0) {
+		_time_rotating = 0;
+		_time_to_stop = 0;
+	}
 }
 
-const bool Main::process()
-{ return false; }
+const bool Main::process() { 
+	if (_key.is_released(ALLEGRO_KEY_ESCAPE)) return true;
+
+	if (_data.cur_round > _data.num_rounds) return true;
+
+	if (_time_rotating < _time_to_stop) return false;
+	else if (_solve_roulette) _resolve_roulette();
+
+	if (_event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN) {
+		if(_event.mouse.x > .6 * _width and _event.mouse.x < 
+			.6 * _width + 200 and _event.mouse.y > .2 * 
+			_height + 30 and _event.mouse.y < .2 * _height 
+			+ 97)	
+			_buy_company();
+		else if(_event.mouse.x > .6 * _width and _event.mouse.x < 
+			.6 * _width + 200 and _event.mouse.y > .4 * 
+			_height + 30 and _event.mouse.y < .4 * _height 
+			+ 97)
+			_certify_company();
+		else {
+			int centerX = ((.95 - (.35 * _height) / _width) 
+				/ 2 + 0.025) * _width;
+			int centerY = .4 * _height;
+			int distSq = (_event.mouse.x - centerX) * 
+				(_event.mouse.x - centerX) + 
+				(_event.mouse.y - centerY) * 
+				(_event.mouse.y - centerY);
+			if (distSq <= 16900) {
+				_time_to_stop = 200 + rand() % 100;
+				_solve_roulette = true;
+			}
+		}
+	}
+
+	return false; 
+}
+
+void Main::_buy_company() {
+	int answer = al_show_native_message_box(_display, "Comprar Empresa", 
+		"Comprar Empresa", "Deseja realmente comprar uma nova empresa?", 
+		"Sim|Não", ALLEGRO_MESSAGEBOX_YES_NO);
+	bool success = true;
+	if (answer == 1)
+		success = _data.player[_data.turn]->_buy_company();
+	if (not success)
+		al_show_native_message_box(_display, "Comprar Empresa", "Erro!", "Não foi possível adquirir uma nova empresa. É possível que não existam recursos suficientes ou você já tenha atingido o limite de 6 empresas.", "OK", ALLEGRO_MESSAGEBOX_ERROR);
+}
+
+void Main::_certify_company() {
+	char options[200];
+	bool first = true;
+	for (int i(0); i < _data.player[_data.turn]->_num_companies(); ++i) {
+		if (_data.player[_data.turn]->_get_companies()[i]->_level() < 5) {
+			if (first)
+				sprintf(options, "Empresa %d", i + 1);
+			else
+				sprintf(options, "%s|Empresa %d", options, i);
+			first = false;
+		}
+	}
+	
+	if (first) {
+		al_show_native_message_box(_display, "Certificar Empresa", 
+			"Erro!", "Você não possui empresas a certificar!", 
+			"OK", ALLEGRO_MESSAGEBOX_ERROR);
+		return;
+	}
+
+	int answer = al_show_native_message_box(_display, "Certificar Empresa", 
+		"Certificar Empresa", "Qual empresa deseja certificar?", 
+		options, ALLEGRO_MESSAGEBOX_QUESTION);
+	bool success = _data.player[_data.turn]->_certification(answer);
+	if (not success)
+		al_show_native_message_box(_display, "Certificar Empresa", "Erro!", "Não foi possível certificar a empresa. É possível que não existam recursos suficientes.", "OK", ALLEGRO_MESSAGEBOX_ERROR);
+}
+
+void Main::_resolve_roulette() {
+	float piece = 6.283 / 12;
+	int cur_piece = floor(_angle / piece);
+	int answer = 0;
+	switch(cur_piece % 4) {
+	case 0:
+		// TODO: specific question
+		answer = al_show_native_message_box(_display, 
+			"Pergunta Específica", "Pergunta Específica", 
+			"???", "A1|A2|A3|A4", ALLEGRO_MESSAGEBOX_QUESTION);
+		if (answer == 1) {
+			al_show_native_message_box(_display,
+				"Pergunta Específica",
+				"Pergunta Específica",
+				"Resposta correta!", "OK",
+				ALLEGRO_MESSAGEBOX_OK_CANCEL);
+			_data.player[_data.turn]->_add_resources(
+				config::game::specific);
+		}
+		else {
+			al_show_native_message_box(_display,
+				"Pergunta Específica",
+				"Pergunta Específica",
+				"Resposta incorreta!", "OK",
+				ALLEGRO_MESSAGEBOX_OK_CANCEL);
+			_data.player[_data.turn]->_remove_resources(
+				config::game::specific, true);
+		}
+		break;
+	case 1:
+		// TODO: bad luck event
+		al_show_native_message_box(_display,
+			"Evento de revés", "Evento de revés",
+			"Evento de revés", "OK",
+			ALLEGRO_MESSAGEBOX_OK_CANCEL);
+		_data.player[_data.turn]->_remove_resources(
+			500000, true);
+		break;
+	case 2:
+		// TODO: general question
+		answer = al_show_native_message_box(_display, 
+			"Pergunta Geral", "Pergunta Geral", 
+			"???", "A1|A2|A3|A4", ALLEGRO_MESSAGEBOX_QUESTION);
+		if (answer == 1) {
+			al_show_native_message_box(_display,
+				"Pergunta Geral",
+				"Pergunta Geral",
+				"Resposta correta!", "OK",
+				ALLEGRO_MESSAGEBOX_OK_CANCEL);
+			_data.player[_data.turn]->_add_resources(
+				config::game::general);
+		}
+		else {
+			al_show_native_message_box(_display,
+				"Pergunta Geral",
+				"Pergunta Geral",
+				"Resposta incorreta!", "OK",
+				ALLEGRO_MESSAGEBOX_OK_CANCEL);
+			_data.player[_data.turn]->_remove_resources(
+				config::game::general, true);
+		}
+		break;
+	case 3:
+		// TODO: good luck event
+		al_show_native_message_box(_display,
+			"Evento de sorte", "Evento de sorte",
+			"Evento de sorte", "OK",
+			ALLEGRO_MESSAGEBOX_OK_CANCEL);
+		_data.player[_data.turn]->_add_resources(
+			500000);
+		break;
+	}
+
+	++_data.turn;
+	if (_data.turn >= _data.player.size()) {
+		_data.turn %= _data.player.size();
+		++_data.cur_round;
+	}
+	_solve_roulette = false;
+}
 
 /*
 for (int i(0); i < _player.size(); ++i) {

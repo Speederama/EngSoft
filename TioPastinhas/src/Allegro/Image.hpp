@@ -10,7 +10,8 @@ public:
 
 	enum Mode {
 		NORMAL,
-		SCALED
+		SCALED,
+		ROTATED
 	};
 
 	// Constructor -- create
@@ -64,7 +65,8 @@ public:
 	// Draws the text given
 	template <char mode, int flag = 0>
 	inline void draw(const float& x, const float& y,
-			int width = -1, int height = -1) const {
+			int width = -1, int height = -1, 
+			float angle = 0.0) const {
 
 		if (width == -1) width = _width;
 		if (height == -1) height = _height;
@@ -82,6 +84,12 @@ public:
 					config::screen::height * y,
 					width, height,
 					flag);
+			break;
+		case 2:
+			al_draw_rotated_bitmap(_image, width, 
+				height, config::screen::width * x, 
+				config::screen::height * y, angle, 
+				flag);
 			break;
 		}
 
