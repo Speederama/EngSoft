@@ -211,13 +211,37 @@ void Main::_certify_company() {
 void Main::_resolve_roulette() {
 	float piece = 6.283 / 12;
 	int cur_piece = floor(_angle / piece);
-	int answer = 0;
+	int answer = 0, chosen = 0, desired = 0;
+	char full_text[1000];
+	std::vector<Question*> questions_to_use;
 	switch(cur_piece % 4) {
 	case 0:
-		// TODO: specific question
+		if (_data.player[_data.turn]->_process == "XP")
+			desired = 1;
+		else if (_data.player[_data.turn]->_process == "Kanban")
+			desired = 2;
+		else if (_data.player[_data.turn]->_process == "Scrum")
+			desired = 3;
+		else if (_data.player[_data.turn]->_process == "Praxis")
+			desired = 4;
+
+		for (int i(0); i < _data.question.size(); ++i) {
+			if (_data.question[i]->type == desired)
+				questions_to_use.push_back(_data.question[i]);
+		}
+
+		chosen = rand() % questions_to_use.size();	
+		sprintf(full_text, "%s\nA: %s\nB: %s\nc: %s\nD: %s",
+			questions_to_use[chosen]->text.data(), 
+			questions_to_use[chosen]->option[0].data(), 
+			questions_to_use[chosen]->option[1].data(), 
+			questions_to_use[chosen]->option[2].data(), 
+			questions_to_use[chosen]->option[3].data());
+		
 		answer = al_show_native_message_box(_display, 
 			"Pergunta Específica", "Pergunta Específica", 
-			"???", "A1|A2|A3|A4", ALLEGRO_MESSAGEBOX_QUESTION);
+			full_text, "A|B|C|D", 
+			ALLEGRO_MESSAGEBOX_QUESTION);
 		if (answer == 1) {
 			al_show_native_message_box(_display,
 				"Pergunta Específica",
@@ -247,11 +271,24 @@ void Main::_resolve_roulette() {
 			500000, true);
 		break;
 	case 2:
-		// TODO: general question
+		for (int i(0); i < _data.question.size(); ++i) {
+			if (_data.question[i]->type == 0)
+				questions_to_use.push_back(_data.question[i]);
+		}
+
+		chosen = rand() % questions_to_use.size();	
+		sprintf(full_text, "%s\nA: %s\nB: %s\nc: %s\nD: %s",
+			questions_to_use[chosen]->text.data(), 
+			questions_to_use[chosen]->option[0].data(), 
+			questions_to_use[chosen]->option[1].data(), 
+			questions_to_use[chosen]->option[2].data(), 
+			questions_to_use[chosen]->option[3].data());
+		
 		answer = al_show_native_message_box(_display, 
 			"Pergunta Geral", "Pergunta Geral", 
-			"???", "A1|A2|A3|A4", ALLEGRO_MESSAGEBOX_QUESTION);
-		if (answer == 1) {
+			full_text, "A|B|C|D", 
+			ALLEGRO_MESSAGEBOX_QUESTION);
+		if (answer == questions_to_use[chosen]->correct) {
 			al_show_native_message_box(_display,
 				"Pergunta Geral",
 				"Pergunta Geral",

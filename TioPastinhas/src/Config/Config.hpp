@@ -14,7 +14,7 @@ namespace config {
 
 		namespace path {
 			const std::string card = "../misc/card.txt";
-			const std::string question = "../misc/question.txt";
+			const std::string question = "../misc/data/questions";
 		}
 
 	}
