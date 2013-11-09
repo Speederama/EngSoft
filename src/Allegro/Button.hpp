@@ -12,13 +12,11 @@ public:
 	};
 
 	// Constructor
-	inline Button(const char& btn_type,
-			const ALLEGRO_EVENT& event,
-			const std::string& path, const std::string& type,
-			const float& x, const float& y,
-			const float& dx = 0, const float& dy = 0) :
-	_event(event), _path(path), _type(type),
-	_x(x), _y(y), _dx(dx), _dy(dy), _sx(0), _sy(0),
+	inline Button(const char& btn_type, const ALLEGRO_EVENT& event,
+			const std::string& path, const float& x, const float& y,
+			const float& dx = -1, const float& dy = -1) :
+	_event(event), _path(path),
+	_x(x), _y(y), _dx(dx), _dy(dy), _width(0), _height(0),
 	_link(NULL), _visited(NULL), _hover(NULL), _cur(NULL),
 	_clicked(false), _moved(false),
 	_was_over(false), _is_over(false),
@@ -31,9 +29,12 @@ public:
 		default: config::error::invalid("unknown button type");
 		}
 
-		_load_image(_link, path + "_LINK" + type);
-		_load_image(_visited, path + "_VISITED" + type);
-		_load_image(_hover, path + "_HOVER" + type);
+		_load_image(_link, path + "_LINK.png");
+		_load_image(_visited, path + "_VISITED.png");
+		_load_image(_hover, path + "_HOVER.png");
+
+		_cur = _link;
+		_x *= config::screen::width, _y *= config::screen::height;
 
 	}
 
@@ -47,28 +48,46 @@ public:
 	}
 
 	// Draws the button
-	inline const bool draw(void) {
+	inline void draw(void) {
 
-		if (_cur == NULL) _draw(_link);
+		al_draw_scaled_bitmap(_cur, 0, 0, _width, _height,
+				_x, _y, _dx, _dy, 0);
+
+	}
+
+	// Resets the button state
+	inline void reset(void) {
+
+		_cur = _link;
+		_clicked = false, _moved = false;
+		_was_over = false, _is_over = false;
+		_was_pressed = false, _is_pressed = false;
+
+	}
+
+	// Checks whether the button is pressed
+	inline const bool pressed(void) {
+
+		if (_cur == NULL) _cur = _link;
 		else if (not _update()) return false;
 
 		if (not _was_pressed and not _was_over) {
 
-			if (_is_over) _draw(_is_pressed ? _visited : _hover);
+			if (_is_over) _cur = (_is_pressed ? _visited : _hover);
 
 		} else if (not _was_pressed) {
-			
-			if (not _is_over) _draw(_link);
-			else if (_is_pressed) _draw(_visited);
+
+			if (not _is_over) _cur = _link;
+			else if (_is_pressed) _cur = _visited;
 
 		} else if (_toggle and _is_pressed
 				and _clicked and _is_over) {
 
-			_is_pressed = false, _draw(_hover);
+			_is_pressed = false, _cur = _hover;
 
 		} else if (not _hold and not _toggle and not _is_pressed) {
 
-			_draw(_is_over ? _hover : _link);
+			_cur = (_is_over ? _hover : _link);
 
 		}
 
@@ -79,10 +98,10 @@ public:
 
 private:
 
+	const std::string _path;
 	const ALLEGRO_EVENT &_event;
-	const std::string _path, _type;
 
-	float _x, _y, _dx, _dy, _sx, _sy;
+	float _x, _y, _dx, _dy, _width, _height;
 	ALLEGRO_BITMAP *_cur, *_link, *_visited, *_hover;
 
 	bool _hold, _toggle, _clicked, _moved;
@@ -95,9 +114,11 @@ private:
 		image = al_load_bitmap(path.c_str());
 		if (image == NULL) config::error::load(path);
 
-		_sx = al_get_bitmap_width(image);
-		_sy = al_get_bitmap_height(image);
-		_dx = (_dx ? _dx : _sx), _dy = (_dy ? _dy : _sy);
+		_width = al_get_bitmap_width(image);
+		_height = al_get_bitmap_height(image);
+
+		_dx = (_dx != -1 ? _dx : _width);
+		_dy = (_dy != -1 ? _dy : _height);
 
 	}
 
@@ -121,13 +142,6 @@ private:
 
 		return true;
 
-	}
-
-	// Draws the button
-	inline void _draw(ALLEGRO_BITMAP *image) {
-		_cur = image;
-		al_draw_scaled_bitmap(_cur, 0, 0, _sx, _sy,
-				_x, _y, _dx, _dy, 0);
 	}
 
 };

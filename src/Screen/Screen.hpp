@@ -57,16 +57,14 @@ protected:
 
 	// Loads a button
 	template <char type>
-	void _load_button(const std::string& id,
-			const std::string (&path)[2],
+	void _load_button(const std::string& id, const std::string& path,
 			const float& x, const float& y,
 			const float& dx, const float& dy) {
 
 		if (_button.find(id) != _button.end()) {
 			config::error::load("button[" + id + "] already taken");
 		}
-		_button[id] = new Button(type, _event,
-				path[0], path[1], x, y, dx, dy);
+		_button[id] = new Button(type, _event, path, x, y, dx, dy);
 
 	}
 

@@ -14,7 +14,7 @@ _time_to_stop(0), _time_rotating(0), _solve_roulette(false) {
 	_load_font("other", config::misc::font::dejavu,	20);
 	_load_font("title", config::misc::font::dejavu, 30);
 
-	_load_image("back", config::misc::image::config);
+	_load_image("back", config::misc::image::main);
 	_load_image("roulette", config::misc::image::roulette);
 	_load_image("arrow", config::misc::image::arrow);
 	_load_image("buy", config::misc::image::buy);

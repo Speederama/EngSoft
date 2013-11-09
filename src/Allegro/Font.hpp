@@ -9,7 +9,9 @@ class Allegro::Font {
 public:
 
 	enum Alignment {
-		CENTER = ALLEGRO_ALIGN_CENTER
+		LEFT = ALLEGRO_ALIGN_LEFT,
+		CENTER = ALLEGRO_ALIGN_CENTER,
+		RIGHT = ALLEGRO_ALIGN_RIGHT
 	};
 
 	// Constructor

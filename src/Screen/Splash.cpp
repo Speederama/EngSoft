@@ -57,7 +57,7 @@ void Splash::draw(void) {
 	switch (_step) {
 	case 0:
 
-		alpha -= .005 * alpha;
+		alpha -= .05 * alpha;
 		_image["cover"]->set_color(_palette, "black", alpha);
 		_image["cover"]->draw<Image::NORMAL>(0, 0);
 
@@ -70,6 +70,8 @@ void Splash::draw(void) {
 				((_counter % 30) > 15 ? "royalblue" : "green"),
 				.5, .85,
 				"Pressione <ENTER> para continuar");
+		break;
+
 	}
 
 }

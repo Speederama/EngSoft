@@ -1,3 +1,4 @@
+# include <string>
 # include "Screen.hpp"
 # include "../Game/Data.hpp"
 
@@ -23,7 +24,13 @@ private:
 
 	Data& _data;
 
-	// Draws the background
-	void _background();
+	bool _avatar_selected;
+	int _cur_avatar, _num_avatars;
+
+	int _user_process;
+	std::string _username;
+
+	// Allows the user to choose an avatar
+	void _choose_avatar(void);
 
 };
