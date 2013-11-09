@@ -1,2 +1,0 @@
-/usr/bin/ar cr libScreen.a  CMakeFiles/Screen.dir/Screen.cpp.o
-/usr/bin/ranlib libScreen.a
