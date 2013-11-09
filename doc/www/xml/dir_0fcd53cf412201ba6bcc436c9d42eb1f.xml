@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="dir_0fcd53cf412201ba6bcc436c9d42eb1f" kind="dir">
+    <compoundname>Screen</compoundname>
+    <innerfile refid="MainScreen_8cc">MainScreen.cc</innerfile>
+    <innerfile refid="MainScreen_8h">MainScreen.h</innerfile>
+    <innerfile refid="Screen_8cc">Screen.cc</innerfile>
+    <innerfile refid="Screen_8h">Screen.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Screen/"/>
+  </compounddef>
+</doxygen>

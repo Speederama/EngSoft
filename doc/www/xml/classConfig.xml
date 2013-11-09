@@ -1,0 +1,596 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classConfig" kind="class" prot="public">
+    <compoundname>Config</compoundname>
+    <includes refid="Config_8h" local="no">Config.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classConfig_1a5dcfbb05343ed1091fa69155603fa56d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Config::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="23" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1aa5faf33d87a76174ce860e44b537c8b1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Config::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="23" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1a53ef3cee54ba935fdc2e7254f22303ed" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Config::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="24" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1ab53531496150bf60f52ef036c1c02af1" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Config::fileImageAvatar</definition>
+        <argsstring></argsstring>
+        <name>fileImageAvatar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="26" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1a52893ffc540cc1761c6cf134ac0ba62b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Config::namePlayer</definition>
+        <argsstring></argsstring>
+        <name>namePlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="26" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1aa2ab092263091948bdb4afc6503a1c1f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Config::methodologyPlayer</definition>
+        <argsstring></argsstring>
+        <name>methodologyPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="26" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1a32dfe36d2b0f14cfdcfe6e2eb91c6303" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Config::pointsPlayer</definition>
+        <argsstring></argsstring>
+        <name>pointsPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="27" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1ac58bc4418df8d11d7a888a99a3d363c1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Config::resourcePlayer</definition>
+        <argsstring></argsstring>
+        <name>resourcePlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="27" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1a80051638713d0acc67ec8c24328d7854" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Config::numRound</definition>
+        <argsstring></argsstring>
+        <name>numRound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="27" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1aa1f16019542fe2613ab299fae7c51c89" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Config::maxRounds</definition>
+        <argsstring></argsstring>
+        <name>maxRounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="27" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1af7422b2039efc89485521b37e0568692" prot="private" static="no" mutable="no">
+        <type>std::list&lt; std::pair&lt; const char *, int &gt; &gt;</type>
+        <definition>std::list&lt; std::pair&lt;const char*, int&gt; &gt; Config::otherPlayers</definition>
+        <argsstring></argsstring>
+        <name>otherPlayers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="28" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1a925bbb7d1f7b27d91ca25ee8fbdb602e" prot="private" static="no" mutable="no">
+        <type>std::list&lt; std::pair&lt; const char *, int &gt; &gt;</type>
+        <definition>std::list&lt; std::pair&lt;const char*, int&gt; &gt; Config::companiesPlayer</definition>
+        <argsstring></argsstring>
+        <name>companiesPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="28" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classConfig_1abd0c571c116924871e30444b192b792a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Config::Config</definition>
+        <argsstring>()</argsstring>
+        <name>Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="9" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a543dce59b66475c5108088ee4ce1cdfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Config::~Config</definition>
+        <argsstring>()</argsstring>
+        <name>~Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a100ac66bc3f8bbb1d6dd179b8d42836a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="15" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="15" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classConfig_1a5392a3db20405cfff92023bdd42b1acf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::rotateRoullete</definition>
+        <argsstring>()</argsstring>
+        <name>rotateRoullete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a18e4dea6aa177d060197a082123316cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::confirmPurchase</definition>
+        <argsstring>()</argsstring>
+        <name>confirmPurchase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a71bfccda1988ab17f4b6fd413aab5ebe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::confirmCertification</definition>
+        <argsstring>()</argsstring>
+        <name>confirmCertification</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a916ac83d7a301c63dbce3f1057adfa30" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::showQuestion</definition>
+        <argsstring>(bool specific)</argsstring>
+        <name>showQuestion</name>
+        <param>
+          <type>bool</type>
+          <declname>specific</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a0d6e8018df2d67f443067d68a78b4295" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::showCard</definition>
+        <argsstring>(bool lucky)</argsstring>
+        <name>showCard</name>
+        <param>
+          <type>bool</type>
+          <declname>lucky</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1aceade6a398c75c8d66b9cf9d1cdfb1df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::drawScreen</definition>
+        <argsstring>()</argsstring>
+        <name>drawScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1affc178127d0b71bb9b3d43565216007d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::drawBackground</definition>
+        <argsstring>()</argsstring>
+        <name>drawBackground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1ab53ccf2f2e9fda3cffed819f27ceb755" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::drawLinesText</definition>
+        <argsstring>()</argsstring>
+        <name>drawLinesText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a9f40f1ec5f86fb5ffb656a685e43f839" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::drawRoullete</definition>
+        <argsstring>(float angle)</argsstring>
+        <name>drawRoullete</name>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a73fa8b9975b0cb12a38fae894eb5cb9d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::drawLegendArrow</definition>
+        <argsstring>()</argsstring>
+        <name>drawLegendArrow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1acd6352ea39d22c126fa65dd0154b80ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::drawButtons</definition>
+        <argsstring>()</argsstring>
+        <name>drawButtons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a7a9d4c97d6b18988fe29402347800d29" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::drawAvatar</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>drawAvatar</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a24f2340c9c40a4f3505dc65663fbd5db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::drawPlayerInfo</definition>
+        <argsstring>(const char *playerName, const char *methodology, int currentPoints, int currentMoney, const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;companies)</argsstring>
+        <name>drawPlayerInfo</name>
+        <param>
+          <type>const char *</type>
+          <declname>playerName</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>methodology</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>currentPoints</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>currentMoney</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>companies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a22d6d743fbd58562dcafd561efc55c0c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::drawOtherPlayers</definition>
+        <argsstring>(const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;otherPlayers)</argsstring>
+        <name>drawOtherPlayers</name>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>otherPlayers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a2e879d1afd349169660ddd7f629bcac8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::drawRounds</definition>
+        <argsstring>(int roundNumber, int totalRounds)</argsstring>
+        <name>drawRounds</name>
+        <param>
+          <type>int</type>
+          <declname>roundNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>totalRounds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1aad5b9c2a16c4243d37bd885fef38d53b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Config::MainScreen</definition>
+        <argsstring>()</argsstring>
+        <name>MainScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a8d030eb0ec8a2362e7c5d34744ffcad5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::drawScreen</definition>
+        <argsstring>(const char *fileImageAvatar, int numRound, int maxRounds, const char *namePlayer, const char *methodologyPlayer, int points, int resources, const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;companiesPlayer, const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;otherPlayers)</argsstring>
+        <name>drawScreen</name>
+        <param>
+          <type>const char *</type>
+          <declname>fileImageAvatar</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numRound</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxRounds</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>namePlayer</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>methodologyPlayer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>resources</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>companiesPlayer</declname>
+        </param>
+        <param>
+          <type>const std::list&lt; std::pair&lt; const char *, int &gt; &gt; &amp;</type>
+          <declname>otherPlayers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1aa290ba2a75688a112ad3d220d25ffef6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Config::waitForEvent</definition>
+        <argsstring>()</argsstring>
+        <name>waitForEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a55ec2670022ba8bc78d87f9b9807164c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::showMessage</definition>
+        <argsstring>(const char *caption, const char *header, const char *text, bool error)</argsstring>
+        <name>showMessage</name>
+        <param>
+          <type>const char *</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="54" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" line="4" column="1" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/Config.h" bodystart="4" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classConfig_1a53ef3cee54ba935fdc2e7254f22303ed" prot="private" virt="non-virtual"><scope>Config</scope><name>angle</name></member>
+      <member refid="classConfig_1a925bbb7d1f7b27d91ca25ee8fbdb602e" prot="private" virt="non-virtual"><scope>Config</scope><name>companiesPlayer</name></member>
+      <member refid="classConfig_1abd0c571c116924871e30444b192b792a" prot="public" virt="non-virtual"><scope>Config</scope><name>Config</name></member>
+      <member refid="classConfig_1a71bfccda1988ab17f4b6fd413aab5ebe" prot="private" virt="non-virtual"><scope>Config</scope><name>confirmCertification</name></member>
+      <member refid="classConfig_1a18e4dea6aa177d060197a082123316cb" prot="private" virt="non-virtual"><scope>Config</scope><name>confirmPurchase</name></member>
+      <member refid="classConfig_1a7a9d4c97d6b18988fe29402347800d29" prot="private" virt="non-virtual"><scope>Config</scope><name>drawAvatar</name></member>
+      <member refid="classConfig_1affc178127d0b71bb9b3d43565216007d" prot="private" virt="non-virtual"><scope>Config</scope><name>drawBackground</name></member>
+      <member refid="classConfig_1acd6352ea39d22c126fa65dd0154b80ee" prot="private" virt="non-virtual"><scope>Config</scope><name>drawButtons</name></member>
+      <member refid="classConfig_1a73fa8b9975b0cb12a38fae894eb5cb9d" prot="private" virt="non-virtual"><scope>Config</scope><name>drawLegendArrow</name></member>
+      <member refid="classConfig_1ab53ccf2f2e9fda3cffed819f27ceb755" prot="private" virt="non-virtual"><scope>Config</scope><name>drawLinesText</name></member>
+      <member refid="classConfig_1a22d6d743fbd58562dcafd561efc55c0c" prot="private" virt="non-virtual"><scope>Config</scope><name>drawOtherPlayers</name></member>
+      <member refid="classConfig_1a24f2340c9c40a4f3505dc65663fbd5db" prot="private" virt="non-virtual"><scope>Config</scope><name>drawPlayerInfo</name></member>
+      <member refid="classConfig_1a9f40f1ec5f86fb5ffb656a685e43f839" prot="private" virt="non-virtual"><scope>Config</scope><name>drawRoullete</name></member>
+      <member refid="classConfig_1a2e879d1afd349169660ddd7f629bcac8" prot="private" virt="non-virtual"><scope>Config</scope><name>drawRounds</name></member>
+      <member refid="classConfig_1aceade6a398c75c8d66b9cf9d1cdfb1df" prot="private" virt="non-virtual"><scope>Config</scope><name>drawScreen</name></member>
+      <member refid="classConfig_1a8d030eb0ec8a2362e7c5d34744ffcad5" prot="private" virt="non-virtual"><scope>Config</scope><name>drawScreen</name></member>
+      <member refid="classConfig_1ab53531496150bf60f52ef036c1c02af1" prot="private" virt="non-virtual"><scope>Config</scope><name>fileImageAvatar</name></member>
+      <member refid="classConfig_1a5dcfbb05343ed1091fa69155603fa56d" prot="private" virt="non-virtual"><scope>Config</scope><name>height</name></member>
+      <member refid="classConfig_1aad5b9c2a16c4243d37bd885fef38d53b" prot="private" virt="non-virtual"><scope>Config</scope><name>MainScreen</name></member>
+      <member refid="classConfig_1aa1f16019542fe2613ab299fae7c51c89" prot="private" virt="non-virtual"><scope>Config</scope><name>maxRounds</name></member>
+      <member refid="classConfig_1aa2ab092263091948bdb4afc6503a1c1f" prot="private" virt="non-virtual"><scope>Config</scope><name>methodologyPlayer</name></member>
+      <member refid="classConfig_1a52893ffc540cc1761c6cf134ac0ba62b" prot="private" virt="non-virtual"><scope>Config</scope><name>namePlayer</name></member>
+      <member refid="classConfig_1a80051638713d0acc67ec8c24328d7854" prot="private" virt="non-virtual"><scope>Config</scope><name>numRound</name></member>
+      <member refid="classConfig_1af7422b2039efc89485521b37e0568692" prot="private" virt="non-virtual"><scope>Config</scope><name>otherPlayers</name></member>
+      <member refid="classConfig_1a32dfe36d2b0f14cfdcfe6e2eb91c6303" prot="private" virt="non-virtual"><scope>Config</scope><name>pointsPlayer</name></member>
+      <member refid="classConfig_1ac58bc4418df8d11d7a888a99a3d363c1" prot="private" virt="non-virtual"><scope>Config</scope><name>resourcePlayer</name></member>
+      <member refid="classConfig_1a5392a3db20405cfff92023bdd42b1acf" prot="private" virt="non-virtual"><scope>Config</scope><name>rotateRoullete</name></member>
+      <member refid="classConfig_1a0d6e8018df2d67f443067d68a78b4295" prot="private" virt="non-virtual"><scope>Config</scope><name>showCard</name></member>
+      <member refid="classConfig_1a55ec2670022ba8bc78d87f9b9807164c" prot="private" virt="non-virtual"><scope>Config</scope><name>showMessage</name></member>
+      <member refid="classConfig_1a916ac83d7a301c63dbce3f1057adfa30" prot="private" virt="non-virtual"><scope>Config</scope><name>showQuestion</name></member>
+      <member refid="classConfig_1a100ac66bc3f8bbb1d6dd179b8d42836a" prot="public" virt="non-virtual"><scope>Config</scope><name>start</name></member>
+      <member refid="classConfig_1aa290ba2a75688a112ad3d220d25ffef6" prot="private" virt="non-virtual"><scope>Config</scope><name>waitForEvent</name></member>
+      <member refid="classConfig_1aa5faf33d87a76174ce860e44b537c8b1" prot="private" virt="non-virtual"><scope>Config</scope><name>width</name></member>
+      <member refid="classConfig_1a543dce59b66475c5108088ee4ce1cdfc" prot="public" virt="non-virtual"><scope>Config</scope><name>~Config</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

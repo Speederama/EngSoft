@@ -1,0 +1,68 @@
+\hypertarget{classGame}{\section{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+}
+
+
+{\ttfamily \#include $<$Game.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGame_a44f47382ce13570a98591a8248b65316}{Game} (const std\-::list$<$ std\-::pair$<$ std\-::pair$<$ const char $\ast$, const char $\ast$ $>$, const char $\ast$ $>$ $>$ \&info\-Players, int num\-Rounds)
+\item 
+void \hyperlink{classGame_ae8638ccdb0ef3bf39a6affa30aa1258f}{start\-Game} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classGame_a44f47382ce13570a98591a8248b65316}{\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\subsubsection[{Game}]{\setlength{\rightskip}{0pt plus 5cm}Game\-::\-Game (
+\begin{DoxyParamCaption}
+\item[{const std\-::list$<$ std\-::pair$<$ std\-::pair$<$ const char $\ast$, const char $\ast$ $>$, const char $\ast$ $>$ $>$ \&}]{info\-Players, }
+\item[{int}]{num\-Rounds}
+\end{DoxyParamCaption}
+)}}\label{classGame_a44f47382ce13570a98591a8248b65316}
+
+\begin{DoxyCode}
+8 \{
+9     \textcolor{keywordflow}{for} (list< pair<pair<const char*, const char*>, \textcolor{keyword}{const} \textcolor{keywordtype}{char}*> >::const\_iterator it = infoPlayers.begin()
+      ; it != infoPlayers.end(); ++it)
+10     \{
+11         \hyperlink{classPlayer}{Player} player(it->first.first, it->first.second, it->second);
+12         players.push\_back(player);
+13     \}
+14 
+15     numberRounds = numRounds;
+16     currentRound = 1;
+17 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classGame_ae8638ccdb0ef3bf39a6affa30aa1258f}{\index{Game@{Game}!start\-Game@{start\-Game}}
+\index{start\-Game@{start\-Game}!Game@{Game}}
+\subsubsection[{start\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-::start\-Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGame_ae8638ccdb0ef3bf39a6affa30aa1258f}
+
+\begin{DoxyCode}
+20 \{
+21     \hyperlink{classMainScreen}{MainScreen} screen;
+22     \textcolor{keywordflow}{while} (currentRound <= numberRounds)
+23     \{
+24         round(screen);
+25         currentRound++;
+26     \}
+27 
+28     endGame();
+29 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Game/\hyperlink{Game_8h}{Game.\-h}\item 
+Game/\hyperlink{Game_8cc}{Game.\-cc}\end{DoxyCompactItemize}

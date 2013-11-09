@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="dir_894de4897dae893eb9d15381d999f0a0" kind="dir">
+    <compoundname>Config</compoundname>
+    <innerfile refid="Config_8cc">Config.cc</innerfile>
+    <innerfile refid="Config_8h">Config.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Config/"/>
+  </compounddef>
+</doxygen>

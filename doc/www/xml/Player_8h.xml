@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="Player_8h" kind="file">
+    <compoundname>Player.h</compoundname>
+    <includes local="no">list</includes>
+    <includes local="no">string</includes>
+    <includes refid="Company_8h" local="yes">../Company/Company.h</includes>
+    <includedby refid="Game_8h" local="yes">Game/Game.h</includedby>
+    <includedby refid="Player_8cc" local="yes">Player/Player.cc</includedby>
+    <incdepgraph>
+      <node id="239">
+        <label>list</label>
+      </node>
+      <node id="240">
+        <label>string</label>
+      </node>
+      <node id="241">
+        <label>../Company/Company.h</label>
+        <link refid="Company_8h"/>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>Player/Player.h</label>
+        <link refid="Player.h"/>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="245">
+        <label>main.cc</label>
+        <link refid="main_8cc"/>
+      </node>
+      <node id="246">
+        <label>Player/Player.cc</label>
+        <link refid="Player_8cc"/>
+      </node>
+      <node id="244">
+        <label>Game/Game.cc</label>
+        <link refid="Game_8cc"/>
+      </node>
+      <node id="242">
+        <label>Player/Player.h</label>
+        <link refid="Player.h"/>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+      </node>
+      <node id="243">
+        <label>Game/Game.h</label>
+        <link refid="Game_8h"/>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classPlayer" prot="public">Player</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="Player_8h_1a984027001c10072051bf999609f9167d" prot="public" static="no">
+        <name>INITIAL_RESOURCES</name>
+        <initializer>2000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Player/Player.h" line="6" column="9" bodyfile="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Player/Player.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Company/Company.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="Player_8h_1a984027001c10072051bf999609f9167d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_RESOURCES<sp/>2000000</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classPlayer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classPlayer" kindref="compound">Player</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>namePlayer;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>methodologyPlayer;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>fileAvatar;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::list&lt;Company&gt;<sp/>listCompanies;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pointsPlayer,<sp/>resourcesPlayer;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updatePoints();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPlayer_1a71bfdf4e61822929e6cc678159653b9f" kindref="member">Player</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>namePlayer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>methodologyPlayer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fileAvatar);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classPlayer_1a63af5762c820d47e9ed31915ac0ceed9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classPlayer_1a63af5762c820d47e9ed31915ac0ceed9" kindref="member">getName</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>namePlayer.data();<sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classPlayer_1ad98ff5b24bb1ddc41f0390d50ceac3a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classPlayer_1ad98ff5b24bb1ddc41f0390d50ceac3a4" kindref="member">getMethodology</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>methodologyPlayer.data();<sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classPlayer_1acd9a2131d61ae05f83063900b205d9ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPlayer_1acd9a2131d61ae05f83063900b205d9ff" kindref="member">getNumEmpresas</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>listCompanies.size();<sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classPlayer_1a2d9d894f68e52cc6d9dfdbc0e6cd3e53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPlayer_1a2d9d894f68e52cc6d9dfdbc0e6cd3e53" kindref="member">getPoints</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pointsPlayer;<sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classPlayer_1abfaf379855ef276b27da1bd47d7b037d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPlayer_1abfaf379855ef276b27da1bd47d7b037d" kindref="member">getResources</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>resourcesPlayer;<sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPlayer_1ab4beffed28357e5e05f601a7290c9fb8" kindref="member">addResources</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>resources);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPlayer_1afd36b40cd4f3950f2e3516904c4b6fba" kindref="member">removeResources</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>resources,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPlayer_1a0bc0123924856c22e17fd932114f268a" kindref="member">buyCompany</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>nameCompany);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPlayer_1aecc72601f8778fc18a767a450e1fb7e8" kindref="member">certifyCompany</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>nameCompany);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classPlayer_1a8bca0e3d8ce5e75e0798aba334e9763b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::list&lt;Company&gt;&amp;<sp/><ref refid="classPlayer_1a8bca0e3d8ce5e75e0798aba334e9763b" kindref="member">getCompanies</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>listCompanies;<sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classPlayer_1addd52384a5062bc06c6fa4d4cf381f86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classPlayer_1addd52384a5062bc06c6fa4d4cf381f86" kindref="member">getFileAvatar</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fileAvatar.data();<sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/rubens/UFMG/Grad/8/SE/EngSoft/TioPastinhas/src/Player/Player.h"/>
+  </compounddef>
+</doxygen>

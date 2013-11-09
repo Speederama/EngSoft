@@ -1,0 +1,25 @@
+-- ------------------------------------------------------------------
+-- TODO list:
+
+- evidenciar a origem das informações de engenharia de software:
+	. evidenciar fonte das perguntas; [2]
+
+- evidenciar trabalho sobre requisitos (ler nível dois do CMMI): [1,2]
+	. mostrar quais requisitos foram atendidos;
+	. mostrar quais requisitos não foram atendidos, e porque;
+	. apresentar justificativas de atrasos e outros;
+
+- evidenciar testes: [1,2]
+	. definir roteiro de testes para executar testes de lógica;
+	. mostrar testes da lógica do jogo: evidenciar quais os casos
+	possíveis de ocorrer, e os respectivos testes -- apresentar
+	printscreen de etapas de interação;
+
+- fluffy stuff:
+	. refinar interface gráfica;
+	. instalar dados: imagens, sons, questões e binários
+	na máquina do usuário;
+
+- legenda:
+	(1) apresentar nos slides da sala;
+	(2) apresentar no blog;
