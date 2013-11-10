@@ -86,8 +86,8 @@ void Game::run(void) {
 			switch (_step) {
 			case 0:
 				++_step;
-				// Card::loader(_event, config::data::path::card,
-				// 		_data.card);
+				Card::loader(config::data::path::card,
+				 		_data.card);
 				Question::loader(config::data::path::question,
 						_data.question);
 				break;
