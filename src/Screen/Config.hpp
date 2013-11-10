@@ -24,11 +24,8 @@ private:
 
 	Data& _data;
 
-	bool _avatar_selected;
 	int _cur_avatar, _num_avatars;
-
-	int _user_process;
-	std::string _username;
+	std::string _username, _user_process;
 
 	// Allows the user to choose an avatar
 	void _choose_avatar(void);

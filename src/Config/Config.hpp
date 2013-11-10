@@ -21,6 +21,11 @@ namespace config {
 
 	// Game-related constants
 	namespace game {
+
+		const unsigned int max_players = 4;
+		const unsigned int num_methods = 4;
+		const char method[][7] =
+			{"Praxis", "Kanban", "XP", "Scrum"};
 		const unsigned int initial = 2000000;
 		const unsigned int company = 500000;
 		const unsigned int certification[4] = 
@@ -29,6 +34,7 @@ namespace config {
 			{100, 200, 300, 400, 500};
 		const unsigned int specific = 200000;
 		const unsigned int general = 100000;
+
 	}
 
 	// Screen constants
@@ -48,6 +54,7 @@ namespace config {
 		}
 
 		namespace image {
+
 			const std::string path("../misc/images/");
 			const std::string splash(path + "splash2.png");
 			const std::string config(path + "config.png");
@@ -57,6 +64,7 @@ namespace config {
 			const std::string buy("../misc/buttons/compra.png");
 			const std::string certification("../misc/buttons/certifica.png");
 			const std::string podium(path + "cilindro.png");
+
 		}
 
 		namespace avatar {
@@ -78,14 +86,16 @@ namespace config {
 		}
 
 		namespace button {
+
 			const std::string path("../misc/buttons/");
 			const std::string add(path + "add");
 			const std::string tick(path + "tick");
 			const std::string left(path + "left");
 			const std::string right(path + "right");
-			const std::string cert[2] = {path + "certifica", ".png"};
-			const std::string buy[2] = {path + "compra", ".png"};
-			const std::string green[2] = {path + "verde", ".png"};
+			const std::string play(path + "jogar");
+			const std::string menu(path + "menu");
+			const std::string quit(path + "sair");
+
 		}
 
 	}

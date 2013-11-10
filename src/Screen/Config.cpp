@@ -7,9 +7,8 @@
 Config::Config(ALLEGRO_DISPLAY *display, ALLEGRO_EVENT& event,
 		Data& data) :
 Screen(display, event), _data(data),
-_avatar_selected(false),
 _cur_avatar(0), _num_avatars(config::misc::avatar::count),
-_user_process(-1), _username("") {
+_user_process(""), _username("") {
 
 	// Fonts
 	_load_font("18", config::misc::font::dejavu, 18);
@@ -27,13 +26,28 @@ _user_process(-1), _username("") {
 		_load_image(id, config::misc::avatar::src + id + ".png");
 	}
 
-	// Buttons
+	// Avatar selection buttons
 	_load_button<Button::PUSH>("prev", config::misc::button::left,
 			.08, .72, 50, 50);
 	_load_button<Button::PUSH>("next", config::misc::button::right,
 			.2, .72, 50, 50);
-	_load_button<Button::TOGGLE>("mark", config::misc::button::tick,
+	_load_button<Button::PUSH>("mark", config::misc::button::tick,
 			.48, .85, 50, 50);
+
+	// Menu buttons
+	float xpos(.322), ypos(.38);
+	for (int i(0); i < config::game::num_methods; ++i) {
+		_load_button<Button::LOCK>(config::game::method[i],
+				config::misc::button::menu,
+				xpos, ypos += .07, 205, 50);
+	}
+
+	// Play button
+	_load_button<Button::PUSH>("play", config::misc::button::play,
+			.865, .92, 100, 50);
+
+	// Pre-defined data
+	_data.num_rounds = 5, _data.cur_round = 1;
 
 }
 
@@ -44,7 +58,17 @@ Config::~Config(void) {
 // Processes new events
 const bool Config::process(void) {
 
-	if (_key.is_released(ALLEGRO_KEY_ESCAPE)) return true;
+	// Game start
+	if (_button["play"]->pressed()) {
+
+		if (_data.player.empty()) {
+			al_show_native_message_box(_display,
+					"Selecionar Personagem", "Aviso:",
+					"você precisa selecionar ao menos um jogador.",
+					"OK", ALLEGRO_MESSAGEBOX_WARN);
+		} else return true;
+
+	}
 
 	// Avatar selection
 	_choose_avatar();
@@ -55,8 +79,8 @@ const bool Config::process(void) {
 // Draws contents to display
 void Config::draw(void) {
 
-	++_counter;
 	Image::set_target(_display);
+	const int c(++_counter % _fps);
 
 	// Background
 	_image["back"]->draw<Image::SCALED>(0, 0, _width, _height);
@@ -65,15 +89,26 @@ void Config::draw(void) {
 	std::stringstream ss; ss << _cur_avatar;
 	_image[ss.str()]->draw<Image::SCALED>(.054, .225, 273, 355);
 
+	// Text input
 	_font["18"]->draw<Font::LEFT>(_palette, "black",
-			.295, .35, _username);
+			.295, .345, _username + (c > _fps / 2 ? "|" : ""));
 
+	// Avatars
 	_button["prev"]->draw();
 	_button["mark"]->draw();
 	_button["next"]->draw();
-
-	// Avatars
 	_display_avatars();
+
+	// Management methods
+	float xpos(.396), ypos(.396);
+	for (int i(0); i < config::game::num_methods; ++i) {
+		_button[config::game::method[i]]->draw();
+		_font["18"]->draw<Font::CENTER>(_palette, "white",
+				xpos, ypos += .07, config::game::method[i]);
+	}
+
+	// Play button
+	_button["play"]->draw();
 
 }
 
@@ -81,16 +116,25 @@ void Config::draw(void) {
 void Config::_choose_avatar(void) {
 
 	// Validates user input data
-	if (_button["mark"]->pressed()) _avatar_selected ^= true;
-	if (_avatar_selected) {
+	if (_button["mark"]->pressed()) {
 
-		if (_username.empty()) {
-			_avatar_selected = false, _button["mark"]->reset();
+		if (_username.empty() or _user_process.empty()) {
+
 			al_show_native_message_box(_display,
 					"Selecionar Personagem", "Aviso:",
 					"você não selecionou um método de processo "
 					"ou não inseriu um nome de jogador.",
 					"OK", ALLEGRO_MESSAGEBOX_WARN);
+
+		} else if (_data.player.size() ==
+				config::game::max_players) {
+
+			al_show_native_message_box(_display,
+					"Selecionar Personagem", "Erro:",
+					"a versão atual de Roda o Software ® "
+					"não suporta mais de quatro jogaddores.",
+					"OK", ALLEGRO_MESSAGEBOX_ERROR);
+
 		} else {
 
 			std::stringstream ss;
@@ -99,9 +143,29 @@ void Config::_choose_avatar(void) {
 			Allegro::Image *img(new Allegro::Image(_display, _event,
 									ss.str() + ".png"));
 			_data.player.push_back(new Player(_username,
-							"Praxis", img));
+							_user_process, img));
 
-			_username.clear(), _user_process = -1;
+			// Resetting user data
+			if (not _user_process.empty()) {
+				_button[_user_process]->reset();
+			}
+			_username.clear(), _user_process.clear();
+
+		}
+
+	}
+
+	// Select the management process
+	for (int i(0); i < config::game::num_methods; ++i) {
+
+		if (_button[config::game::method[i]]->pressed()) {
+
+			if (not _user_process.empty()) {
+				_button[_user_process]->reset();
+			}
+
+			_user_process = config::game::method[i];
+			break;
 
 		}
 
