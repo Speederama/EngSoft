@@ -99,7 +99,8 @@ void Game::run(void) {
 				break;
 			case 3:
 				if (_update<Main>()) ++_step;
-				al_flush_event_queue(_queue);
+				if (_event.type == ALLEGRO_EVENT_TIMER)
+					al_flush_event_queue(_queue);
 				break;
 			case 4:
 				if (_update<End>()) ++_step;

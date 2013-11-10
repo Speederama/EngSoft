@@ -160,7 +160,7 @@ const bool Main::process() {
 				(_event.mouse.y - centerY) * 
 				(_event.mouse.y - centerY);
 			if (distSq <= 16900) {
-				_time_to_stop = 200 + rand() % 100;
+				_time_to_stop = 100 + rand() % 100;
 				_solve_roulette = true;
 			}
 		}
