@@ -63,6 +63,7 @@ namespace config {
 			const int count = 4;
 			const std::string path("../misc/images/");
 			const std::string src("../misc/avatar/");
+			const std::string bg(src + "info.png");
 			const std::string silvio(path + "silvio.png");
 			const std::string hebe(path + "hebe.png");
 			const std::string xuxa(path + "xuxa.png");

@@ -33,4 +33,7 @@ private:
 	// Allows the user to choose an avatar
 	void _choose_avatar(void);
 
+	// Displays the current players
+	void _display_avatars(void);
+
 };
