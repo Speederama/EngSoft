@@ -109,7 +109,7 @@ void Config::_choose_avatar(void) {
 		const int c(_event.keyboard.unichar);
 		if (c >= 32) al_utf8_encode(l, c), _username += l;
 		else if (_event.keyboard.keycode == ALLEGRO_KEY_BACKSPACE
-				and not _username.empty()) _username.pop_back();
+				and not _username.empty()) _username.resize(_username.size() - 1);
 		if (_username.size() > 30) _username.resize(30);
 
 	}
