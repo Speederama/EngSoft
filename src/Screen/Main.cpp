@@ -83,7 +83,7 @@ void Main::draw(void) {
 	char namePlayer[100], procPlayer[100], recPlayer[100], 
 		pointsPlayer[100]; 
 	sprintf(namePlayer, "Nome: %s", _data.player[_data.turn]->_name.data());
-	sprintf(procPlayer, "Process: %s", _data.player[_data.turn]->_process.data());
+	sprintf(procPlayer, "Processo: %s", _data.player[_data.turn]->_process.data());
 	sprintf(recPlayer, "Recursos: %d", _data.player[_data.turn]->_get_resources());
 	sprintf(pointsPlayer, "Pontuação: %d", _data.player[_data.turn]->_get_points());
 	_font["main"]->draw(_palette, "white", .2, .69, namePlayer);
@@ -183,6 +183,7 @@ void Main::_buy_company() {
 void Main::_certify_company() {
 	char options[200];
 	bool first = true;
+	std::vector<int> numbers;
 	for (int i(0); i < _data.player[_data.turn]->_num_companies(); ++i) {
 		if (_data.player[_data.turn]->_get_companies()[i]->_level() < 5) {
 			if (first)
@@ -190,6 +191,7 @@ void Main::_certify_company() {
 			else
 				sprintf(options, "%s|Empresa %d", options, i + 1);
 			first = false;
+			numbers.push_back(i + 1);
 		}
 	}
 	
@@ -203,7 +205,7 @@ void Main::_certify_company() {
 	int answer = al_show_native_message_box(_display, "Certificar Empresa", 
 		"Certificar Empresa", "Qual empresa deseja certificar?", 
 		options, ALLEGRO_MESSAGEBOX_QUESTION);
-	bool success = _data.player[_data.turn]->_certification(answer);
+	bool success = _data.player[_data.turn]->_certification(numbers[answer - 1]);
 	if (not success)
 		al_show_native_message_box(_display, "Certificar Empresa", "Erro!", "Não foi possível certificar a empresa. É possível que não existam recursos suficientes.", "OK", ALLEGRO_MESSAGEBOX_ERROR);
 }
