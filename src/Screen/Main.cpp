@@ -121,8 +121,8 @@ void Main::draw(void) {
 	}
 	
 	if (_time_rotating < _time_to_stop) {
-		_angle += 3.1415 / (10 + exp((_time_rotating - 
-			_time_to_stop / 2) * .1) * .01);
+		_angle += 3.1415 / (9 + exp((_time_rotating - 
+			_time_to_stop / 10) * .1) * .001);
 		if (_angle > 6.283) _angle -= 6.283;
 		++_time_rotating;
 	}
@@ -160,7 +160,7 @@ const bool Main::process() {
 				(_event.mouse.y - centerY) * 
 				(_event.mouse.y - centerY);
 			if (distSq <= 16900) {
-				_time_to_stop = 100 + rand() % 100;
+				_time_to_stop = 50 + rand() % 100;
 				_solve_roulette = true;
 			}
 		}
@@ -188,7 +188,7 @@ void Main::_certify_company() {
 			if (first)
 				sprintf(options, "Empresa %d", i + 1);
 			else
-				sprintf(options, "%s|Empresa %d", options, i);
+				sprintf(options, "%s|Empresa %d", options, i + 1);
 			first = false;
 		}
 	}
@@ -214,6 +214,7 @@ void Main::_resolve_roulette() {
 	int answer = 0, chosen = 0, desired = 0;
 	char full_text[1000];
 	std::vector<Question*> questions_to_use;
+	std::vector<Card*> events_to_use;
 	switch(cur_piece % 4) {
 	case 0:
 		if (_data.player[_data.turn]->_process == "XP")
@@ -262,13 +263,18 @@ void Main::_resolve_roulette() {
 		}
 		break;
 	case 1:
-		// TODO: bad luck event
+		for (int i(0); i < _data.card.size(); ++i) {
+			if (_data.card[i]->type == 2)
+				events_to_use.push_back(_data.card[i]);
+		}
+
+		chosen = rand() % events_to_use.size();
 		al_show_native_message_box(_display,
 			"Evento de revés", "Evento de revés",
-			"Evento de revés", "OK",
-			ALLEGRO_MESSAGEBOX_OK_CANCEL);
-		_data.player[_data.turn]->_remove_resources(
-			500000, true);
+			events_to_use[chosen]->description.data(), 
+			"OK", ALLEGRO_MESSAGEBOX_OK_CANCEL);
+		_apply_effect(events_to_use[chosen]->effect, 
+			events_to_use[chosen]->magnitude);
 		break;
 	case 2:
 		for (int i(0); i < _data.question.size(); ++i) {
@@ -308,14 +314,19 @@ void Main::_resolve_roulette() {
 		}
 		break;
 	case 3:
-		// TODO: good luck event
+		for (int i(0); i < _data.card.size(); ++i) {
+			if (_data.card[i]->type == 1)
+				events_to_use.push_back(_data.card[i]);
+		}
+
+		chosen = rand() % events_to_use.size();
 		al_show_native_message_box(_display,
 			"Evento de sorte", "Evento de sorte",
-			"Evento de sorte", "OK",
-			ALLEGRO_MESSAGEBOX_OK_CANCEL);
-		_data.player[_data.turn]->_add_resources(
-			500000);
-		break;
+			events_to_use[chosen]->description.data(), 
+			"OK", ALLEGRO_MESSAGEBOX_OK_CANCEL);
+		_apply_effect(events_to_use[chosen]->effect, 
+			events_to_use[chosen]->magnitude);
+		break;	
 	}
 
 	++_data.turn;
@@ -324,6 +335,51 @@ void Main::_resolve_roulette() {
 		++_data.cur_round;
 	}
 	_solve_roulette = false;
+}
+
+void Main::_apply_effect(int effect, int magnitude) {
+	int chosen;
+	switch(effect) {
+	case 1:
+		if (magnitude > 0) {
+			for (int i(0); i < magnitude; ++i)
+				_data.player[_data.turn]->_add_company();
+		}
+		else {
+			for (int i(0); i < -1 * magnitude and 
+				_data.player[_data.turn]->
+				_num_companies() > 0; ++i) {
+				chosen = rand() % _data.player
+					[_data.turn]->_num_companies();
+				_data.player[_data.turn]->
+					_remove_company(chosen);
+			}
+		}
+		break;
+	case 2:
+		if (_data.player[_data.turn]->_num_companies() > 0) {
+			chosen = rand() % _data.player[_data.turn]->
+				_num_companies();
+			if (magnitude > 0) {
+				for (int i(0); i < magnitude; ++i)
+					_data.player[_data.turn]->
+						_upgrade_company(chosen);
+			}
+			else {
+				for (int i(0); i < -1 * magnitude; ++i)
+					_data.player[_data.turn]->
+						_downgrade_company(chosen);
+			}
+		}
+		break;
+	case 3:
+		if (magnitude > 0)
+			_data.player[_data.turn]->_add_resources(magnitude);
+		else
+			_data.player[_data.turn]->
+				_remove_resources(-1 * magnitude, true);
+		break;
+	}
 }
 
 /*

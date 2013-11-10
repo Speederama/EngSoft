@@ -13,7 +13,7 @@ namespace config {
 		const std::string title = "Roda o Software";
 
 		namespace path {
-			const std::string card = "../misc/card.txt";
+			const std::string card = "../misc/data/events";
 			const std::string question = "../misc/data/questions";
 		}
 

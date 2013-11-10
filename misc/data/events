@@ -1,0 +1,9 @@
+% Format: id|type|effect|magnitude|description
+% Type: 1 for good luck, 2 for bad luck
+% Effect: 1 for companies, 2 for certification, 3 for resources
+1|1|1|1|Seu avô morreu e te deixou como herança uma empresa de software!
+2|1|2|1|Sua influente rede de contatos finalmente lhe rendeu algo: uma de suas empresas foi recebeu uma avaliação gratuita e subiu de nível CMMI!
+3|1|3|500000|Nada como ganhar processos judiciais! Receba 500.000 de indenização!
+4|2|1|-1|Uma de suas empresas foi destruída por um incêndio!
+5|2|2|-1|Que pena! Uma de suas empresas foi avaliada por um certificador CMMI rabugento e perdeu um nível!
+6|2|3|-500000|Você não deveria se esquecer da pensão de sua filha! Pague 500.000 de indenização!

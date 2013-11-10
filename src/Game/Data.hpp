@@ -1,7 +1,7 @@
 # ifndef DATA_HPP
 # define DATA_HPP
 
-// # include "Card.hpp"
+# include "Card.hpp"
 # include "Player.hpp"
 // # include "Company.hpp"
 # include "Question.hpp"
@@ -13,9 +13,8 @@ public:
 
 	int num_rounds, cur_round, turn;
 
-	// std::vector<Card *> card;
+	std::vector<Card *> card;
 	std::vector<Player *> player;
-	// std::vector<Company *> company;
 	std::vector<Question *> question;
 
 	// Constructor

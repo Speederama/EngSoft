@@ -56,6 +56,23 @@ public:
 		}
 	}
 
+	inline const bool _add_company() {
+		if (_companies.size() >= 6) return false;
+		Company* company = new Company();
+		_companies.push_back(company);
+		_update_points();
+		return true;
+	}
+
+	inline const bool _remove_company(unsigned int number) {
+		if (number >= _companies.size()) return false;
+		std::vector<Company*>::iterator it = 
+			_companies.begin(); 
+		for (int i(0); i < number; ++i) ++it;
+		_companies.erase(it);
+		_update_points();
+	}
+
 	inline const bool _buy_company() {
 		if (_companies.size() >= 6) return false;
 		if (_remove_resources(config::game::company, false)) {
@@ -65,6 +82,22 @@ public:
 			return true;
 		}
 		else return false;
+	}
+
+	inline const bool _upgrade_company(unsigned int number) {
+		if (number >= _companies.size()) return false;
+		if (_companies[number]->_level() >= 5) return false;
+		_companies[number]->_upgrade();
+		_update_points();
+		return true;
+	}
+
+	inline const bool _downgrade_company(unsigned int number) {
+		if (number >= _companies.size()) return false;
+		if (_companies[number]->_level() <= 1) return false;
+		_companies[number]->_downgrade();
+		_update_points();
+		return true;
 	}
 
 	inline const bool _certification(unsigned int number) {

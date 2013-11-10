@@ -30,5 +30,6 @@ private:
 	void _buy_company(void);
 	void _certify_company(void);
 	void _resolve_roulette(void);
+	void _apply_effect(int effect, int magnitude);
 
 };
