@@ -7,6 +7,7 @@ Screen(display, event), _data(data) {
 
 	// Fonts
 	_load_font("main", config::misc::font::dejavu, 15);
+	_load_font("results", config::misc::font::dejavu, 30);
 	_load_font("title", config::misc::font::dejavu, 45);
 
         _load_image("back", config::misc::image::main);
@@ -43,7 +44,7 @@ const bool End::process(void) {
 
 
 void End::drawPlayerStatus(Player* player,double startX, double startY){
-  char name[100], process[100], numbOfComp[100], meanLevel[100];
+  char name[100], process[100], numbOfComp[100], meanLevel[100], points[100];
 
   const std::vector<Company*>& companies (player-> _get_companies());
   int numberOfCompanies = companies.size();
@@ -55,10 +56,11 @@ void End::drawPlayerStatus(Player* player,double startX, double startY){
   if(meanCMMILevel != 0)
     meanCMMILevel /= (double)numberOfCompanies;
   
-  sprintf(name,"Player Name: %s", player->_name.data());
-  sprintf(process,"Process: %s",player->_process.data());
-  sprintf(numbOfComp,"Number of Companies: %ld", companies.size());
-  sprintf(meanLevel,"Mean level of CMMI: %.1lf", meanCMMILevel);
+  sprintf(name,"Nome: %s", player->_name.data());
+  sprintf(process,"Processo: %s",player->_process.data());
+  sprintf(numbOfComp,"Número de empresas: %ld", companies.size());
+  sprintf(meanLevel,"Nível CMMI médio: %.1lf", meanCMMILevel);
+  sprintf(points, "Pontuação: %d", player->_get_points());
 
 
   player->_avatar->draw<Image::SCALED>(startX + .025,
@@ -70,6 +72,7 @@ void End::drawPlayerStatus(Player* player,double startX, double startY){
   _font["main"]->draw(_palette, "black", startX + 0.2, startY+0.06, process);
   _font["main"]->draw(_palette, "black", startX + 0.2, startY+0.1, numbOfComp);
   _font["main"]->draw(_palette, "black", startX + 0.2, startY+0.14, meanLevel);
+  _font["main"]->draw(_palette, "black", startX + 0.2, startY+0.18, points);
   
 }
 
@@ -90,12 +93,11 @@ void End::draw(void) {
         _font["title"]->draw<Font::CENTER>(_palette, "white", .5, .025,
                     "GAME OVER - STATUS");
 
-          
-
         ++_counter;
 
         double winnerPoints=-1;
         int winnerId=-1;
+	bool tie = true;
         for(unsigned i=0; i< _data.player.size(); i++){
           double points = _data.player[i]->_get_points();
 
@@ -104,20 +106,20 @@ void End::draw(void) {
           if(points > winnerPoints){
             winnerPoints = points;
             winnerId = i;
+	    tie = false;
           }
+	  else if (points == winnerPoints) tie = true;
         }
 
-
         char finalMessage[500];
+	if (tie)
+		sprintf(finalMessage, "Houve um empate!");
+	else
+        	sprintf(finalMessage, "O jogador %s ganhou o jogo com %.0lf pontos.", 
+            		_data.player[winnerId]->_name.data(), winnerPoints);
 
-
-        sprintf(finalMessage, "The player %s has Won with %.0lf points", 
-            _data.player[winnerId]->_name.data(), winnerPoints);
-
-//	_font["main"]->draw<Font::CENTER>(_palette, 
-//            ((_counter%30) > 15 ? "royalblue" : "green"),
-//			.5, .85,
-			//"THE END!!!\nTHE GROUP...\nWanna quit? press <ESC>");
-//			finalMessage);
+	_font["results"]->draw<Font::CENTER>(_palette, 
+            ((_counter%30) > 15 ? "royalblue" : "green"),
+	    .5, .85, finalMessage);
 
 }
