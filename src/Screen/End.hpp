@@ -20,8 +20,11 @@ public:
 	void draw(void);
 
 private:
-        void drawPodium(const std::vector<std::pair<double,int>>& playerPoints );
+        void drawPodium(const std::vector<std::pair<double,int>>& playerPoints,
+            int winnerId);
         void drawPlayerStatus(Player * player, double startX, double startY);
 	Data& _data;
+        double _angle;
+        double _delta;
 
 };

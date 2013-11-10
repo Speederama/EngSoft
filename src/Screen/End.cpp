@@ -30,7 +30,8 @@ Screen(display, event), _data(data) {
         _create_image("box", 0.30 * _width, 0.412 * _height);
           _image["box"]->set_color(_palette, "grey", 0);
 
-
+        _angle = .0;
+        _delta = .03;
 }
 
 // Destructor
@@ -80,7 +81,8 @@ void End::drawPlayerStatus(Player* player,double startX, double startY){
   
 }
 
-void End::drawPodium(const std::vector<std::pair<double,int>>& playerPoints ){
+void End::drawPodium(const std::vector<std::pair<double,int>>& playerPoints, 
+    int winnerId){
 
   std::stringstream ss;
   for(unsigned i=0; i<playerPoints.size(); i++){
@@ -94,8 +96,24 @@ void End::drawPodium(const std::vector<std::pair<double,int>>& playerPoints ){
 
     _image["podium"]->draw<Image::SCALED>(pX, pY, 
         0.12 * _width, pHeight ); 
-    _data.player[i]->_avatar->draw<Image::SCALED>(pX + .025,
-      pY - (.15*_height/_height), .07 * _width, .15 * _height);
+    
+   
+    if( i == winnerId){
+      _angle += _delta;
+      if(_angle >= .5 || _angle <= -0.5)
+        _delta *= -1;
+
+      //((_counter%30) > 15 ? "royalblue" : "green"),
+      _data.player[i]->_avatar->draw<Image::SCALED_ROTATED>(pX + .06,
+        pY - (.08*_height/_height), .07 * _width, .15 * _height, 
+        _angle, .3, .3);
+    } else {
+      //_data.player[i]->_avatar->draw<Image::SCALED>(pX + .025,
+       // pY - (.15*_height/_height), .07 * _width, .15 * _height);
+      _data.player[i]->_avatar->draw<Image::SCALED_ROTATED>(pX + .06,
+        pY - (.08*_height/_height), .07 * _width, .15 * _height, 
+        .0, .3, .3);
+    }
     
     //Draw Status
     Player * player = _data.player[i];
@@ -178,7 +196,10 @@ void End::draw(void) {
             winnerId = i;
 	    tie = false;
           }
-	  else if (points == winnerPoints) tie = true;
+	  else if (points == winnerPoints){
+            tie = true;
+            winnerId = -1;
+          }
         }
 
         if( winnerPoints > 0 )
@@ -187,7 +208,7 @@ void End::draw(void) {
               playerPoints[i].first /= winnerPoints;
           }
 
-        this->drawPodium(playerPoints);
+        this->drawPodium(playerPoints,winnerId);
 
 
         char finalMessage[500];
