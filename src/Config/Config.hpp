@@ -56,6 +56,7 @@ namespace config {
 			const std::string arrow(path + "seta.png");
 			const std::string buy("../misc/buttons/compra.png");
 			const std::string certification("../misc/buttons/certifica.png");
+			const std::string podium(path + "cilindro.png");
 		}
 
 		namespace avatar {
