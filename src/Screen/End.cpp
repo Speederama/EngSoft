@@ -7,12 +7,15 @@ Screen(display, event), _data(data) {
 
 	// Fonts
 	_load_font("main", config::misc::font::dejavu, 15);
-	_load_font("results", config::misc::font::dejavu, 30);
+	_load_font("results", config::misc::font::dejavu, 20);
 	_load_font("title", config::misc::font::dejavu, 45);
+	_load_font("14", config::misc::font::dejavu, 14);
 
         _load_image("back", config::misc::image::main);
+        _load_image("podium", config::misc::image::podium);
+        _load_image("avatar_bg", config::misc::avatar::bg);
 
-        _create_image("cover", 1 * _width, 1 * _height);
+        _create_image("cover", .45 * _width, .8 * _height);
         _image["cover"]->set_color(_palette, "black", 220);
 
         _create_image("VLine",.001* _width, 1 * _height);
@@ -41,6 +44,7 @@ const bool End::process(void) {
 	return false;
 
 }
+
 
 
 void End::drawPlayerStatus(Player* player,double startX, double startY){
@@ -76,6 +80,68 @@ void End::drawPlayerStatus(Player* player,double startX, double startY){
   
 }
 
+void End::drawPodium(const std::vector<std::pair<double,int>>& playerPoints ){
+
+  std::stringstream ss;
+  for(unsigned i=0; i<playerPoints.size(); i++){
+
+    //Draw Podium
+    double nPoints = playerPoints[i].first;
+    int pId = playerPoints[i].second;
+
+    double pHeight = (nPoints + 0.2 + (0*0.25)) * 0.5 * _height;
+    double pX = (i*0.12)+ .51, pY = .9 - (pHeight/_height);
+
+    _image["podium"]->draw<Image::SCALED>(pX, pY, 
+        0.12 * _width, pHeight ); 
+    _data.player[i]->_avatar->draw<Image::SCALED>(pX + .025,
+      pY - (.15*_height/_height), .07 * _width, .15 * _height);
+    
+    //Draw Status
+    Player * player = _data.player[i];
+
+    _image["avatar_bg"]->draw<Image::SCALED>(.1,
+      .245 + i * .18);
+
+    // Player avatar
+    player->_avatar->draw<Image::SCALED>(.113,
+                        .266 + i * .18, 79, 70);
+
+    // Player name
+    _font["14"]->draw<Font::LEFT>(_palette, "black",
+                        .235, .267 + i * .18, player->_name);
+
+    // Player process
+    _font["14"]->draw<Font::LEFT>(_palette, "black",
+                        .235, .302 + i * .18, player->_process);
+
+    // Player companies
+    ss.str(""), ss << player->_num_companies();
+    _font["14"]->draw<Font::LEFT>(_palette, "black",
+                        .402, .302 + i * .18, ss.str());
+
+    // Player resources
+    ss.str(""), ss << player->_get_resources();
+    _font["14"]->draw<Font::LEFT>(_palette, "black",
+                        .235, .337 + i * .18, ss.str());
+
+    // Player points
+    ss.str(""), ss << player->_get_points();
+    _font["14"]->draw<Font::LEFT>(_palette, "black",
+                        .402, .337 + i * .18, ss.str());
+
+    
+//    const std::vector<Company*>& comps = player-> _get_companies();
+//    int numComp = (int) comps.size();
+
+
+
+    //for(int j=0; j<numComp; j++){
+    //  int level = comps[j]->_level();
+    //}
+
+  }
+}
 
 // Draws contents to display
 void End::draw(void) {
@@ -83,11 +149,11 @@ void End::draw(void) {
         Image::set_target(_display);
         // Drawing background
         _image["back"]->draw<Image::SCALED>(0, 0, _width, _height);
-        _image["cover"]->draw<Image::NORMAL>(.0, .0);
-        _image["VLine"]->draw<Image::NORMAL>(.5,.15);
-        
-        _image["HLine2"]->draw<Image::NORMAL>(.0,.15);
-        _image["HLine"]->draw<Image::NORMAL>(.0,.575);
+        _image["cover"]->draw<Image::NORMAL>(.05, .15);
+
+//        _image["VLine"]->draw<Image::NORMAL>(.5,.15;
+//        _image["HLine2"]->draw<Image::NORMAL>(.0,.15);
+//        _image["HLine"]->draw<Image::NORMAL>(.0,.575);
 
 
         _font["title"]->draw<Font::CENTER>(_palette, "white", .5, .025,
@@ -98,10 +164,14 @@ void End::draw(void) {
         double winnerPoints=-1;
         int winnerId=-1;
 	bool tie = true;
+
+        std::vector<std::pair<double,int>> playerPoints;
         for(unsigned i=0; i< _data.player.size(); i++){
           double points = _data.player[i]->_get_points();
+          
+          playerPoints.push_back( std::make_pair(points,i) );
 
-          this->drawPlayerStatus(_data.player[i], (i%2)*.5,((i>>1)%2)*0.425+.15);
+ //         this->drawPlayerStatus(_data.player[i], (i%2)*.5,((i>>1)%2)*0.425+.15);
           
           if(points > winnerPoints){
             winnerPoints = points;
@@ -110,6 +180,15 @@ void End::draw(void) {
           }
 	  else if (points == winnerPoints) tie = true;
         }
+
+        if( winnerPoints > 0 )
+          for(unsigned i=0; i< _data.player.size(); i++){
+            if( playerPoints[i].first > 0 )
+              playerPoints[i].first /= winnerPoints;
+          }
+
+        this->drawPodium(playerPoints);
+
 
         char finalMessage[500];
 	if (tie)
@@ -120,6 +199,7 @@ void End::draw(void) {
 
 	_font["results"]->draw<Font::CENTER>(_palette, 
             ((_counter%30) > 15 ? "royalblue" : "green"),
-	    .5, .85, finalMessage);
+            ( (.45*_width/_width) - .05 ) /2. + .08,
+            .15, finalMessage);
 
 }
