@@ -21,6 +21,7 @@ public:
 
 private:
 
+        void drawPlayerStatus(Player * player, double startX, double startY);
 	Data& _data;
 
 };
