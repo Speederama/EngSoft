@@ -194,7 +194,7 @@ void End::draw(void) {
 	if (tie)
 		sprintf(finalMessage, "Houve um empate!");
 	else
-        	sprintf(finalMessage, "O jogador %s ganhou o jogo com %.0lf pontos.", 
+        	sprintf(finalMessage, "%s ganhou o jogo com %.0lf pontos.", 
             		_data.player[winnerId]->_name.data(), winnerPoints);
 
 	_font["results"]->draw<Font::CENTER>(_palette, 
