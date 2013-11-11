@@ -26,6 +26,7 @@ private:
 	float _angle;
 	int _time_to_stop, _time_rotating;
 	bool _solve_roulette;
+	bool _startRotate;
 
 	void _buy_company(void);
 	void _certify_company(void);

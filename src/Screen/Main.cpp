@@ -7,7 +7,8 @@
 Main::Main(ALLEGRO_DISPLAY *display, ALLEGRO_EVENT& event,
 		Data& data) :
 Screen(display, event), _data(data), _angle(0.0), 
-_time_to_stop(0), _time_rotating(0), _solve_roulette(false) {
+_time_to_stop(0), _time_rotating(0), _solve_roulette(false), 
+_startRotate(false) {
 
 	// Fonts
 	_load_font("main", config::misc::font::dejavu, 25);
@@ -38,6 +39,7 @@ _time_to_stop(0), _time_rotating(0), _solve_roulette(false) {
 
 	_create_image("lineVer", .01 * _height, .26 * _height);
 	_image["lineVer"]->set_color(_palette, "white", 255);
+
 }
 
 // Destructor
@@ -46,6 +48,18 @@ Main::~Main(void) {
 
 // Draws contents to display
 void Main::draw(void) {
+	
+        if (_time_rotating < _time_to_stop) {
+//		_angle += (3.1415 / (9 + exp((_time_rotating - 
+//			_time_to_stop / 10) * .1) * .001) + x);
+                _angle += (.0031415  * pow(1.06,(_time_to_stop - _time_rotating)));
+		if (_angle > 6.283) _angle -= 6.283;
+		++_time_rotating;
+	}
+	else if (_time_rotating > 0) {
+		_time_rotating = 0;
+		_time_to_stop = 0;
+	}
 
 //	if (_key.is_released(ALLEGRO_KEY_ESCAPE)) return true;
 
@@ -120,16 +134,6 @@ void Main::draw(void) {
 		++count;
 	}
 	
-	if (_time_rotating < _time_to_stop) {
-		_angle += 3.1415 / (9 + exp((_time_rotating - 
-			_time_to_stop / 10) * .1) * .001);
-		if (_angle > 6.283) _angle -= 6.283;
-		++_time_rotating;
-	}
-	else if (_time_rotating > 0) {
-		_time_rotating = 0;
-		_time_to_stop = 0;
-	}
 }
 
 const bool Main::process() { 
@@ -160,8 +164,9 @@ const bool Main::process() {
 				(_event.mouse.y - centerY) * 
 				(_event.mouse.y - centerY);
 			if (distSq <= 16900) {
-				_time_to_stop = 50 + rand() % 100;
+				_time_to_stop = 70 + rand() % 50;
 				_solve_roulette = true;
+                                _startRotate = true;
 			}
 		}
 	}
@@ -218,7 +223,7 @@ void Main::_resolve_roulette() {
 	std::vector<Question*> questions_to_use;
 	std::vector<Card*> events_to_use;
 	switch(cur_piece % 4) {
-	case 0:
+	case 1:
 		if (_data.player[_data.turn]->_process == "XP")
 			desired = 1;
 		else if (_data.player[_data.turn]->_process == "Kanban")
@@ -245,7 +250,7 @@ void Main::_resolve_roulette() {
 			"Pergunta Específica", "Pergunta Específica", 
 			full_text, "A|B|C|D", 
 			ALLEGRO_MESSAGEBOX_QUESTION);
-		if (answer == 1) {
+		if (answer == questions_to_use[chosen]->correct) {
 			al_show_native_message_box(_display,
 				"Pergunta Específica",
 				"Pergunta Específica",
@@ -264,7 +269,7 @@ void Main::_resolve_roulette() {
 				config::game::specific, true);
 		}
 		break;
-	case 1:
+	case 0:
 		for (int i(0); i < _data.card.size(); ++i) {
 			if (_data.card[i]->type == 2)
 				events_to_use.push_back(_data.card[i]);
@@ -278,7 +283,7 @@ void Main::_resolve_roulette() {
 		_apply_effect(events_to_use[chosen]->effect, 
 			events_to_use[chosen]->magnitude);
 		break;
-	case 2:
+	case 3:
 		for (int i(0); i < _data.question.size(); ++i) {
 			if (_data.question[i]->type == 0)
 				questions_to_use.push_back(_data.question[i]);
@@ -315,7 +320,7 @@ void Main::_resolve_roulette() {
 				config::game::general, true);
 		}
 		break;
-	case 3:
+	case 2:
 		for (int i(0); i < _data.card.size(); ++i) {
 			if (_data.card[i]->type == 1)
 				events_to_use.push_back(_data.card[i]);

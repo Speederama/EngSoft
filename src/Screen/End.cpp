@@ -31,7 +31,7 @@ Screen(display, event), _data(data) {
           _image["box"]->set_color(_palette, "grey", 0);
 
         _angle = .0;
-        _delta = .03;
+        _delta = .09;
 }
 
 // Destructor
